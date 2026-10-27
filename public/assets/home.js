@@ -8,7 +8,7 @@
   var svg = spec && spec.querySelector('svg');
   var marker = spec && spec.querySelector('.marker');
   var tip = spec && spec.querySelector('.tip');
-  var COLORS = { low: '#3FA796', moderate: '#9DB15A', elevated: '#E3B341', high: '#E8743B', 'very-high': '#D9473A' };
+  var COLORS = { low: '#7FA38A', moderate: '#A9AE7A', elevated: '#D6A85C', high: '#C47A4E', 'very-high': '#A8553E' };
   var jobs = null, sorted = [];
 
   function load() {

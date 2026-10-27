@@ -1,9 +1,9 @@
-/* Shared styles for the index pages: paper ground, ink type, one signal scale from low (teal) to high (red). */
+/* Shared styles for the index pages: oat paper, espresso ink, one earthy scale from low (sage) to high (terracotta). */
 :root {
-  --bg: #F6F3EC; --surface: #FFFDF8; --line: #E2DDD1; --line-strong: #C9C2B3;
-  --ink: #14171C; --soft: #3A3F47; --muted: #5E636B; --faint: #7A7E85;
-  --low: #3FA796; --mid: #E3B341; --high: #E8743B; --max: #D9473A;
-  --accent: #D9473A;
+  --bg: #EFE7DA; --surface: #F8F2E8; --line: #DCD0BD; --line-strong: #C5B59D;
+  --ink: #2B231E; --soft: #4A3F37; --muted: #6B5E53; --faint: #8A7C6F;
+  --low: #7FA38A; --moderate: #A9AE7A; --mid: #D6A85C; --high: #C47A4E; --max: #A8553E;
+  --accent: #B4593F;
   --head: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
@@ -26,7 +26,7 @@ header.top { display: flex; flex-wrap: wrap; align-items: center; justify-conten
 .top nav { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px; font-size: 14px; }
 .top nav a { color: var(--soft); text-decoration: none; padding: 10px 0; }
 .top nav a:hover, .top nav a[aria-current="page"] { color: var(--ink); }
-.top nav a.cta { color: #fff; background: var(--ink); font-weight: 600; padding: 10px 18px; border-radius: 6px; }
+.top nav a.cta { color: #F3EADC; background: var(--ink); font-weight: 600; padding: 10px 18px; border-radius: 6px; }
 .top nav a.cta:hover { background: var(--accent); color: #fff; }
 @media (max-width: 560px) { .top nav a:not(.cta):not(.keep) { display: none; } }
 
@@ -43,7 +43,7 @@ h3 { font-size: 19px; line-height: 1.25; margin: 0 0 6px; letter-spacing: -.01em
 section.block { border-top: 1px solid var(--line); padding: 56px 0; }
 
 /* Score */
-.band-low { --c: var(--low); } .band-moderate { --c: #9DB15A; } .band-elevated { --c: var(--mid); } .band-high { --c: var(--high); } .band-very-high { --c: var(--max); }
+.band-low { --c: var(--low); } .band-moderate { --c: var(--moderate); } .band-elevated { --c: var(--mid); } .band-high { --c: var(--high); } .band-very-high { --c: var(--max); }
 .scorecard { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px 48px; align-items: end; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 14px; padding: 28px; margin: 32px 0 0; }
 .scorecard .big { font-family: var(--head); font-weight: 700; font-size: clamp(64px, 9vw, 104px); line-height: .9; letter-spacing: -.04em; }
 .scorecard .big small { font-size: .32em; color: var(--faint); letter-spacing: 0; margin-left: 6px; }
@@ -56,7 +56,7 @@ section.block { border-top: 1px solid var(--line); padding: 56px 0; }
 .facts dd { margin: 4px 0 0; font-family: var(--head); font-weight: 600; font-size: 22px; letter-spacing: -.01em; }
 .facts dd small { display: block; font-family: var(--sans); font-weight: 400; font-size: 12px; color: var(--faint); letter-spacing: 0; }
 .mini { display: inline-flex; align-items: center; gap: 10px; min-width: 150px; }
-.mini .bar { flex: 1; height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.mini .bar { flex: 1; height: 8px; border-radius: 4px; background: #D5DCCB; overflow: hidden; }
 .mini .bar i { display: block; height: 100%; background: var(--c); }
 .mini b { font-family: var(--mono); font-weight: 500; font-size: 14px; width: 2.2em; text-align: right; }
 
