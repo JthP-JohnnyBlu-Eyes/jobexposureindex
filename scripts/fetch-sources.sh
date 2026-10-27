@@ -10,19 +10,24 @@ UA="Mozilla/5.0 (compatible; jobexposureindex.com; report@jobexposureindex.com)"
 year=$(date -u +%y)
 for y in $year $((10#$year - 1)) $((10#$year - 2)); do
   y=$(printf "%02d" "$y")
-  if curl -sSfL --retry 3 -A "$UA" -o /tmp/oesm.zip "https://www.bls.gov/oes/special-requests/oesm${y}nat.zip"; then
-    echo "BLS OEWS May 20$y"
-    rm -rf /tmp/oesm && mkdir /tmp/oesm && unzip -q /tmp/oesm.zip -d /tmp/oesm
-    f=$(find /tmp/oesm -iname 'national_M20*_dl.xlsx' | head -1)
-    python3 -c "
+  rm -f /tmp/oesm.zip
+  curl -sSL --retry 3 -A "$UA" -o /tmp/oesm.zip "https://www.bls.gov/oes/special-requests/oesm${y}nat.zip" || true
+  # A release that doesn't exist yet comes back as an HTML page, so check it's really a zip.
+  if ! unzip -tq /tmp/oesm.zip >/dev/null 2>&1; then
+    echo "BLS May 20$y: not available ($(head -c 120 /tmp/oesm.zip 2>/dev/null | tr -d '\n'))"
+    continue
+  fi
+  echo "BLS OEWS May 20$y"
+  rm -rf /tmp/oesm && mkdir /tmp/oesm && unzip -q /tmp/oesm.zip -d /tmp/oesm
+  f=$(find /tmp/oesm -iname 'national_M20*_dl.xlsx' | head -1)
+  python3 -c "
 import sys, pandas as pd
 df = pd.read_excel(sys.argv[1], dtype=str)
 df.columns = [c.upper() for c in df.columns]
 df.to_csv('data/raw/bls_oews_national.csv', index=False)
-open('data/raw/bls_oews_release.txt','w').write('May 20' + sys.argv[2] + '\n')
+open('data/raw/bls_oews_release.txt','w').write('May 20' + sys.argv[2] + '\\n')
 " "$f" "$y"
-    break
-  fi
+  break
 done
 
 # Anthropic Economic Index: list every file, keep the small CSVs that map to O*NET tasks.
