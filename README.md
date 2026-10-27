@@ -23,3 +23,9 @@ The site is plain static HTML. `public/index.html` is the launch page; its job l
 Share cards (`public/cards/<slug>.jpg`, the link preview for each job page) are drawn by `scripts/build-cards.mjs` with Playwright. It only redraws cards whose score changed, so run it after the index build whenever scores change.
 
 To rebuild locally after changing templates: `node scripts/build-index.mjs`, then commit the output.
+
+## Daily social posts
+
+`.github/workflows/social.yml` runs `scripts/post-daily.mjs` every day at 12:07 UTC. It picks the "job of the day" (a fixed shuffle of jobs with at least 20,000 US workers, one per day) from `data/social-jobs.json`, and schedules a post for 14:00 UTC on X (with the job's share card), Bluesky and LinkedIn (as link cards) through Buffer. If Buffer rejects a rich post, it falls back to plain text with the link. Each day is logged in `data/social/log.json`, so nothing is posted twice.
+
+Needs the repository secret `BUFFER_API_KEY` (from https://publish.buffer.com/settings/api on the Job Exposure Index Buffer account). From the Actions tab you can run it by hand: `dry-run` prints the posts, `soon` schedules them 15 minutes from now.
