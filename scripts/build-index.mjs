@@ -124,7 +124,7 @@ const fmt = (n) => n.toLocaleString("en-US");
 const money = (n) => "$" + fmt(n);
 const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 
-const LOGO = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#14171C"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg>`;
+const LOGO = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#EDE8DE"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg>`;
 
 function page({ title, desc, path, current, body, jsonld, image = "/og.png" }) {
   return `<!doctype html>
@@ -146,16 +146,13 @@ function page({ title, desc, path, current, body, jsonld, image = "/og.png" }) {
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>\n` : ""}</head>
 <body>
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/" aria-label="Job Exposure Index home">${LOGO}<span>Job Exposure<br>Index</span></a>
-    <nav aria-label="Main"><a class="keep" href="/jobs/"${current === "jobs" ? ' aria-current="page"' : ""}>All jobs</a><a href="/method.html"${current === "method" ? ' aria-current="page"' : ""}>Method</a><a class="cta" href="#subscribe">Get the weekly report</a></nav>
+    <nav aria-label="Main"><a class="keep" href="/jobs/"${current === "jobs" ? ' aria-current="page"' : ""}>Explore jobs</a><a href="/method.html"${current === "method" ? ' aria-current="page"' : ""}>Methodology</a><a class="cta" href="#subscribe">Get the weekly report</a></nav>
   </header>
   <main>
 ${body}
@@ -174,7 +171,7 @@ ${body}
   <footer>
     <div class="row">
       <span>© 2026 Job Exposure Index</span>
-      <nav aria-label="Footer"><a href="/jobs/">All jobs</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+      <nav aria-label="Footer"><a href="/jobs/">Explore jobs</a><a href="/method.html">Methodology</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
     </div>
     <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear. Task data from the O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license; O*NET® is a trademark of USDOL/ETA. Exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023). Real-world use from the Anthropic Economic Index (CC BY). Employment and pay from the BLS Occupational Employment and Wage Statistics, ${BLS_RELEASE}.</p>
   </footer>

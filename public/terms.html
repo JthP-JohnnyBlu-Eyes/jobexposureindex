@@ -8,15 +8,12 @@
 <meta name="theme-color" content="#F6F3EC">
 <link rel="canonical" href="https://jobexposureindex.com/terms.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 :root {
-  --bg: #F6F3EC; --line: #E2DDD1; --ink: #14171C; --soft: #3A3F47; --muted: #5E636B; --faint: #7A7E85; --accent: #D9473A;
-  --head: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --bg: #F6F3EC; --line: #DED9CF; --ink: #14171C; --soft: #3A3F47; --muted: #65645E; --faint: #7A7E85; --accent: #D9473A;
+  --head: "DejaVu Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --sans: var(--head);
+  --mono: ui-monospace, "SF Mono", Menlo, "DejaVu Sans Mono", monospace;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -30,9 +27,9 @@ header.top { display: flex; flex-wrap: wrap; align-items: center; justify-conten
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
 .brand svg { width: 36px; height: 36px; flex: none; }
 .brand span { font-family: var(--head); font-weight: 700; font-size: 18px; letter-spacing: -.01em; line-height: 1.1; }
-.top nav a { font-size: 14px; color: #fff; background: var(--ink); font-weight: 600; padding: 10px 18px; border-radius: 6px; text-decoration: none; }
+.top nav a { font-size: 14px; color: #fff; background: var(--ink); font-weight: 600; padding: 10px 18px; border-radius: 12px; text-decoration: none; }
 .top nav a:hover { background: var(--accent); color: #fff; }
-.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
 h1, h2 { font-family: var(--head); font-weight: 700; letter-spacing: -.02em; }
 h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.05; margin: 14px 0 0; }
 .page-head { padding: 40px 0 32px; border-bottom: 1px solid var(--line); }
@@ -48,7 +45,7 @@ footer a { color: var(--muted); }
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/" aria-label="Job Exposure Index home">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#14171C"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg>
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#EDE8DE"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg>
       <span>Job Exposure<br>Index</span>
     </a>
     <nav aria-label="Main"><a href="/#subscribe">Get the weekly report</a></nav>
