@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Method: how the Job Exposure Index scores jobs</title>
+<meta name="description" content="How the Job Exposure Index scores US jobs on AI exposure: O*NET tasks, GPT-4 task ratings from published research, and BLS employment and pay data.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="canonical" href="https://jobexposureindex.com/method.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:site_name" content="Job Exposure Index">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jobexposureindex.com/method.html">
+<meta property="og:title" content="Method: how the Job Exposure Index scores jobs">
+<meta property="og:description" content="How the Job Exposure Index scores US jobs on AI exposure: O*NET tasks, GPT-4 task ratings from published research, and BLS employment and pay data.">
+<meta property="og:image" content="https://jobexposureindex.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="Job Exposure Index home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#14171C"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg><span>Job Exposure<br>Index</span></a>
+    <nav aria-label="Main"><a class="keep" href="/jobs/">All jobs</a><a href="/method.html" aria-current="page">Method</a><a class="cta" href="#subscribe">Get the weekly report</a></nav>
+  </header>
+  <main>
+
+    <div class="eyebrow" style="margin-top:20px">Method</div>
+    <h1>How the Job Exposure Index works</h1>
+    <p class="lede">The index scores 923 US occupations from 0 to 100 on how much of their work AI could speed up. Here is exactly where the numbers come from, and what they do and don't mean.</p>
+
+    <section class="block" style="margin-top:40px">
+      <div class="grid2">
+        <div>
+          <h2>1. The tasks</h2>
+          <p class="sub">Every occupation starts from its task list in <a href="https://www.onetcenter.org/">O*NET</a>, the US Department of Labor's database of what people in each job actually do. For example, accountants "prepare detailed reports on audit findings". In total the index covers 19,265 tasks.</p>
+        </div>
+        <div>
+          <h2>2. The ratings</h2>
+          <p class="sub">Each task was rated in the study <a href="https://arxiv.org/abs/2303.10130">"GPTs are GPTs"</a> by Eloundou, Manning, Mishkin and Rock (OpenAI and the University of Pennsylvania, 2023), which used GPT-4 to rate every O*NET task, checked against human raters. We use their published ratings unchanged.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>3. Three kinds of task</h2>
+      <p class="sub">A task counts as exposed if a large language model could cut the time it takes by at least half, at the same quality.</p>
+      <ul class="legend" style="margin-top:18px;flex-direction:column;gap:10px">
+        <li><i class="e1"></i><b>AI can speed this up on its own.</b>&nbsp;A chat assistant alone could do it at least twice as fast.</li>
+        <li><i class="e2"></i><b>AI can speed this up with extra software.</b>&nbsp;It needs software built around the AI, such as access to company data or tools.</li>
+        <li><i class="e0"></i><b>Little or no AI speed-up.</b>&nbsp;Physical work, or tasks where AI wouldn't save meaningful time.</li>
+      </ul>
+      <p class="sub" style="margin-top:18px">The score counts the first kind in full and the second at half weight: <b>score = (direct tasks + ½ × software tasks) ÷ all tasks × 100</b>. This is the study's main measure, called β.</p>
+    </section>
+
+    <section class="block">
+      <div class="grid2">
+        <div>
+          <h2>4. Levels</h2>
+          <ul class="rel">
+            <li><span><span class="pill band-very-high">Very high (80–100)</span></span><span>28 jobs</span></li>
+            <li><span><span class="pill band-high">High (60–79)</span></span><span>69 jobs</span></li>
+            <li><span><span class="pill band-elevated">Elevated (40–59)</span></span><span>323 jobs</span></li>
+            <li><span><span class="pill band-moderate">Moderate (20–39)</span></span><span>221 jobs</span></li>
+            <li><span><span class="pill band-low">Low (0–19)</span></span><span>282 jobs</span></li>
+          </ul>
+        </div>
+        <div>
+          <h2>5. Jobs and pay</h2>
+          <p class="sub">The number of US workers and median annual pay come from the Bureau of Labor Statistics' <a href="https://www.bls.gov/oes/">Occupational Employment and Wage Statistics</a>, May 2021, the release the study matched to. Where BLS only reports a broader group, we show that group's figures and say so.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>What the score doesn't tell you</h2>
+      <div class="note-box" style="margin-top:16px">
+        <p><b>Exposure is not job loss.</b> A high score means AI could change how the work is done. Whether that leads to fewer jobs, different jobs or more productive ones depends on employers, demand and regulation.</p>
+        <p><b>The ratings reflect GPT-4 in 2023.</b> AI has improved since, and tools now do more on their own. We'll update scores as new research is published, and the weekly report covers what changes.</p>
+        <p><b>Jobs vary.</b> Two people with the same job title can do very different work. Use the task list on each job page to see which parts apply to you.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Sources and licences</h2>
+      <p class="sub">Task data: O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> licence. Exposure ratings: Eloundou, T., Manning, S., Mishkin, P. and Rock, D. (2023), "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models", <a href="https://github.com/openai/GPTs-are-GPTs">data published under the MIT licence</a>. Employment and pay: BLS OEWS, May 2021 (public domain).</p>
+    </section>
+
+    <section class="closing" id="subscribe">
+      <div class="eyebrow" style="color:#F0A07A">The weekly exposure report</div>
+      <h2>Know what's changing before it reaches your job.</h2>
+      <p class="sub">One short email a week: which jobs are most exposed, the research worth knowing about, and one practical step you can take.</p>
+      <form class="signup" action="https://app.kit.com/forms/10103045/subscriptions" method="post" novalidate>
+        <label class="sr" for="signup-email">Email address</label>
+        <input id="signup-email" name="email_address" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button type="submit">Subscribe free</button>
+      </form>
+      <p class="note" aria-live="polite">Free · one email a week · unsubscribe anytime</p>
+    </section>
+  </main>
+  <footer>
+    <div class="row">
+      <span>© 2026 Job Exposure Index</span>
+      <nav aria-label="Footer"><a href="/jobs/">All jobs</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+    </div>
+    <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear. Task data from the O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license; O*NET® is a trademark of USDOL/ETA. Exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023). Employment and pay from the BLS Occupational Employment and Wage Statistics, May 2021.</p>
+  </footer>
+</div>
+<script src="/assets/signup.js" defer></script>
+</body>
+</html>

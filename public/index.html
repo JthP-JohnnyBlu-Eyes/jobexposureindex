@@ -50,7 +50,7 @@ header.top { display: flex; flex-wrap: wrap; align-items: center; justify-conten
 .top nav a:hover { color: var(--ink); }
 .top nav a.cta { color: #fff; background: var(--ink); font-weight: 600; padding: 10px 18px; border-radius: 6px; }
 .top nav a.cta:hover { background: var(--accent); color: #fff; }
-@media (max-width: 560px) { .top nav a:not(.cta) { display: none; } }
+@media (max-width: 560px) { .top nav a:not(.cta):not(.keep) { display: none; } }
 
 /* Type */
 .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
@@ -131,6 +131,27 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
 footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
 footer a { color: var(--muted); }
 footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
+/* Live lookup and top 10 */
+.card form.q { margin: 14px 0 8px; }
+.card form.q input { flex: 1; min-width: 0; font: inherit; font-size: 18px; font-weight: 500; border: 0; background: transparent; color: var(--ink); padding: 0; }
+.card form.q input:focus { outline: none; }
+.card form.q:focus-within { border-color: var(--ink); }
+.results { list-style: none; margin: 0; padding: 0; }
+.results li a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 2px; border-top: 1px solid var(--line); text-decoration: none; font-size: 15px; }
+.results li a:hover { color: var(--accent); }
+.results li.empty { padding: 10px 2px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.card .foot a { color: var(--muted); }
+.band-low { --c: var(--low); } .band-moderate { --c: #9DB15A; } .band-elevated { --c: var(--mid); } .band-high { --c: var(--high); } .band-very-high { --c: var(--max); }
+.mini { display: inline-flex; align-items: center; gap: 10px; min-width: 130px; flex: none; }
+.mini .bar { flex: 1; height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.mini .bar i { display: block; height: 100%; background: var(--c); }
+.mini b { font-family: var(--mono); font-weight: 500; font-size: 14px; width: 2.2em; text-align: right; color: var(--ink); }
+.toplist { list-style: none; margin: 28px 0 0; padding: 0; counter-reset: t; columns: 2 380px; column-gap: 56px; }
+.toplist li { counter-increment: t; break-inside: avoid; display: flex; align-items: center; gap: 14px; padding: 13px 0; border-top: 1px solid var(--line); }
+.toplist li::before { content: counter(t, decimal-leading-zero); font-family: var(--mono); font-size: 13px; color: var(--accent); width: 2em; flex: none; }
+.toplist li a { flex: 1; min-width: 0; font-weight: 500; text-decoration: none; }
+.toplist li a:hover { text-decoration: underline; }
+.more { font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
 </style>
 </head>
 <body>
@@ -140,7 +161,7 @@ footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
       <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#14171C"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg>
       <span>Job Exposure<br>Index</span>
     </a>
-    <nav aria-label="Main"><a href="#how">How it works</a><a href="#numbers">The numbers</a><a class="cta" href="#subscribe">Get the weekly report</a></nav>
+    <nav aria-label="Main"><a class="keep" href="/jobs/">All jobs</a><a href="/method.html">Method</a><a class="cta" href="#subscribe">Get the weekly report</a></nav>
   </header>
 
   <main>
@@ -148,7 +169,7 @@ footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
       <div>
         <div class="eyebrow">AI and the US job market</div>
         <h1>How exposed is <em>your job</em> to AI?</h1>
-        <p class="lede">Look up any US job and see which of its tasks AI can already do, which it can't, and what to learn next. The full index is opening soon. Get the free weekly report to hear first.</p>
+        <p class="lede">Look up any US job and see which of its tasks AI can already do, which it can't, and what to learn next. Over 900 occupations, built on official US job data. Get the free weekly report to follow what changes.</p>
         <div id="subscribe">
           <form class="signup" action="https://app.kit.com/forms/10103045/subscriptions" method="post" novalidate>
             <label class="sr" for="signup-email">Email address</label>
@@ -159,21 +180,41 @@ footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
         </div>
       </div>
 
-      <figure class="card" aria-label="Preview of what a job lookup will look like" style="margin:0">
-        <div class="k"><span>Job lookup · preview</span><span>Coming soon</span></div>
-        <div class="q" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-          <span>Your job title<span class="cursor"></span></span>
-        </div>
+      <div class="card">
+        <div class="k"><span>Job lookup</span><span>923 US jobs</span></div>
+        <form class="q" role="search" action="/jobs/" method="get">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <label class="sr" for="lookup">Your job title</label>
+          <input id="lookup" name="q" type="search" placeholder="Your job title, e.g. accountant" autocomplete="off" aria-controls="lookup-results">
+        </form>
+        <ul class="results" id="lookup-results" aria-live="polite"></ul>
         <div class="scale" aria-hidden="true"><div class="pin"></div></div>
         <div class="scale-ends" aria-hidden="true"><span>Low exposure</span><span>High exposure</span></div>
-        <ul class="tasks">
-          <li><span class="dot" style="background:var(--max)"></span><span>Drafting routine documents and emails</span><span class="lvl">Higher</span></li>
-          <li><span class="dot" style="background:var(--mid)"></span><span>Analysing data and writing reports</span><span class="lvl">Medium</span></li>
-          <li><span class="dot" style="background:var(--low)"></span><span>Hands-on, in-person work</span><span class="lvl">Lower</span></li>
-        </ul>
-        <figcaption class="foot">Illustration. Task types and levels follow the pattern in published research on AI exposure; each job page will show its own tasks.</figcaption>
-      </figure>
+        <p class="foot">Start typing to find your job, or <a href="/jobs/">browse all jobs ranked by exposure</a>.</p>
+      </div>
+    </section>
+
+    <section class="block" id="top">
+      <div class="eyebrow">Most exposed right now</div>
+      <h2>The 10 jobs AI can speed up the most.</h2>
+      <p class="sub">Scored 0 to 100 on how much of the job's tasks AI could do at least twice as fast. High exposure means the work is likely to change, not that the job will vanish.</p>
+      <div class="topwrap">
+          <!-- top10:start -->
+          <ol class="toplist">
+            <li><a href="/jobs/mathematicians">Mathematicians</a><span class="mini band-very-high"><span class="bar"><i style="width:100%"></i></span><b>100</b></span></li>
+            <li><a href="/jobs/proofreaders-and-copy-markers">Proofreaders and Copy Markers</a><span class="mini band-very-high"><span class="bar"><i style="width:98%"></i></span><b>98</b></span></li>
+            <li><a href="/jobs/blockchain-engineers">Blockchain Engineers</a><span class="mini band-very-high"><span class="bar"><i style="width:97%"></i></span><b>97</b></span></li>
+            <li><a href="/jobs/correspondence-clerks">Correspondence Clerks</a><span class="mini band-very-high"><span class="bar"><i style="width:96%"></i></span><b>96</b></span></li>
+            <li><a href="/jobs/court-reporters-and-simultaneous-captioners">Court Reporters and Simultaneous Captioners</a><span class="mini band-very-high"><span class="bar"><i style="width:96%"></i></span><b>96</b></span></li>
+            <li><a href="/jobs/computer-programmers">Computer Programmers</a><span class="mini band-very-high"><span class="bar"><i style="width:95%"></i></span><b>95</b></span></li>
+            <li><a href="/jobs/data-warehousing-specialists">Data Warehousing Specialists</a><span class="mini band-very-high"><span class="bar"><i style="width:94%"></i></span><b>94</b></span></li>
+            <li><a href="/jobs/database-administrators">Database Administrators</a><span class="mini band-very-high"><span class="bar"><i style="width:94%"></i></span><b>94</b></span></li>
+            <li><a href="/jobs/web-developers">Web Developers</a><span class="mini band-very-high"><span class="bar"><i style="width:93%"></i></span><b>93</b></span></li>
+            <li><a href="/jobs/web-administrators">Web Administrators</a><span class="mini band-very-high"><span class="bar"><i style="width:91%"></i></span><b>91</b></span></li>
+          </ol>
+          <!-- top10:end -->
+      </div>
+      <p style="margin:22px 0 0"><a class="more" href="/jobs/">See all 923 jobs, ranked</a></p>
     </section>
 
     <section class="block" id="how">
@@ -183,7 +224,7 @@ footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
       <div class="grid3">
         <div class="feat"><span class="n">01</span><h3>An exposure score</h3><p>A 0 to 100 score for each occupation, showing how much of the work AI tools can already help with or do.</p></div>
         <div class="feat"><span class="n">02</span><h3>Task by task</h3><p>Which parts of the job are most exposed and which are not, because almost no job is all one or the other.</p></div>
-        <div class="feat"><span class="n">03</span><h3>What to do next</h3><p>Nearby jobs that use your skills but are less exposed, and the skills worth learning to stay ahead.</p></div>
+        <div class="feat"><span class="n">03</span><h3>What to do next</h3><p>Related jobs that use similar skills but are less exposed, so you can see where your experience could take you.</p></div>
       </div>
     </section>
 
@@ -214,11 +255,11 @@ footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
         <div>
           <div class="eyebrow">How the index works</div>
           <h2>Public data, open method.</h2>
-          <p class="sub">Every score will link back to its sources, and the method will be published in full, so you can check it yourself.</p>
+          <p class="sub">Every score is built from published research and official data, and the <a href="/method.html">full method</a> is public, so you can check it yourself.</p>
         </div>
         <ol class="steps">
           <li><b>Start with the tasks.</b><span>O*NET lists the tasks that make up each US occupation.</span></li>
-          <li><b>Rate each task.</b><span>Each task is matched against published research on what current AI can and can't do.</span></li>
+          <li><b>Rate each task.</b><span>Each task is rated on whether AI like GPT-4 could do it at least twice as fast, using published research from OpenAI and the University of Pennsylvania.</span></li>
           <li><b>Add the job market.</b><span>Bureau of Labor Statistics data shows how many people do the job and what it pays.</span></li>
           <li><b>Update as AI changes.</b><span>Scores are reviewed as new models and new research come out, and the weekly report covers what moved.</span></li>
         </ol>
@@ -241,37 +282,13 @@ footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
   <footer>
     <div class="row">
       <span>© 2026 Job Exposure Index</span>
-      <nav aria-label="Legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+      <nav aria-label="Footer"><a href="/jobs/">All jobs</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
     </div>
-    <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear.</p>
+    <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear. Task data from the O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license; O*NET® is a trademark of USDOL/ETA. Exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023). Employment and pay from BLS, May 2021.</p>
   </footer>
 </div>
 
-<script>
-// Kit signup for every form on the page: post in the background, fall back to a normal post.
-document.querySelectorAll('form.signup').forEach(function (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = form.querySelector('input[type=email]');
-    var button = form.querySelector('button');
-    var note = form.nextElementSibling;
-    if (!email.value || !email.checkValidity()) {
-      note.textContent = 'Enter a full email address, like you@example.com.';
-      email.focus();
-      return;
-    }
-    button.disabled = true;
-    note.textContent = 'Signing you up...';
-    fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
-      .then(function (res) {
-        if (!res.ok) throw new Error('Signup failed');
-        note.textContent = 'Almost done. Check your inbox and confirm your email to get the weekly report.';
-        form.reset();
-      })
-      .catch(function () { form.submit(); })
-      .finally(function () { button.disabled = false; });
-  });
-});
-</script>
+<script src="/assets/signup.js" defer></script>
+<script src="/assets/lookup.js" defer></script>
 </body>
 </html>
