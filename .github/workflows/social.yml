@@ -1,0 +1,47 @@
+name: Daily social post
+
+# Every day at 12:07 UTC: schedules the "job of the day" on X, Bluesky and LinkedIn in Buffer
+# for 14:00 UTC, and commits data/social/log.json so a day is never posted twice.
+on:
+  schedule:
+    - cron: '7 12 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dry-run prints the posts only; soon schedules them 15 minutes from now'
+        type: choice
+        options: [normal, dry-run, soon]
+        default: normal
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Schedule today's post
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          case "${{ github.event.inputs.mode }}" in
+            dry-run) node scripts/post-daily.mjs --dry-run ;;
+            soon) node scripts/post-daily.mjs --soon ;;
+            *) node scripts/post-daily.mjs ;;
+          esac
+      - name: Record what was posted
+        if: always()
+        run: |
+          git add data/social 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name="jobexposureindex-bot" -c user.email="actions@users.noreply.github.com" commit -m "Record daily social post"
+          git pull --rebase -q && git push

@@ -437,6 +437,16 @@ mkdirSync(ROOT + "public/data", { recursive: true });
 for (const j of jobs) writeFileSync(ROOT + `public/jobs/${j.slug}.html`, jobPage(j));
 writeFileSync(ROOT + "public/jobs/index.html", listPage());
 writeFileSync(ROOT + "public/method.html", methodPage());
+// Facts for the daily social posts (scripts/post-daily.mjs).
+const firstTask = (j, e) => j.tasks.filter((t) => t.exposure === e).sort((a, c) => (a.type === "Core" ? 0 : 1) - (c.type === "Core" ? 0 : 1) || a.task.length - c.task.length)[0]?.task.replace(/\.$/, "") ?? null;
+writeFileSync(ROOT + "data/social-jobs.json", JSON.stringify({
+  total: TOTAL, period: AEI_PERIOD,
+  jobs: jobs.map((j) => ({
+    title: j.title, slug: j.slug, score: j.score, band: j.band.label, rank: j.rank,
+    tasks: j.tasks.length, e1: j.e1, e2: j.e2, e0: j.e0, inUse: j.inUse, emp: j.emp, pay: j.payNote ? null : j.pay,
+    exposedTask: firstTask(j, "E1") ?? firstTask(j, "E2"), safeTask: firstTask(j, "E0"),
+  })),
+}, null, 1));
 writeFileSync(ROOT + "public/data/jobs.json", JSON.stringify(jobs.map((j) => ({ t: j.title, s: j.slug, x: j.score, b: j.band.key }))));
 
 // Homepage top 10
