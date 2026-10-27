@@ -1,6 +1,6 @@
 // Homepage: the job lookup and the spectrum of every US job, both drawn from /data/jobs.json.
-// Typing a job (or tapping a suggestion chip) lists matches and moves the "your job" marker
-// along the spectrum to the best match.
+// Typing a job (or tapping a suggestion chip) lists matches, shows the best match on the score
+// card and moves the "your job" marker along the spectrum to it.
 (function () {
   var input = document.getElementById('lookup');
   var list = document.getElementById('lookup-results');
@@ -8,7 +8,9 @@
   var svg = spec && spec.querySelector('svg');
   var marker = spec && spec.querySelector('.marker');
   var tip = spec && spec.querySelector('.tip');
-  var COLORS = { low: '#7FA38A', moderate: '#A9AE7A', elevated: '#D6A85C', high: '#C47A4E', 'very-high': '#A8553E' };
+  var card = document.getElementById('score');
+  var COLORS = { low: '#3FA796', moderate: '#9DB15A', elevated: '#E3B341', high: '#E8743B', 'very-high': '#D9473A' };
+  var BANDS = { low: 'Low', moderate: 'Moderate', elevated: 'Elevated', high: 'High', 'very-high': 'Very high' };
   var jobs = null, sorted = [];
 
   function load() {
@@ -52,6 +54,16 @@
     marker.hidden = false;
   }
 
+  function show(j) {
+    if (!card) return;
+    var set = function (k, v) { card.querySelector('[data-k="' + k + '"]').textContent = v; };
+    card.querySelector('.label-top').firstChild.textContent = 'Your search';
+    set('title', j.t); set('score', j.x); set('band', BANDS[j.b] + ' AI exposure');
+    card.querySelector('.pin').style.left = Math.min(Math.max(j.x, 1), 99) + '%';
+    card.querySelector('[data-k="job"]').href = '/jobs/' + j.s;
+    card.querySelector('[data-k="shl"]').href = 'https://skillhalflife.com/?job=' + j.s + '&utm_source=jobexposureindex&utm_medium=homepage';
+  }
+
   function render() {
     var q = input.value.toLowerCase().trim();
     if (q.length < 2) { list.innerHTML = ''; if (marker) marker.hidden = true; return; }
@@ -72,7 +84,8 @@
       list.innerHTML = hits.map(function (j) {
         return '<li><a href="/jobs/' + j.s + '"><span>' + esc(j.t) + '</span><span class="mini band-' + j.b + '"><span class="bar"><i style="width:' + Math.max(j.x, 2) + '%"></i></span><b>' + j.x + '</b></span></a></li>';
       }).join('');
-      if (marker) place(hits[0]);
+      show(hits[0]);
+      if (marker && sorted.length) place(hits[0]);
     });
   }
 
