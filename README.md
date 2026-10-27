@@ -14,7 +14,10 @@ The site is plain static HTML. `public/index.html` is the launch page. Cloudflar
 
 `scripts/build-index.mjs` builds every page under `public/jobs/`, `public/method.html`, `public/data/jobs.json`, the sitemap and the homepage top 10 from the files in `data/`:
 
-- `occ_level.csv`: occupation-level exposure scores (the score is `dv_rating_beta` × 100) and `tasks.tsv`: task-level ratings, both from [GPTs are GPTs](https://github.com/openai/GPTs-are-GPTs) (MIT, see `data/LICENSE-GPTs-are-GPTs.txt`), built on O*NET tasks (CC BY 4.0).
-- `bls_oews_may2021.csv`: US employment and median pay from BLS OEWS, May 2021.
+- `occ_level.csv` (exposure scores: `dv_rating_beta` × 100) and `tasks.tsv` (task ratings), from [GPTs are GPTs](https://github.com/openai/GPTs-are-GPTs) (MIT, see `data/LICENSE-GPTs-are-GPTs.txt`), built on O*NET tasks (CC BY 4.0).
+- `aei_tasks.csv`, `aei_occupations.csv`, `aei_release.txt`: O*NET tasks seen in real Claude usage, summarised from the newest [Anthropic Economic Index](https://huggingface.co/datasets/Anthropic/EconomicIndex) release (CC BY) by `scripts/process-aei.py`.
+- `raw/bls_oews_national.csv`: US employment and median pay from the latest BLS OEWS release, fetched by `scripts/fetch-sources.sh`.
 
-After changing data or templates, run `node scripts/build-index.mjs` and commit the output.
+`.github/workflows/refresh-data.yml` runs every Monday (or by hand from the Actions tab): it fetches the sources, rebuilds the pages and commits when anything changed, and Cloudflare deploys the push.
+
+To rebuild locally after changing templates: `node scripts/build-index.mjs`, then commit the output.

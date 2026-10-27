@@ -1,12 +1,14 @@
 name: Refresh data
 
-# Downloads the latest BLS job numbers and Anthropic Economic Index usage data,
-# and commits them to data/raw/ when anything changed.
+# Every Monday: downloads the latest BLS job numbers and Anthropic Economic Index usage data,
+# rebuilds the index pages, and commits when anything changed. Cloudflare deploys the push.
 on:
+  schedule:
+    - cron: '0 5 * * 1'
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scripts/fetch-sources.sh', 'scripts/process-aei.py', '.github/workflows/refresh-data.yml']
+    paths: ['scripts/fetch-sources.sh', 'scripts/process-aei.py', 'scripts/build-index.mjs', '.github/workflows/refresh-data.yml']
 
 permissions:
   contents: write
@@ -27,9 +29,13 @@ jobs:
       - run: pip install --quiet pandas openpyxl
       - run: scripts/fetch-sources.sh
       - run: python3 scripts/process-aei.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/build-index.mjs
       - name: Commit if changed
         run: |
-          git add -A data
+          git add -A data public
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
-          git -c user.name="jobexposureindex-bot" -c user.email="actions@users.noreply.github.com" commit -m "Refresh source data"
+          git -c user.name="jobexposureindex-bot" -c user.email="actions@users.noreply.github.com" commit -m "Refresh source data and rebuild the index"
           git push

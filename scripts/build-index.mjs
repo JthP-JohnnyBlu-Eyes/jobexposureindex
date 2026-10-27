@@ -37,7 +37,24 @@ function parseCSV(text, sep = ",") {
 const read = (f) => readFileSync(ROOT + f, "utf8");
 const occ = parseCSV(read("data/occ_level.csv"));
 const tasks = parseCSV(read("data/tasks.tsv"), "\t");
-const bls = new Map(parseCSV(read("data/bls_oews_may2021.csv")).map((r) => [r.code, r]));
+// BLS OEWS national file, refreshed by scripts/fetch-sources.sh.
+const bls = new Map(parseCSV(read("data/raw/bls_oews_national.csv")).map((r) => [r.OCC_CODE, {
+  code: r.OCC_CODE, title: r.OCC_TITLE, group: r.O_GROUP, employment: r.TOT_EMP, median_annual: r.A_MEDIAN, median_hourly: r.H_MEDIAN,
+}]));
+const BLS_RELEASE = read("data/raw/bls_oews_release.txt").trim();
+
+// Anthropic Economic Index: O*NET tasks seen in real Claude usage, refreshed by scripts/process-aei.py.
+const aeiRows = parseCSV(read("data/aei_tasks.csv"));
+const aeiById = new Map(aeiRows.map((r) => [r.node_external_id, r]));
+const aeiByName = new Map(aeiRows.map((r) => [r.node_name.trim().toLowerCase(), r]));
+const [AEI_RELEASE, AEI_START, AEI_END] = read("data/aei_release.txt").trim().split("\n");
+const monthName = (d) => new Date(d + "T00:00:00Z").toLocaleString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+// date_end is exclusive, so the last month covered is the one before it.
+const AEI_PERIOD = (() => {
+  const end = new Date(AEI_END + "T00:00:00Z"); end.setUTCDate(0);
+  const a = monthName(AEI_START), b = monthName(end.toISOString().slice(0, 10));
+  return a === b ? a : a.split(" ")[1] === b.split(" ")[1] ? `${a.split(" ")[0]}–${b}` : `${a} – ${b}`;
+})();
 
 // SOC major groups, e.g. "15" -> "Computer and Mathematical"
 const groups = new Map();
@@ -65,6 +82,7 @@ function blsFor(code) {
 
 const tasksBy = new Map();
 for (const t of tasks) {
+  t.inUse = aeiById.has(t.task_id) || aeiByName.has(t.task.trim().toLowerCase());
   if (!tasksBy.has(t.code)) tasksBy.set(t.code, []);
   tasksBy.get(t.code).push(t);
 }
@@ -86,7 +104,7 @@ const jobs = occ.map((o) => {
   return {
     code, title: o.Title, slug: slugify(o.Title), beta, score, band: band(score),
     major: code.slice(0, 2), minor: code.slice(0, 4),
-    tasks: ts, e1: n("E1"), e2: n("E2"), e0: n("E0"),
+    tasks: ts, e1: n("E1"), e2: n("E2"), e0: n("E0"), inUse: ts.filter((t) => t.inUse).length,
     bls: b, emp, pay, payNote, blsIsGroup: b ? b.code !== code.slice(0, 7) || !sameTitle(b.title, o.Title) : false,
   };
 });
@@ -156,7 +174,7 @@ ${body}
       <span>© 2026 Job Exposure Index</span>
       <nav aria-label="Footer"><a href="/jobs/">All jobs</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
     </div>
-    <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear. Task data from the O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license; O*NET® is a trademark of USDOL/ETA. Exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023). Employment and pay from the BLS Occupational Employment and Wage Statistics, May 2021.</p>
+    <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear. Task data from the O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license; O*NET® is a trademark of USDOL/ETA. Exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023). Real-world use from the Anthropic Economic Index (CC BY). Employment and pay from the BLS Occupational Employment and Wage Statistics, ${BLS_RELEASE}.</p>
   </footer>
 </div>
 <script src="/assets/signup.js" defer></script>
@@ -181,7 +199,7 @@ function jobPage(j) {
   const lower = jobs.filter((o) => o.minor === j.minor && o.score <= j.score - 10).sort((a, c) => c.score - a.score).slice(0, 6);
   const lowerAny = lower.length ? lower : jobs.filter((o) => o.major === j.major && o.score <= j.score - 10).sort((a, c) => c.score - a.score).slice(0, 6);
   const field = jobs.filter((o) => o.minor === j.minor && o !== j).slice(0, 8);
-  const empNote = j.blsIsGroup && b ? `for ${esc(b.title)}` : "BLS, May 2021";
+  const empNote = j.blsIsGroup && b ? `for ${esc(b.title)}` : `BLS, ${BLS_RELEASE}`;
   const desc = `${j.title}: AI exposure score ${j.score}/100 (${j.band.label.toLowerCase()}), ranked #${j.rank} of ${TOTAL} US jobs. See which tasks AI can and can't do.`;
 
   const body = `
@@ -189,7 +207,7 @@ function jobPage(j) {
       <p class="crumbs"><a href="/">Home</a> / <a href="/jobs/">All jobs</a> / <a href="/jobs/?group=${j.major}">${esc(groupName)}</a></p>
       <div class="eyebrow" style="margin-top:28px">AI exposure score</div>
       <h1>${esc(j.title)}</h1>
-      <p class="lede">${esc(j.title)} score <b>${j.score} out of 100</b>, which is ${j.band.label.toLowerCase()} exposure to AI. That ranks #${j.rank} of ${TOTAL} US occupations, where #1 is the most exposed. Of the ${n} tasks in this job, AI could speed up ${j.e1} on its own and ${j.e2} more with extra software built on top of it.</p>
+      <p class="lede">${esc(j.title)} score <b>${j.score} out of 100</b>, which is ${j.band.label.toLowerCase()} exposure to AI. That ranks #${j.rank} of ${TOTAL} US occupations, where #1 is the most exposed. Of the ${n} tasks in this job, AI could speed up ${j.e1} on its own and ${j.e2} more with extra software built on top of it. ${j.inUse ? `In ${AEI_PERIOD}, ${j.inUse} of these tasks showed up in real conversations with Claude, Anthropic's AI assistant.` : `None of its tasks showed up in real AI use in ${AEI_PERIOD}.`}</p>
 
       <div class="scorecard band-${j.band.key}">
         <div>
@@ -202,14 +220,14 @@ function jobPage(j) {
           <div><dt>Rank</dt><dd>#${j.rank}<small>of ${TOTAL} jobs</small></dd></div>
           <div><dt>US workers</dt><dd>${j.emp ? fmt(j.emp) : "n/a"}<small>${j.emp ? empNote : "not published by BLS"}</small></dd></div>
           <div><dt>Median pay</dt><dd>${j.pay ? money(j.pay) + (j.payNote === "or more" ? "+" : "") : "n/a"}<small>${j.pay ? (j.payNote === "full-time equivalent" ? "a year, full-time equivalent" : "a year") : "not published by BLS"}</small></dd></div>
-          <div><dt>Tasks rated</dt><dd>${n}<small>from O*NET</small></dd></div>
+          <div><dt>In real AI use</dt><dd>${j.inUse} of ${n}<small>tasks, ${AEI_PERIOD}</small></dd></div>
         </dl>
       </div>
     </article>
 
     <section class="block" style="margin-top:56px">
       <h2>Task by task</h2>
-      <p class="sub">Each task this job involves, as listed by O*NET, rated on whether a large language model like GPT-4 could cut the time it takes by at least half at the same quality.</p>
+      <p class="sub">Each task this job involves, as listed by O*NET, rated on whether a large language model like GPT-4 could cut the time it takes by at least half at the same quality. Tasks marked <b class="seen">Seen in real AI use</b> appeared in conversations with Claude in ${AEI_PERIOD} (<a href="https://www.anthropic.com/economic-index">Anthropic Economic Index</a>).</p>
       <div class="split3" style="grid-template-columns:${j.e1 || 0}fr ${j.e2 || 0}fr ${j.e0 || 0}fr" role="img" aria-label="${pct(j.e1, n)}% of tasks exposed directly, ${pct(j.e2, n)}% with extra software, ${pct(j.e0, n)}% not exposed"><span class="e1"></span><span class="e2"></span><span class="e0"></span></div>
       <ul class="legend">
         <li><i class="e1"></i>${KIND.E1}: ${j.e1} (${pct(j.e1, n)}%)</li>
@@ -217,7 +235,7 @@ function jobPage(j) {
         <li><i class="e0"></i>${KIND.E0}: ${j.e0} (${pct(j.e0, n)}%)</li>
       </ul>
       <ul class="tasks">
-${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden="true"></i><span>${esc(t.task)}<span class="kind">${KIND[t.exposure]}${t.type ? " · " + esc(t.type.toLowerCase()) + " task" : ""}</span></span></li>`).join("\n")}
+${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden="true"></i><span>${esc(t.task)}<span class="kind">${KIND[t.exposure]}${t.type ? " · " + esc(t.type.toLowerCase()) + " task" : ""}${t.inUse ? ' · <b class="seen">Seen in real AI use</b>' : ""}</span></span></li>`).join("\n")}
       </ul>
     </section>
 
@@ -239,7 +257,7 @@ ${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden=
     <section class="block">
       <div class="note-box">
         <p><b>How to read this score.</b> Exposure measures how much of the work AI could speed up, not whether the job will disappear. A highly exposed job can change shape, with people spending less time on routine tasks and more on the rest. The score counts tasks AI can speed up on its own in full, and tasks that need extra software at half weight.</p>
-        <p>Ratings come from published research based on GPT-4 (2023). AI has improved since, and we'll update scores as new research is published. <a href="/method.html">Read the full method</a>.</p>
+        <p>The ratings come from published research based on GPT-4 (2023). To show what's happening now, each task is also checked against the latest Anthropic Economic Index, which records which tasks people actually use AI for. That data is refreshed automatically when Anthropic publishes a new release. <a href="/method.html">Read the full method</a>.</p>
       </div>
     </section>
 `;
@@ -272,13 +290,13 @@ function listPage() {
     <p class="count" id="count" aria-live="polite">${TOTAL} jobs</p>
     <div class="table-scroll">
       <table id="jobs">
-        <thead><tr><th>#</th><th><button type="button" data-sort="title">Job</button></th><th><button type="button" data-sort="score" aria-pressed="true">Exposure ↓</button></th><th class="hide-sm">Level</th><th class="n hide-sm"><button type="button" data-sort="emp">US workers</button></th><th class="n hide-sm"><button type="button" data-sort="pay">Median pay</button></th></tr></thead>
+        <thead><tr><th>#</th><th><button type="button" data-sort="title">Job</button></th><th><button type="button" data-sort="score" aria-pressed="true">Exposure ↓</button></th><th class="hide-sm">Level</th><th class="n hide-sm"><button type="button" data-sort="use">In use</button></th><th class="n hide-sm"><button type="button" data-sort="emp">US workers</button></th><th class="n hide-sm"><button type="button" data-sort="pay">Median pay</button></th></tr></thead>
         <tbody>
-${jobs.map((j) => `          <tr data-g="${j.major}" data-score="${j.beta}" data-emp="${j.emp ?? -1}" data-pay="${j.pay ?? -1}" data-title="${esc(j.title.toLowerCase())}"><td class="rk">${j.rank}</td><td><a href="/jobs/${j.slug}">${esc(j.title)}</a><span class="grp">${esc(groups.get(j.major) ?? "")}</span></td><td>${mini(j)}</td><td class="hide-sm">${pill(j)}</td><td class="n hide-sm">${j.emp ? fmt(j.emp) : "–"}</td><td class="n hide-sm">${j.pay ? money(j.pay) + (j.payNote === "or more" ? "+" : "") : "–"}</td></tr>`).join("\n")}
+${jobs.map((j) => `          <tr data-g="${j.major}" data-score="${j.beta}" data-use="${j.inUse / Math.max(j.tasks.length, 1)}" data-emp="${j.emp ?? -1}" data-pay="${j.pay ?? -1}" data-title="${esc(j.title.toLowerCase())}"><td class="rk">${j.rank}</td><td><a href="/jobs/${j.slug}">${esc(j.title)}</a><span class="grp">${esc(groups.get(j.major) ?? "")}</span></td><td>${mini(j)}</td><td class="hide-sm">${pill(j)}</td><td class="n hide-sm">${pct(j.inUse, j.tasks.length)}%</td><td class="n hide-sm">${j.emp ? fmt(j.emp) : "–"}</td><td class="n hide-sm">${j.pay ? money(j.pay) + (j.payNote === "or more" ? "+" : "") : "–"}</td></tr>`).join("\n")}
         </tbody>
       </table>
     </div>
-    <p class="count" style="margin-top:14px">US workers and median pay: BLS, May 2021. Where BLS reports a broader group, its figures are shown.</p>
+    <p class="count" style="margin-top:14px">In use: share of the job's tasks seen in real conversations with Claude, ${AEI_PERIOD} (Anthropic Economic Index). US workers and median pay: BLS, ${BLS_RELEASE}. Where BLS reports a broader group, its figures are shown.</p>
     <script src="/assets/jobs-table.js" defer></script>
 `;
   return page({
@@ -331,24 +349,30 @@ ${counts.map(([k, n]) => `            <li><span><span class="pill band-${k}">${l
           </ul>
         </div>
         <div>
-          <h2>5. Jobs and pay</h2>
-          <p class="sub">The number of US workers and median annual pay come from the Bureau of Labor Statistics' <a href="https://www.bls.gov/oes/">Occupational Employment and Wage Statistics</a>, May 2021, the release the study matched to. Where BLS only reports a broader group, we show that group's figures and say so.</p>
+          <h2>6. Jobs and pay</h2>
+          <p class="sub">The number of US workers and median annual pay come from the Bureau of Labor Statistics' <a href="https://www.bls.gov/oes/">Occupational Employment and Wage Statistics</a>, ${BLS_RELEASE}, the latest release. It refreshes automatically when BLS publishes a new year. Where BLS only reports a broader group, we show that group's figures and say so.</p>
         </div>
       </div>
+    </section>
+
+    <section class="block">
+      <h2>5. Real-world use</h2>
+      <p class="sub">The exposure score says what AI <i>could</i> do. To show what people are <i>actually</i> doing with it, each task is checked against the <a href="https://www.anthropic.com/economic-index">Anthropic Economic Index</a>, which maps millions of anonymised conversations with Claude to the same O*NET tasks. The current data covers ${AEI_PERIOD} (release ${esc(AEI_RELEASE.replace("release_", "").replace(/_/g, "-"))}); ${fmt(tasks.filter((t) => t.inUse).length)} of the ${fmt(tasks.length)} tasks appear in it. A task counts as "seen in real AI use" when it appears in the published data. It reflects one AI assistant, so tasks done with other tools won't show up, and a task that doesn't appear may still be done with AI elsewhere.</p>
+      <p class="sub">A GitHub job checks for new Economic Index and BLS releases every week and rebuilds the site when they change.</p>
     </section>
 
     <section class="block">
       <h2>What the score doesn't tell you</h2>
       <div class="note-box" style="margin-top:16px">
         <p><b>Exposure is not job loss.</b> A high score means AI could change how the work is done. Whether that leads to fewer jobs, different jobs or more productive ones depends on employers, demand and regulation.</p>
-        <p><b>The ratings reflect GPT-4 in 2023.</b> AI has improved since, and tools now do more on their own. We'll update scores as new research is published, and the weekly report covers what changes.</p>
+        <p><b>The exposure ratings reflect GPT-4 in 2023.</b> AI has improved since, and tools now do more on their own. The real-world use data above is refreshed as Anthropic publishes it, and the weekly report covers what changes.</p>
         <p><b>Jobs vary.</b> Two people with the same job title can do very different work. Use the task list on each job page to see which parts apply to you.</p>
       </div>
     </section>
 
     <section class="block">
       <h2>Sources and licences</h2>
-      <p class="sub">Task data: O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> licence. Exposure ratings: Eloundou, T., Manning, S., Mishkin, P. and Rock, D. (2023), "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models", <a href="https://github.com/openai/GPTs-are-GPTs">data published under the MIT licence</a>. Employment and pay: BLS OEWS, May 2021 (public domain).</p>
+      <p class="sub">Task data: O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> licence. Exposure ratings: Eloundou, T., Manning, S., Mishkin, P. and Rock, D. (2023), "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models", <a href="https://github.com/openai/GPTs-are-GPTs">data published under the MIT licence</a>. Real-world use: Anthropic Economic Index, ${esc(AEI_RELEASE.replace("release_", "").replace(/_/g, "-"))} release, used under CC BY. Employment and pay: BLS OEWS, ${BLS_RELEASE} (public domain).</p>
     </section>
 `;
   return page({

@@ -6,7 +6,7 @@
   var tbody = document.querySelector('#jobs tbody');
   var rows = Array.prototype.slice.call(tbody.rows);
   var buttons = document.querySelectorAll('#jobs th button');
-  var labels = { title: 'Job', score: 'Exposure', emp: 'US workers', pay: 'Median pay' };
+  var labels = { title: 'Job', score: 'Exposure', use: 'In use', emp: 'US workers', pay: 'Median pay' };
   var sortKey = 'score', desc = true;
 
   var params = new URLSearchParams(location.search);
