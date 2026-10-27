@@ -2,7 +2,7 @@
 
 Website for jobexposureindex.com: a free index of how exposed US jobs are to AI, built on public O*NET and BLS data, with a weekly email report and automated posts to X, Bluesky and LinkedIn.
 
-The site is plain static HTML. `public/index.html` is the launch page. Cloudflare Workers serves the `public` folder as static assets, and `wrangler.jsonc` attaches jobexposureindex.com and www.jobexposureindex.com to the Worker as custom domains, so Cloudflare creates their DNS records on deploy. The Worker redirects www to the bare domain.
+The site is plain static HTML. `public/index.html` is the launch page; its job lookup and the spectrum of every job are drawn by `public/assets/home.js` from `public/data/jobs.json`. Cloudflare Workers serves the `public` folder as static assets, and `wrangler.jsonc` attaches jobexposureindex.com and www.jobexposureindex.com to the Worker as custom domains, so Cloudflare creates their DNS records on deploy. The Worker redirects www to the bare domain.
 
 ## Setup
 
