@@ -40,9 +40,11 @@ tree = json.load(open('data/raw/aei_tree.json'))
 os.makedirs('data/raw/aei', exist_ok=True)
 for f in tree:
     p = f.get('path', '')
-    if f.get('type') != 'file' or not p.endswith('.csv'): continue
-    if f.get('size', 0) > 40_000_000: continue
-    if not any(k in p.lower() for k in ('task', 'onet', 'occupation', 'soc')): continue
+    if f.get('type') != 'file': continue
+    is_doc = p.endswith('.md') and p != 'README.md'
+    if not is_doc:
+        if not p.endswith('.csv') or f.get('size', 0) > 40_000_000: continue
+        if not any(k in p.lower() for k in ('task', 'onet', 'occupation', 'soc', 'exposure')): continue
     out = 'data/raw/aei/' + p.replace('/', '__')
     subprocess.run(['curl', '-sSfL', '--retry', '3', '-o', out,
                     'https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/main/' + p], check=True)
