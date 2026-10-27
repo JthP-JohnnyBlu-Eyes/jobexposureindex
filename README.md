@@ -8,4 +8,4 @@ The site is plain static HTML. `public/index.html` is the launch page. Cloudflar
 
 1. **Kit form.** In Kit, create a new form for this site and replace `KIT_FORM_ID` in `public/index.html` (two places) with its number.
 2. **Deploy.** In Cloudflare, go to Workers & Pages, Create, Import a repository, and pick this repo. Every push to `main` then deploys.
-3. **Email.** Turn on Cloudflare Email Routing for the domain and forward `hello@jobexposureindex.com` to your inbox. The privacy and terms pages use that address.
+3. **Email.** Turn on Cloudflare Email Routing for the domain and forward `report@jobexposureindex.com` to your inbox. The privacy and terms pages use that address.
