@@ -126,7 +126,7 @@ const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 
 const LOGO = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#14171C"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg>`;
 
-function page({ title, desc, path, current, body, jsonld }) {
+function page({ title, desc, path, current, body, jsonld, image = "/og.png" }) {
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -142,7 +142,9 @@ function page({ title, desc, path, current, body, jsonld }) {
 <meta property="og:url" content="${SITE}${path}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="${SITE}/og.png">
+<meta property="og:image" content="${SITE}${image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -178,6 +180,7 @@ ${body}
   </footer>
 </div>
 <script src="/assets/signup.js" defer></script>
+<script src="/assets/share.js" defer></script>
 </body>
 </html>
 `;
@@ -200,7 +203,8 @@ function jobPage(j) {
   const lowerAny = lower.length ? lower : jobs.filter((o) => o.major === j.major && o.score <= j.score - 10).sort((a, c) => c.score - a.score).slice(0, 6);
   const field = jobs.filter((o) => o.minor === j.minor && o !== j).slice(0, 8);
   const empNote = j.blsIsGroup && b ? `for ${esc(b.title)}` : `BLS, ${BLS_RELEASE}`;
-  const desc = `${j.title}: AI exposure score ${j.score}/100 (${j.band.label.toLowerCase()}), ranked #${j.rank} of ${TOTAL} US jobs. See which tasks AI can and can't do.`;
+  const desc = `Will AI replace ${j.title.toLowerCase()}? Their AI exposure score is ${j.score}/100 (${j.band.label.toLowerCase()}), #${j.rank} of ${TOTAL} US jobs. See which tasks AI can and can't do.`;
+  const faq = jobFaq(j);
 
   const body = `
     <article>
@@ -208,6 +212,14 @@ function jobPage(j) {
       <div class="eyebrow" style="margin-top:28px">AI exposure score</div>
       <h1>${esc(j.title)}</h1>
       <p class="lede">${esc(j.title)} score <b>${j.score} out of 100</b>, which is ${j.band.label.toLowerCase()} exposure to AI. That ranks #${j.rank} of ${TOTAL} US occupations, where #1 is the most exposed. Of the ${n} tasks in this job, AI could speed up ${j.e1} on its own and ${j.e2} more with extra software built on top of it. ${j.inUse ? `In ${AEI_PERIOD}, ${j.inUse} of these tasks showed up in real conversations with Claude, Anthropic's AI assistant.` : `None of its tasks showed up in real AI use in ${AEI_PERIOD}.`}</p>
+
+      <div class="share" data-title="${esc(j.title)}" data-score="${j.score}">
+        <span>Share this score:</span>
+        <a class="sh" data-net="x" href="https://x.com/intent/post?text=${encodeURIComponent(shareText(j))}&amp;url=${encodeURIComponent(SITE + "/jobs/" + j.slug)}" target="_blank" rel="noopener">X</a>
+        <a class="sh" data-net="bluesky" href="https://bsky.app/intent/compose?text=${encodeURIComponent(shareText(j) + " " + SITE + "/jobs/" + j.slug)}" target="_blank" rel="noopener">Bluesky</a>
+        <a class="sh" data-net="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SITE + "/jobs/" + j.slug)}" target="_blank" rel="noopener">LinkedIn</a>
+        <button type="button" class="sh" data-copy="${SITE}/jobs/${j.slug}">Copy link</button>
+      </div>
 
       <div class="scorecard band-${j.band.key}">
         <div>
@@ -255,6 +267,13 @@ ${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden=
     </section>
 
     <section class="block">
+      <h2>Questions about ${esc(j.title.toLowerCase())} and AI</h2>
+      <div class="faq">
+${faq.map(([q, a]) => `        <details${q === faq[0][0] ? " open" : ""}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("\n")}
+      </div>
+    </section>
+
+    <section class="block">
       <div class="note-box">
         <p><b>How to read this score.</b> Exposure measures how much of the work AI could speed up, not whether the job will disappear. A highly exposed job can change shape, with people spending less time on routine tasks and more on the rest. The score counts tasks AI can speed up on its own in full, and tasks that need extra software at half weight.</p>
         <p>The ratings come from published research based on GPT-4 (2023). To show what's happening now, each task is also checked against the latest Anthropic Economic Index, which records which tasks people actually use AI for. That data is refreshed automatically when Anthropic publishes a new release. <a href="/method.html">Read the full method</a>.</p>
@@ -262,15 +281,43 @@ ${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden=
     </section>
 `;
   return page({
-    title: `${j.title}: AI exposure score ${j.score}/100 · Job Exposure Index`,
-    desc, path: `/jobs/${j.slug}`, current: "jobs", body,
-    jsonld: {
+    title: `Will AI replace ${j.title}? AI exposure ${j.score}/100 · Job Exposure Index`,
+    desc, path: `/jobs/${j.slug}`, current: "jobs", body, image: `/cards/${j.slug}.jpg`,
+    jsonld: [{
       "@context": "https://schema.org", "@type": "Occupation", name: j.title,
       occupationalCategory: j.code, description: desc,
       ...(j.pay && !j.payNote ? { estimatedSalary: { "@type": "MonetaryAmountDistribution", name: "base", currency: "USD", duration: "P1Y", median: j.pay } } : {}),
       occupationLocation: { "@type": "Country", name: "United States" },
-    },
+    }, {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+    }],
   });
+}
+
+function shareText(j) {
+  return `${j.title} scored ${j.score}/100 on the Job Exposure Index: ${j.band.label.toLowerCase()} exposure to AI. How exposed is your job?`;
+}
+
+// Plain-language questions and answers for each job page, built only from the job's own data.
+function jobFaq(j) {
+  const t = j.title.toLowerCase(), n = j.tasks.length;
+  const pick = (e) => j.tasks.filter((x) => x.exposure === e).sort((a, c) => (a.type === "Core" ? 0 : 1) - (c.type === "Core" ? 0 : 1)).slice(0, 3).map((x) => x.task.replace(/\.$/, ""));
+  const list = (xs) => xs.map((x) => `"${x}"`).join("; ");
+  const exposed = pick("E1").length ? pick("E1") : pick("E2");
+  const safe = pick("E0");
+  const out = [
+    [`Will AI replace ${t}?`,
+      `${j.score >= 60 ? "Probably not entirely, but the job is likely to change a lot." : j.score >= 40 ? "Not entirely. Parts of the job are likely to change as AI takes over routine tasks." : "Unlikely. Most of the work is hard for today's AI to speed up."} ${j.title} score ${j.score} out of 100 (${j.band.label.toLowerCase()} exposure), #${j.rank} of ${TOTAL} US jobs. AI could speed up ${j.e1 + j.e2} of the job's ${n} tasks, ${j.e1} of them on its own${j.e0 ? `, while ${j.e0} see little or no speed-up` : ""}. Exposure means the work is likely to change, not that the job will disappear.`],
+  ];
+  if (exposed.length) out.push([`Which ${t} tasks can AI do?`, `The most exposed tasks include ${list(exposed)}.`]);
+  out.push([`Which ${t} tasks are hardest for AI?`, safe.length ? `Tasks with little or no AI speed-up include ${list(safe)}.` : `Every task in this job has some AI exposure, though ${j.e2} of them need extra software built around the AI.`]);
+  out.push([`Are people already using AI for this work?`, j.inUse
+    ? `Yes. In ${AEI_PERIOD}, ${j.inUse} of the ${n} tasks showed up in real conversations with Claude, according to the Anthropic Economic Index.`
+    : `Not much yet. None of the job's tasks showed up in real conversations with Claude in ${AEI_PERIOD}, according to the Anthropic Economic Index.`]);
+  if (j.emp && j.pay) out.push([`How many people work as ${t}, and what do they earn?`,
+    `About ${fmt(j.emp)} people in the US${j.blsIsGroup ? ` (figure for ${j.bls.title})` : ""}, with median pay of ${money(j.pay)}${j.payNote === "or more" ? " or more" : ""} a year (BLS, ${BLS_RELEASE}).`]);
+  return out;
 }
 
 // ---------- all jobs page ----------

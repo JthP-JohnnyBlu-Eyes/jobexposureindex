@@ -71,6 +71,18 @@ section.block { border-top: 1px solid var(--line); padding: 56px 0; }
 .seen { font-weight: 600; color: var(--accent); }
 .tasks .kind { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-top: 2px; }
 
+/* Share */
+.share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 22px 0 0; font-size: 14px; color: var(--muted); }
+.share .sh { font: inherit; font-size: 14px; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 999px; padding: 6px 14px; text-decoration: none; cursor: pointer; }
+.share .sh:hover { border-color: var(--ink); color: var(--ink); }
+
+/* Questions */
+.faq { margin-top: 18px; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); padding: 4px 0; }
+.faq summary { cursor: pointer; font-weight: 600; padding: 12px 0; list-style-position: inside; }
+.faq summary:hover { color: var(--accent); }
+.faq p { margin: 0 0 14px; color: var(--soft); max-width: 48em; }
+
 /* Tables */
 .tools { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 16px; }
 .tools input, .tools select { font: inherit; font-size: 15px; padding: 12px 14px; border: 1.5px solid var(--ink); border-radius: 8px; background: var(--surface); color: var(--ink); min-width: 0; }

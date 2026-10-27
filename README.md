@@ -20,4 +20,6 @@ The site is plain static HTML. `public/index.html` is the launch page. Cloudflar
 
 `.github/workflows/refresh-data.yml` runs every Monday (or by hand from the Actions tab): it fetches the sources, rebuilds the pages and commits when anything changed, and Cloudflare deploys the push.
 
+Share cards (`public/cards/<slug>.jpg`, the link preview for each job page) are drawn by `scripts/build-cards.mjs` with Playwright. It only redraws cards whose score changed, so run it after the index build whenever scores change.
+
 To rebuild locally after changing templates: `node scripts/build-index.mjs`, then commit the output.
