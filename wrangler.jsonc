@@ -1,0 +1,14 @@
+{
+  "name": "jobexposureindex",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "routes": [
+    { "pattern": "jobexposureindex.com/*", "zone_name": "jobexposureindex.com" },
+    { "pattern": "www.jobexposureindex.com/*", "zone_name": "jobexposureindex.com" }
+  ]
+}

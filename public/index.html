@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Job Exposure Index: how exposed is your job to AI?</title>
+<meta name="description" content="Look up how exposed your job is to AI: which of your tasks AI can already do, which it can't, and what to learn next. Built on public US job data. Free weekly report.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="canonical" href="https://jobexposureindex.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:site_name" content="Job Exposure Index">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jobexposureindex.com/">
+<meta property="og:title" content="Job Exposure Index: how exposed is your job to AI?">
+<meta property="og:description" content="Which of your tasks AI can already do, which it can't, and what to learn next. Free weekly report.">
+<meta property="og:image" content="https://jobexposureindex.com/og.png">
+<meta property="og:image:alt" content="Job Exposure Index: how exposed is your job to AI?">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Job Exposure Index: paper ground, ink type, and one signal scale from low (teal) to high (red). */
+:root {
+  --bg: #F6F3EC; --surface: #FFFDF8; --line: #E2DDD1; --line-strong: #C9C2B3;
+  --ink: #14171C; --soft: #3A3F47; --muted: #5E636B; --faint: #7A7E85;
+  --low: #3FA796; --mid: #E3B341; --high: #E8743B; --max: #D9473A;
+  --accent: #D9473A;
+  --head: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 700px) { .wrap { padding-left: 40px; padding-right: 40px; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Header */
+header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px; padding: 22px 0; }
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand svg { width: 36px; height: 36px; flex: none; }
+.brand span { font-family: var(--head); font-weight: 700; font-size: 18px; letter-spacing: -.01em; line-height: 1.1; }
+.top nav { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px; font-size: 14px; }
+.top nav a { color: var(--soft); text-decoration: none; padding: 10px 0; }
+.top nav a:hover { color: var(--ink); }
+.top nav a.cta { color: #fff; background: var(--ink); font-weight: 600; padding: 10px 18px; border-radius: 6px; }
+.top nav a.cta:hover { background: var(--accent); color: #fff; }
+@media (max-width: 560px) { .top nav a:not(.cta) { display: none; } }
+
+/* Type */
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+h1, h2, h3 { font-family: var(--head); font-weight: 700; letter-spacing: -.02em; text-wrap: balance; }
+h1 { font-size: clamp(40px, 6vw, 76px); line-height: 1.02; margin: 18px 0 22px; }
+h1 em { font-style: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; background: linear-gradient(transparent 62%, rgba(232, 116, 59, .35) 62%); }
+h2 { font-size: clamp(28px, 3.4vw, 42px); line-height: 1.1; margin: 10px 0 0; }
+h3 { font-size: 20px; line-height: 1.25; margin: 14px 0 8px; letter-spacing: -.01em; }
+.lede { font-size: 19px; line-height: 1.55; color: var(--soft); max-width: 31em; margin: 0 0 32px; }
+section.block { border-top: 1px solid var(--line); padding: 72px 0; }
+.sub { color: var(--muted); max-width: 40em; margin: 14px 0 0; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px 64px; align-items: center; padding: 36px 0 84px; }
+.hero > * { min-width: 0; }
+
+/* Signup */
+form.signup { display: flex; flex-wrap: wrap; max-width: 480px; border: 1.5px solid var(--ink); border-radius: 8px; background: var(--surface); overflow: hidden; }
+form.signup input { flex: 1 1 220px; min-width: 0; font: inherit; padding: 14px 16px; background: transparent; border: 0; color: var(--ink); }
+form.signup input::placeholder { color: var(--faint); }
+form.signup button { flex: 0 0 auto; font: inherit; font-weight: 600; font-size: 15px; padding: 14px 22px; min-height: 50px; border: 0; background: var(--ink); color: #fff; cursor: pointer; }
+form.signup button:hover { background: var(--accent); }
+form.signup button:disabled { opacity: .6; cursor: progress; }
+.note { font-size: 13px; color: var(--muted); margin: 12px 0 0; min-height: 1.6em; }
+
+/* Index card illustration */
+.card { background: var(--surface); border: 1px solid var(--line-strong); border-radius: 14px; padding: 26px 26px 22px; box-shadow: 0 1px 0 var(--line), 0 18px 40px -24px rgba(20, 23, 28, .25); }
+.card .k { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); display: flex; justify-content: space-between; gap: 12px; }
+.card .q { font-family: var(--head); font-weight: 600; font-size: 22px; margin: 14px 0 18px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; color: var(--muted); }
+.card .q svg { flex: none; }
+.card .q .cursor { display: inline-block; width: 2px; height: 1.1em; background: var(--ink); animation: blink 1.1s steps(1) infinite; vertical-align: -3px; }
+@keyframes blink { 50% { opacity: 0; } }
+.scale { height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--low), var(--mid) 45%, var(--high) 72%, var(--max)); position: relative; margin: 34px 0 8px; }
+.scale .pin { position: absolute; top: -9px; width: 3px; height: 30px; background: var(--ink); border-radius: 2px; transform: translateX(-50%); animation: sweep 7s ease-in-out infinite; }
+@keyframes sweep { 0%, 100% { left: 22%; } 50% { left: 78%; } }
+.scale-ends { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--faint); letter-spacing: .08em; text-transform: uppercase; }
+.tasks { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; }
+.tasks li { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 12px; align-items: center; font-size: 14.5px; color: var(--soft); padding: 10px 0; border-top: 1px solid var(--line); }
+.tasks .dot { width: 10px; height: 10px; border-radius: 50%; }
+.tasks .lvl { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.card .foot { font-size: 12px; color: var(--faint); margin: 14px 0 0; }
+@media (prefers-reduced-motion: reduce) { .scale .pin { animation: none; left: 62%; } .card .q .cursor { animation: none; } }
+
+/* Feature grid */
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 20px; margin-top: 36px; }
+.feat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.feat .n { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+.feat p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* Numbers */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 0; margin-top: 36px; border-top: 2px solid var(--ink); }
+.stat { padding: 24px 24px 24px 0; border-bottom: 1px solid var(--line); }
+.stat .big { font-family: var(--head); font-weight: 700; font-size: clamp(44px, 5vw, 60px); line-height: 1; letter-spacing: -.03em; }
+.stat p { margin: 10px 0 8px; color: var(--soft); font-size: 15px; max-width: 24em; }
+.stat .src { font-size: 13px; color: var(--faint); }
+.stat .src a { color: var(--muted); }
+
+/* Method */
+.method { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px 64px; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 4px 12px; padding: 18px 0; border-top: 1px solid var(--line); }
+.steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 13px; color: var(--accent); padding-top: 3px; }
+.steps b { font-weight: 600; }
+.steps span { grid-column: 2; color: var(--muted); font-size: 15px; }
+
+/* Closing */
+.closing { text-align: center; background: var(--ink); color: #F6F3EC; border-radius: 18px; padding: 64px 24px; margin: 0 0 72px; }
+.closing h2 { color: #fff; }
+.closing .sub { color: #B9BCC2; margin: 14px auto 30px; }
+.closing form.signup { margin: 0 auto; border-color: #F6F3EC; }
+.closing form.signup button { background: var(--accent); }
+.closing form.signup button:hover { background: var(--high); }
+.closing .note { color: #9EA2A9; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 13px; color: var(--muted); }
+footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; }
+footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
+footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 60em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="Job Exposure Index home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#14171C"/><rect x="12" y="38" width="8" height="14" rx="1.5" fill="#3FA796"/><rect x="24" y="30" width="8" height="22" rx="1.5" fill="#E3B341"/><rect x="36" y="20" width="8" height="32" rx="1.5" fill="#E8743B"/><rect x="48" y="11" width="6" height="41" rx="1.5" fill="#D9473A"/></svg>
+      <span>Job Exposure<br>Index</span>
+    </a>
+    <nav aria-label="Main"><a href="#how">How it works</a><a href="#numbers">The numbers</a><a class="cta" href="#subscribe">Get the weekly report</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">AI and the US job market</div>
+        <h1>How exposed is <em>your job</em> to AI?</h1>
+        <p class="lede">Look up any US job and see which of its tasks AI can already do, which it can't, and what to learn next. The full index is opening soon. Get the free weekly report to hear first.</p>
+        <div id="subscribe">
+          <form class="signup" action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions" method="post" novalidate>
+            <label class="sr" for="signup-email">Email address</label>
+            <input id="signup-email" name="email_address" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit">Get the weekly report</button>
+          </form>
+          <p class="note" aria-live="polite">Free · one email a week · unsubscribe anytime</p>
+        </div>
+      </div>
+
+      <figure class="card" aria-label="Preview of what a job lookup will look like" style="margin:0">
+        <div class="k"><span>Job lookup · preview</span><span>Coming soon</span></div>
+        <div class="q" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <span>Your job title<span class="cursor"></span></span>
+        </div>
+        <div class="scale" aria-hidden="true"><div class="pin"></div></div>
+        <div class="scale-ends" aria-hidden="true"><span>Low exposure</span><span>High exposure</span></div>
+        <ul class="tasks">
+          <li><span class="dot" style="background:var(--max)"></span><span>Drafting routine documents and emails</span><span class="lvl">Higher</span></li>
+          <li><span class="dot" style="background:var(--mid)"></span><span>Analysing data and writing reports</span><span class="lvl">Medium</span></li>
+          <li><span class="dot" style="background:var(--low)"></span><span>Hands-on, in-person work</span><span class="lvl">Lower</span></li>
+        </ul>
+        <figcaption class="foot">Illustration. Task types and levels follow the pattern in published research on AI exposure; each job page will show its own tasks.</figcaption>
+      </figure>
+    </section>
+
+    <section class="block" id="how">
+      <div class="eyebrow">What you'll get</div>
+      <h2>One page for every job, in plain English.</h2>
+      <p class="sub">Most coverage of AI and jobs is either hype or doom. The index sticks to what the research and the official job data actually say.</p>
+      <div class="grid3">
+        <div class="feat"><span class="n">01</span><h3>An exposure score</h3><p>A 0 to 100 score for each occupation, showing how much of the work AI tools can already help with or do.</p></div>
+        <div class="feat"><span class="n">02</span><h3>Task by task</h3><p>Which parts of the job are most exposed and which are not, because almost no job is all one or the other.</p></div>
+        <div class="feat"><span class="n">03</span><h3>What to do next</h3><p>Nearby jobs that use your skills but are less exposed, and the skills worth learning to stay ahead.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="numbers">
+      <div class="eyebrow">The numbers so far</div>
+      <h2>This is not a niche problem.</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="big">80%</div>
+          <p>of US workers could have at least 10% of their work tasks affected by large language models. For about 19%, it's at least half of their tasks.</p>
+          <div class="src">Source: <a href="https://arxiv.org/abs/2303.10130">Eloundou et al., "GPTs are GPTs", 2023</a></div>
+        </div>
+        <div class="stat">
+          <div class="big">60%</div>
+          <p>of jobs in advanced economies like the US are exposed to AI, compared with almost 40% of jobs worldwide.</p>
+          <div class="src">Source: <a href="https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity">IMF, January 2024</a></div>
+        </div>
+        <div class="stat">
+          <div class="big">900+</div>
+          <p>US occupations are described task by task in O*NET, the Department of Labor's job database. That's what the index is built on.</p>
+          <div class="src">Source: <a href="https://www.onetcenter.org/overview.html">O*NET Resource Center</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="method">
+        <div>
+          <div class="eyebrow">How the index works</div>
+          <h2>Public data, open method.</h2>
+          <p class="sub">Every score will link back to its sources, and the method will be published in full, so you can check it yourself.</p>
+        </div>
+        <ol class="steps">
+          <li><b>Start with the tasks.</b><span>O*NET lists the tasks that make up each US occupation.</span></li>
+          <li><b>Rate each task.</b><span>Each task is matched against published research on what current AI can and can't do.</span></li>
+          <li><b>Add the job market.</b><span>Bureau of Labor Statistics data shows how many people do the job and what it pays.</span></li>
+          <li><b>Update as AI changes.</b><span>Scores are reviewed as new models and new research come out, and the weekly report covers what moved.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="eyebrow" style="color:#F0A07A">The weekly exposure report</div>
+      <h2>Know what's changing before it reaches your job.</h2>
+      <p class="sub">One short email a week: which jobs moved, the research worth knowing about, and one practical step you can take.</p>
+      <form class="signup" action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions" method="post" novalidate>
+        <label class="sr" for="signup-email-foot">Email address</label>
+        <input id="signup-email-foot" name="email_address" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button type="submit">Subscribe free</button>
+      </form>
+      <p class="note" aria-live="polite">Free · one email a week · unsubscribe anytime</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="row">
+      <span>© 2026 Job Exposure Index</span>
+      <nav aria-label="Legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+    </div>
+    <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear.</p>
+  </footer>
+</div>
+
+<script>
+// Kit signup for every form on the page: post in the background, fall back to a normal post.
+document.querySelectorAll('form.signup').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = form.querySelector('input[type=email]');
+    var button = form.querySelector('button');
+    var note = form.nextElementSibling;
+    if (!email.value || !email.checkValidity()) {
+      note.textContent = 'Enter a full email address, like you@example.com.';
+      email.focus();
+      return;
+    }
+    button.disabled = true;
+    note.textContent = 'Signing you up...';
+    fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Signup failed');
+        note.textContent = 'Almost done. Check your inbox and confirm your email to get the weekly report.';
+        form.reset();
+      })
+      .catch(function () { form.submit(); })
+      .finally(function () { button.disabled = false; });
+  });
+});
+</script>
+</body>
+</html>
