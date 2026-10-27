@@ -1,0 +1,34 @@
+name: Refresh data
+
+# Downloads the latest BLS job numbers and Anthropic Economic Index usage data,
+# and commits them to data/raw/ when anything changed.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/fetch-sources.sh', '.github/workflows/refresh-data.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pandas openpyxl
+      - run: scripts/fetch-sources.sh
+      - name: Commit if changed
+        run: |
+          git add -A data
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git -c user.name="jobexposureindex-bot" -c user.email="actions@users.noreply.github.com" commit -m "Refresh source data"
+          git push
