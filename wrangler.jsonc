@@ -8,7 +8,7 @@
     "binding": "ASSETS"
   },
   "routes": [
-    { "pattern": "jobexposureindex.com/*", "zone_name": "jobexposureindex.com" },
-    { "pattern": "www.jobexposureindex.com/*", "zone_name": "jobexposureindex.com" }
+    { "pattern": "jobexposureindex.com", "custom_domain": true },
+    { "pattern": "www.jobexposureindex.com", "custom_domain": true }
   ]
 }
