@@ -12,6 +12,8 @@ const ROOT = new URL("..", import.meta.url).pathname;
 const SITE = "https://jobexposureindex.com";
 const TODAY = new Date().toISOString().slice(0, 10);
 const KIT_FORM = "10103045";
+// Every job page links to the Skill Half Life waitlist with its slug, so that site can show the job's score.
+const SHL = "https://skillhalflife.com/";
 
 // ---------- data ----------
 
@@ -237,6 +239,15 @@ function jobPage(j) {
       <ul class="tasks">
 ${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden="true"></i><span>${esc(t.task)}<span class="kind">${KIND[t.exposure]}${t.type ? " · " + esc(t.type.toLowerCase()) + " task" : ""}${t.inUse ? ' · <b class="seen">Seen in real AI use</b>' : ""}</span></span></li>`).join("\n")}
       </ul>
+    </section>
+
+    <section class="next-step">
+      <div>
+        <div class="eyebrow">What you can do about it</div>
+        <h2>Get a personal plan for what to learn next.</h2>
+        <p>Skill Half Life turns this score into a 90-day plan for your situation: your realistic options, the skills that carry over, and training that fits your time and budget. Coming soon.</p>
+      </div>
+      <a class="go" href="${SHL}?job=${j.slug}&amp;utm_source=jobexposureindex&amp;utm_medium=job_page">See your options</a>
     </section>
 
     <section class="block">

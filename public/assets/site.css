@@ -119,3 +119,12 @@ footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; ga
 footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
 footer a { color: var(--muted); }
 footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 64em; }
+/* Link to the Skill Half Life waitlist on every job page */
+.next-step { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; background: #E3F0EC; border: 1px solid #B9DCD2; border-radius: 14px; padding: 28px 28px; margin: 0 0 72px; }
+.next-step > div { flex: 1 1 420px; min-width: 0; }
+.next-step .eyebrow { color: #1F7A6B; }
+.next-step h2 { font-size: clamp(24px, 2.6vw, 32px); }
+.next-step p { color: var(--soft); margin: 10px 0 0; max-width: 40em; }
+.next-step .go { flex: none; color: #fff; background: #1F7A6B; font-weight: 600; text-decoration: none; padding: 14px 22px; border-radius: 8px; }
+.next-step .go::after { content: " \2192"; }
+.next-step .go:hover { background: var(--ink); color: #fff; }
