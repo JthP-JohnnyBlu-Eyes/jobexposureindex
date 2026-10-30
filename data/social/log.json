@@ -52,5 +52,23 @@
     "dueAt": "2026-10-29T18:40:46.237Z"
    }
   }
+ },
+ "2026-10-30": {
+  "job": "geothermal-technicians",
+  "dueAt": "2026-10-30T18:13:39.356Z",
+  "results": {
+   "twitter": {
+    "id": "6ae4dad010a950f137376b9c",
+    "dueAt": "2026-10-30T18:13:39.356Z"
+   },
+   "bluesky": {
+    "id": "6ae4dad0cd8290b9b9046ba0",
+    "dueAt": "2026-10-30T18:13:39.356Z"
+   },
+   "linkedin": {
+    "id": "6ae4dad198505e7f5227952e",
+    "dueAt": "2026-10-30T18:13:39.356Z"
+   }
+  }
  }
 }
