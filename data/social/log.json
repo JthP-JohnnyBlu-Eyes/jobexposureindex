@@ -88,5 +88,23 @@
     "dueAt": "2026-10-31T17:28:58.333Z"
    }
   }
+ },
+ "2026-11-01": {
+  "job": "probation-officers-and-correctional-treatment-specialists",
+  "dueAt": "2026-11-01T18:09:32.778Z",
+  "results": {
+   "twitter": {
+    "id": "6ae77cd97c4e5559266a9523",
+    "dueAt": "2026-11-01T18:09:32.778Z"
+   },
+   "bluesky": {
+    "id": "6ae77cd97c4e5559266a955a",
+    "dueAt": "2026-11-01T18:09:32.778Z"
+   },
+   "linkedin": {
+    "id": "6ae77cd9142f545151f28988",
+    "dueAt": "2026-11-01T18:09:32.778Z"
+   }
+  }
  }
 }
