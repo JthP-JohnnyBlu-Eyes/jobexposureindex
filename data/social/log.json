@@ -106,5 +106,23 @@
     "dueAt": "2026-11-01T18:09:32.778Z"
    }
   }
+ },
+ "2026-11-02": {
+  "job": "health-informatics-specialists",
+  "dueAt": "2026-11-02T21:55:42.882Z",
+  "results": {
+   "twitter": {
+    "id": "6ae9035ba49200278eb8b2b1",
+    "dueAt": "2026-11-02T21:55:42.882Z"
+   },
+   "bluesky": {
+    "id": "6ae9035b90c1e19b0347823b",
+    "dueAt": "2026-11-02T21:55:42.882Z"
+   },
+   "linkedin": {
+    "id": "6ae9035b3b6f22c15ed04e15",
+    "dueAt": "2026-11-02T21:55:42.882Z"
+   }
+  }
  }
 }
