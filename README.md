@@ -29,3 +29,9 @@ To rebuild locally after changing templates: `node scripts/build-index.mjs`, the
 `.github/workflows/social.yml` runs `scripts/post-daily.mjs` every day at 12:07 UTC. It picks the "job of the day" (a fixed shuffle of jobs with at least 20,000 US workers, one per day) from `data/social-jobs.json`, and schedules a post for 14:00 UTC on X (with the job's share card), Bluesky and LinkedIn (as link cards) through Buffer. If Buffer rejects a rich post, it falls back to plain text with the link. Each day is logged in `data/social/log.json`, so nothing is posted twice.
 
 Needs the repository secret `BUFFER_API_KEY` (from https://publish.buffer.com/settings/api on the Job Exposure Index Buffer account). From the Actions tab you can run it by hand: `dry-run` prints the posts, `soon` schedules them 15 minutes from now.
+
+## Weekly traffic review
+
+`.github/workflows/traffic-review.yml` runs `scripts/traffic-review.mjs` every Monday at 07:00 UTC. It reads the last 7 days of Cloudflare Web Analytics with bots left out, for every site in the Cloudflare account (jobexposureindex.com, skillhalflife.com, qbitoro.com), and opens a GitHub issue labelled `traffic-review` with visits and page views against the week before, visits per day, top pages, where visitors came from, countries, devices and Core Web Vitals. GitHub emails you about each new issue.
+
+Needs the repository secret `CLOUDFLARE_API_TOKEN`: a Cloudflare API token with only **Account › Account Analytics › Read** (Cloudflare dashboard, My Profile, API Tokens, Create Token, Create Custom Token). The optional secret `CLOUDFLARE_ACCOUNT_ID` picks the account when the token can see more than one. From the Actions tab you can run it by hand, for any number of days, or as `dry-run` to see the review on the run page without opening an issue.
