@@ -151,7 +151,9 @@ let ACCOUNT_ID = ACCOUNT;
 async function main() {
   if (!ACCOUNT_ID) {
     const accounts = await rest("/accounts?per_page=50");
-    if (!accounts?.length) fail("The token can't see any Cloudflare account. Check that it has Account Analytics: Read.");
+    // A token with only Account Analytics: Read may not be allowed to list accounts. Then the
+    // account ID has to come from the CLOUDFLARE_ACCOUNT_ID secret.
+    if (!accounts?.length) fail("This token can't list Cloudflare accounts. Add the repository secret CLOUDFLARE_ACCOUNT_ID (the Account ID from the Cloudflare dashboard). See README.md, \"Weekly traffic review\".");
     ACCOUNT_ID = accounts[0].id;
     if (accounts.length > 1) notes.push(`The token can see ${accounts.length} accounts; this review uses "${accounts[0].name}".`);
   }
