@@ -15,7 +15,7 @@ document.querySelectorAll('form.signup').forEach(function (form) {
     fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
       .then(function (res) {
         if (!res.ok) throw new Error('Signup failed');
-        note.textContent = 'Almost done. Check your inbox and confirm your email to get the weekly report.';
+        note.innerHTML = 'Thanks! <a href="/downloads/ai-job-exposure-report.pdf" download>Download your free report (PDF)</a>. Then check your inbox and confirm your email to get the weekly report.';
         form.reset();
       })
       .catch(function () { form.submit(); })

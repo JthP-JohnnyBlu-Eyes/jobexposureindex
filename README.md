@@ -24,6 +24,12 @@ Share cards (`public/cards/<slug>.jpg`, the link preview for each job page) are 
 
 To rebuild locally after changing templates: `node scripts/build-index.mjs`, then commit the output.
 
+## Field pages, lists and the free report
+
+`build-index.mjs` also builds a page per job field (`public/fields/`, for example `/fields/legal`), five ready-made lists (`public/lists/`, such as `/lists/jobs-ai-cant-replace`) and the source of the free PDF report (`data/report.html`). Job, field and list pages carry a signup box that offers the report. After a successful signup, `public/assets/signup.js` shows a download link to `public/downloads/ai-job-exposure-report.pdf`.
+
+The PDF is printed with Playwright, so it is not rebuilt by the weekly data refresh. Run `node scripts/build-index.mjs && node scripts/build-report.mjs` and commit the PDF when you want a fresh edition (for example once a month). To also email the PDF to new subscribers, set it as the incentive in Kit: form 10103045, Settings, Incentive, and link `https://jobexposureindex.com/downloads/ai-job-exposure-report.pdf`.
+
 ## Daily social posts
 
 `.github/workflows/social.yml` runs `scripts/post-daily.mjs` every day at 12:07 UTC. It picks the "job of the day" (a fixed shuffle of jobs with at least 20,000 US workers, one per day) from `data/social-jobs.json`, and schedules a post for 14:00 UTC on X (with the job's share card), Bluesky and LinkedIn (as link cards) through Buffer. If Buffer rejects a rich post, it falls back to plain text with the link. Each day is logged in `data/social/log.json`, so nothing is posted twice.
