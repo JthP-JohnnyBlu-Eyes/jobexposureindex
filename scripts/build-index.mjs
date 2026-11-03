@@ -161,7 +161,7 @@ ${body}
     <section class="closing" id="subscribe">
       <div class="eyebrow" style="color:#F0A07A">The weekly exposure report</div>
       <h2>Know what's changing before it reaches your job.</h2>
-      <p class="sub">One short email a week: which jobs are most exposed, the research worth knowing about, and one practical step you can take.</p>
+      <p class="sub">One short email a week: which jobs are most exposed, the research worth knowing about, and one practical step you can take. Plus a free PDF report the moment you sign up.</p>
       <form class="signup" action="https://app.kit.com/forms/${KIT_FORM}/subscriptions" method="post" novalidate>
         <label class="sr" for="signup-email">Email address</label>
         <input id="signup-email" name="email_address" type="email" placeholder="you@example.com" autocomplete="email" required>
@@ -173,7 +173,7 @@ ${body}
   <footer>
     <div class="row">
       <span>© 2026 Job Exposure Index</span>
-      <nav aria-label="Footer"><a href="/jobs/">Explore jobs</a><a href="/method.html">Methodology</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+      <nav aria-label="Footer"><a href="/jobs/">Explore jobs</a><a href="/fields/">By field</a><a href="/lists/">Lists</a><a href="/lists/jobs-ai-cant-replace">Jobs AI can't replace</a><a href="/method.html">Methodology</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
     </div>
     <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear. Task data from the O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license; O*NET® is a trademark of USDOL/ETA. Exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023). Real-world use from the Anthropic Economic Index (CC BY). Employment and pay from the BLS Occupational Employment and Wage Statistics, ${BLS_RELEASE}.</p>
   </footer>
@@ -207,7 +207,7 @@ function jobPage(j) {
 
   const body = `
     <article>
-      <p class="crumbs"><a href="/">Home</a> / <a href="/jobs/">All jobs</a> / <a href="/jobs/?group=${j.major}">${esc(groupName)}</a></p>
+      <p class="crumbs"><a href="/">Home</a> / <a href="/jobs/">All jobs</a> / <a href="/fields/${fieldSlug(j.major)}">${esc(groupName)}</a></p>
       <div class="eyebrow" style="margin-top:28px">AI exposure score</div>
       <h1>${esc(j.title)}</h1>
       <p class="lede">${esc(j.title)} score <b>${j.score} out of 100</b>, which is ${j.band.label.toLowerCase()} exposure to AI. That ranks #${j.rank} of ${TOTAL} US occupations, where #1 is the most exposed. Of the ${n} tasks in this job, AI could speed up ${j.e1} on its own and ${j.e2} more with extra software built on top of it. ${j.inUse ? `In ${AEI_PERIOD}, ${j.inUse} of these tasks showed up in real conversations with Claude, Anthropic's AI assistant.` : `None of its tasks showed up in real AI use in ${AEI_PERIOD}.`}</p>
@@ -235,6 +235,8 @@ function jobPage(j) {
         </dl>
       </div>
     </article>
+
+    ${inlineSignup(`Follow how AI is changing ${j.title.toLowerCase()} work.`, "job-signup")}
 
     <section class="block" style="margin-top:56px">
       <h2>Task by task</h2>
@@ -269,7 +271,8 @@ ${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden=
         <div>
           <h2>Other jobs in this field</h2>
           <p class="sub">${esc(groupName)} occupations close to this one.</p>
-          ${field.length ? `<ul class="rel">\n${field.map((o) => `            <li><a href="/jobs/${o.slug}">${esc(o.title)}</a>${mini(o)}</li>`).join("\n")}\n          </ul>` : `<p class="sub"><a href="/jobs/?group=${j.major}">See all ${esc(groupName)} jobs</a></p>`}
+          ${field.length ? `<ul class="rel">\n${field.map((o) => `            <li><a href="/jobs/${o.slug}">${esc(o.title)}</a>${mini(o)}</li>`).join("\n")}\n          </ul>` : ""}
+          <p class="sub" style="margin-top:14px"><a href="/fields/${fieldSlug(j.major)}">All ${esc(groupName.toLowerCase())} jobs and AI</a></p>
         </div>
       </div>
     </section>
@@ -437,12 +440,322 @@ ${counts.map(([k, n]) => `            <li><span><span class="pill band-${k}">${l
   });
 }
 
+// ---------- fields (one page per SOC major group) ----------
+
+const REPORT_PDF = "/downloads/ai-job-exposure-report.pdf";
+const fieldSlug = (major) => slugify(groups.get(major) ?? "other");
+const fieldList = [...groups.entries()].filter(([k]) => jobs.some((j) => j.major === k)).map(([major, name]) => {
+  const js = jobs.filter((j) => j.major === major);
+  const avg = Math.round(js.reduce((s, j) => s + j.score, 0) / js.length);
+  const emp = js.reduce((s, j) => s + (j.emp ?? 0), 0);
+  return { major, name, slug: fieldSlug(major), jobs: js, avg, emp, band: band(avg) };
+}).sort((a, b) => b.avg - a.avg);
+fieldList.forEach((f, i) => { f.rank = i + 1; });
+const fieldOf = new Map(fieldList.map((f) => [f.major, f]));
+
+// A sortable-looking but static table of jobs, used by field and list pages.
+function jobTable(list, { numbered = true } = {}) {
+  return `<div class="table-scroll">
+      <table>
+        <thead><tr>${numbered ? "<th>#</th>" : ""}<th>Job</th><th>Exposure</th><th class="hide-sm">Level</th><th class="n hide-sm">US workers</th><th class="n hide-sm">Median pay</th></tr></thead>
+        <tbody>
+${list.map((j, i) => `          <tr>${numbered ? `<td class="rk">${i + 1}</td>` : ""}<td><a href="/jobs/${j.slug}">${esc(j.title)}</a><span class="grp">${esc(groups.get(j.major) ?? "")}</span></td><td>${mini(j)}</td><td class="hide-sm">${pill(j)}</td><td class="n hide-sm">${j.emp ? fmt(j.emp) : "–"}</td><td class="n hide-sm">${j.pay ? money(j.pay) + (j.payNote === "or more" ? "+" : "") : "–"}</td></tr>`).join("\n")}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+const faqHtml = (faq) => `<div class="faq">
+${faq.map(([q, a], i) => `        <details${i === 0 ? " open" : ""}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("\n")}
+      </div>`;
+const faqLd = (faq) => ({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
+
+function fieldPage(f) {
+  const sorted = [...f.jobs].sort((a, b) => b.beta - a.beta);
+  const k = Math.min(5, Math.floor(sorted.length / 2)), least = [...sorted].reverse().slice(0, k), most = sorted.slice(0, k);
+  const counts = ["very-high", "high", "elevated", "moderate", "low"].map((k) => [k, f.jobs.filter((j) => j.band.key === k).length]).filter(([, n]) => n);
+  const label = { "very-high": "Very high", high: "High", elevated: "Elevated", moderate: "Moderate", low: "Low" };
+  const lower = f.name.toLowerCase();
+  const faq = [
+    [`Will AI replace ${lower} jobs?`, `Not as a whole. The ${f.jobs.length} ${lower} jobs in the index have an average AI exposure score of ${f.avg} out of 100 (${f.band.label.toLowerCase()}), #${f.rank} of ${fieldList.length} fields. Exposure means parts of the work are likely to change, not that the jobs will disappear.`],
+    [`Which ${lower} jobs are most exposed to AI?`, `${most.slice(0, 3).map((j) => `${j.title} (${j.score}/100)`).join(", ")}.`],
+    [`Which ${lower} jobs are safest from AI?`, `${least.slice(0, 3).map((j) => `${j.title} (${j.score}/100)`).join(", ")}.`],
+  ];
+  if (f.emp) faq.push([`How many people work in ${lower} jobs?`, `About ${fmt(f.emp)} people in the US work in the jobs listed here (BLS, ${BLS_RELEASE}).`]);
+  const desc = `Will AI replace ${lower} jobs? All ${f.jobs.length} ${lower} occupations ranked by AI exposure. Average score ${f.avg}/100, #${f.rank} of ${fieldList.length} fields.`;
+  const body = `
+    <p class="crumbs"><a href="/">Home</a> / <a href="/fields/">All fields</a></p>
+    <div class="eyebrow" style="margin-top:28px">AI exposure by field</div>
+    <h1>Will AI replace ${esc(lower)} jobs?</h1>
+    <p class="lede">The ${f.jobs.length} ${esc(lower)} jobs in the index score <b>${f.avg} out of 100</b> on average, which is ${f.band.label.toLowerCase()} exposure to AI. That ranks the field #${f.rank} of ${fieldList.length}, where #1 is the most exposed.${f.emp ? ` Together these jobs employ about ${fmt(f.emp)} people in the US.` : ""}</p>
+    <ul class="legend" style="margin-top:20px">
+${counts.map(([k, n]) => `      <li><span class="pill band-${k}">${label[k]}</span>&nbsp;${n} job${n === 1 ? "" : "s"}</li>`).join("\n")}
+    </ul>
+
+    ${inlineSignup(`Follow how AI is changing ${lower} work.`, `fld-${f.slug}`)}
+
+    <section class="block">
+      <div class="grid2">
+        <div>
+          <h2>Most exposed</h2>
+          <ul class="rel">
+${most.map((o) => `            <li><a href="/jobs/${o.slug}">${esc(o.title)}</a>${mini(o)}</li>`).join("\n")}
+          </ul>
+        </div>
+        <div>
+          <h2>Least exposed</h2>
+          <ul class="rel">
+${least.map((o) => `            <li><a href="/jobs/${o.slug}">${esc(o.title)}</a>${mini(o)}</li>`).join("\n")}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>All ${f.jobs.length} ${esc(lower)} jobs, most exposed first</h2>
+      <p class="sub" style="margin-bottom:18px">Scores run from 0 (AI can speed up almost none of the tasks) to 100 (almost all of them). <a href="/method.html">How scores work</a>.</p>
+      ${jobTable(sorted)}
+    </section>
+
+    <section class="block">
+      <h2>Questions about ${esc(lower)} jobs and AI</h2>
+      ${faqHtml(faq)}
+    </section>
+
+    <section class="block">
+      <h2>Other fields</h2>
+      <ul class="rel">
+${fieldList.filter((o) => o !== f).map((o) => `        <li><a href="/fields/${o.slug}">${esc(o.name)}</a><span class="mini band-${o.band.key}"><span class="bar"><i style="width:${Math.max(o.avg, 2)}%"></i></span><b>${o.avg}</b></span></li>`).join("\n")}
+      </ul>
+    </section>
+`;
+  return page({ title: `Will AI replace ${f.name} jobs? AI exposure for ${f.jobs.length} jobs · Job Exposure Index`, desc, path: `/fields/${f.slug}`, current: "jobs", body, jsonld: [faqLd(faq)] });
+}
+
+function fieldsIndex() {
+  const body = `
+    <div class="eyebrow" style="margin-top:20px">AI exposure by field</div>
+    <h1>Which fields are most exposed to AI?</h1>
+    <p class="lede">All ${fieldList.length} job fields, ranked by the average AI exposure score of their jobs. Click a field to see every job in it.</p>
+    <section class="block" style="margin-top:32px">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>#</th><th>Field</th><th>Average exposure</th><th class="n hide-sm">Jobs</th><th class="n hide-sm">US workers</th></tr></thead>
+          <tbody>
+${fieldList.map((f) => `            <tr><td class="rk">${f.rank}</td><td><a href="/fields/${f.slug}">${esc(f.name)}</a></td><td><span class="mini band-${f.band.key}"><span class="bar"><i style="width:${Math.max(f.avg, 2)}%"></i></span><b>${f.avg}</b></span></td><td class="n hide-sm">${f.jobs.length}</td><td class="n hide-sm">${f.emp ? fmt(f.emp) : "–"}</td></tr>`).join("\n")}
+          </tbody>
+        </table>
+      </div>
+    </section>
+`;
+  return page({ title: "AI exposure by field: which careers are most exposed to AI? · Job Exposure Index", desc: `All ${fieldList.length} US job fields ranked by how exposed their jobs are to AI, from computer and math jobs to construction and healthcare.`, path: "/fields/", current: "jobs", body });
+}
+
+// ---------- lists ----------
+
+const withEmp = jobs.filter((j) => j.emp);
+const LISTS = [
+  {
+    slug: "jobs-ai-cant-replace", short: "Jobs AI can't replace",
+    title: "Jobs AI can't replace: the 50 least exposed US jobs",
+    h1: "Jobs AI can't replace",
+    lede: `The 50 US jobs where AI can speed up the least of the work, out of ${TOTAL}. Most involve hands-on physical work, care for people, or work in unpredictable places.`,
+    jobs: [...jobs].sort((a, b) => a.beta - b.beta || (b.emp ?? 0) - (a.emp ?? 0)).slice(0, 50),
+  },
+  {
+    slug: "ai-proof-jobs-that-pay-well", short: "AI-proof jobs that pay well",
+    title: "AI-proof jobs that pay well: low AI exposure, $80,000+ a year",
+    h1: "AI-proof jobs that pay well",
+    lede: "Jobs with low or moderate AI exposure (a score under 40) and median pay of at least $80,000 a year, highest pay first.",
+    jobs: jobs.filter((j) => j.score < 40 && j.pay >= 80000).sort((a, b) => b.pay - a.pay).slice(0, 50),
+  },
+  {
+    slug: "common-jobs-safest-from-ai", short: "Common jobs safest from AI",
+    title: "Common jobs safest from AI: the biggest US jobs with low AI exposure",
+    h1: "Common jobs safest from AI",
+    lede: "The jobs that employ the most people in the US while scoring under 30 for AI exposure. Good options if you want work that is both easy to find and hard to automate.",
+    jobs: withEmp.filter((j) => j.score < 30).sort((a, b) => b.emp - a.emp).slice(0, 50),
+  },
+  {
+    slug: "jobs-most-exposed-to-ai", short: "Jobs most exposed to AI",
+    title: "Jobs most exposed to AI: the 50 highest-scoring US jobs",
+    h1: "Jobs most exposed to AI",
+    lede: `The 50 US jobs, out of ${TOTAL}, where AI could speed up the most of the work. High exposure means the job is likely to change, not that it will disappear.`,
+    jobs: jobs.slice(0, 50),
+  },
+  {
+    slug: "well-paid-jobs-most-exposed-to-ai", short: "Well-paid jobs most exposed to AI",
+    title: "Well-paid jobs most exposed to AI: $100,000+ jobs with high exposure",
+    h1: "Well-paid jobs most exposed to AI",
+    lede: "Jobs paying a median of $100,000 or more a year that score 60 or higher for AI exposure. AI is reaching well-paid office work first.",
+    jobs: jobs.filter((j) => j.score >= 60 && j.pay >= 100000).sort((a, b) => b.beta - a.beta).slice(0, 50),
+  },
+];
+
+function listFaq(l) {
+  const top = l.jobs.slice(0, 3).map((j) => `${j.title} (${j.score}/100)`).join(", ");
+  return [
+    [`${l.short}: which come first?`, `${top}. The full list has ${l.jobs.length} jobs.`],
+    ["How is AI exposure measured?", "Each job's tasks, from the US Department of Labor's O*NET database, are rated on whether AI could do them at least twice as fast at the same quality. The score is the share of tasks AI can speed up, from 0 to 100."],
+    ["Does a low score mean the job is safe forever?", "No. It means today's AI can speed up little of the work. Tools around the job can still change, so it pays to keep learning."],
+  ];
+}
+
+function listPageFor(l) {
+  const faq = listFaq(l);
+  const body = `
+    <p class="crumbs"><a href="/">Home</a> / <a href="/lists/">Lists</a></p>
+    <div class="eyebrow" style="margin-top:28px">Job Exposure Index list</div>
+    <h1>${esc(l.h1)}</h1>
+    <p class="lede">${esc(l.lede)}</p>
+    ${inlineSignup("Get the full report on the jobs AI is changing most.", `lst-${l.slug}`)}
+    <section class="block">
+      ${jobTable(l.jobs)}
+      <p class="count" style="margin-top:14px">US workers and median pay: BLS, ${BLS_RELEASE}. Exposure scores: <a href="/method.html">how they work</a>.</p>
+    </section>
+    <section class="block">
+      <h2>Questions</h2>
+      ${faqHtml(faq)}
+    </section>
+    <section class="block">
+      <h2>More lists</h2>
+      <ul class="rel">
+${LISTS.filter((o) => o !== l).map((o) => `        <li><a href="/lists/${o.slug}">${esc(o.short)}</a><span>${o.jobs.length} jobs</span></li>`).join("\n")}
+        <li><a href="/fields/">AI exposure by field</a><span>${fieldList.length} fields</span></li>
+      </ul>
+    </section>
+`;
+  return page({
+    title: `${l.title} · Job Exposure Index`, desc: `${l.lede}`.slice(0, 300), path: `/lists/${l.slug}`, current: "jobs", body,
+    jsonld: [{ "@context": "https://schema.org", "@type": "ItemList", name: l.h1, numberOfItems: l.jobs.length, itemListElement: l.jobs.map((j, i) => ({ "@type": "ListItem", position: i + 1, name: j.title, url: `${SITE}/jobs/${j.slug}` })) }, faqLd(faq)],
+  });
+}
+
+function listsIndex() {
+  const body = `
+    <div class="eyebrow" style="margin-top:20px">Lists</div>
+    <h1>AI and jobs, in lists</h1>
+    <p class="lede">Ready-made lists from the index: the jobs AI is least and most likely to change, and where pay and exposure meet.</p>
+    <section class="block" style="margin-top:32px">
+      <ul class="rel">
+${LISTS.map((o) => `        <li><a href="/lists/${o.slug}">${esc(o.short)}</a><span>${o.jobs.length} jobs</span></li>`).join("\n")}
+        <li><a href="/fields/">AI exposure by field</a><span>${fieldList.length} fields</span></li>
+        <li><a href="/jobs/">All ${TOTAL} jobs, ranked</a><span>${TOTAL} jobs</span></li>
+      </ul>
+    </section>
+`;
+  return page({ title: "Lists: jobs AI can't replace, AI-proof jobs that pay well and more · Job Exposure Index", desc: "Lists of US jobs by AI exposure: jobs AI can't replace, AI-proof jobs that pay well, common jobs safest from AI, and the jobs most exposed.", path: "/lists/", current: "jobs", body });
+}
+
+// ---------- free report (HTML source for the PDF that subscribers get) ----------
+
+function reportPage() {
+  const month = new Date().toLocaleString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+  const totalEmp = withEmp.reduce((s, j) => s + j.emp, 0);
+  const highEmp = withEmp.filter((j) => j.score >= 60).reduce((s, j) => s + j.emp, 0);
+  const lowEmp = withEmp.filter((j) => j.score < 30).reduce((s, j) => s + j.emp, 0);
+  const tasksInUse = tasks.filter((t) => t.inUse).length;
+  const big = withEmp.filter((j) => j.emp >= 10000);
+  const row = (j) => `<tr><td>${esc(j.title)}</td><td class="n">${j.score}</td><td class="n">${j.emp ? fmt(j.emp) : "–"}</td><td class="n">${j.pay ? money(j.pay) + (j.payNote === "or more" ? "+" : "") : "–"}</td></tr>`;
+  const table = (list) => `<table><thead><tr><th>Job</th><th class="n">Score</th><th class="n">US workers</th><th class="n">Median pay</th></tr></thead><tbody>${list.map(row).join("")}</tbody></table>`;
+  return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<title>The AI Job Exposure Report, ${month}</title>
+<style>
+@page { size: Letter; margin: 14mm 16mm; }
+body { font: 11pt/1.5 "Helvetica Neue", Arial, sans-serif; color: #17202A; margin: 0; }
+h1 { font-size: 28pt; line-height: 1.1; margin: 0 0 6pt; }
+h2 { font-size: 16pt; margin: 22pt 0 6pt; break-after: avoid; }
+p { margin: 0 0 8pt; }
+.muted { color: #5B6573; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10pt; margin: 16pt 0; }
+.kpis div { border: 1px solid #D9D4C7; border-radius: 6pt; padding: 10pt; }
+.kpis b { display: block; font-size: 20pt; }
+table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 6pt; }
+th { text-align: left; font-size: 8pt; text-transform: uppercase; letter-spacing: .06em; color: #5B6573; border-bottom: 1.5pt solid #17202A; padding: 4pt; }
+td { border-bottom: 1px solid #E5E1D6; padding: 2.5pt 4pt; }
+.n { text-align: right; white-space: nowrap; }
+tr { break-inside: avoid; }
+ol li { margin-bottom: 6pt; }
+.cover { border-bottom: 3pt solid #E8743B; padding-bottom: 12pt; }
+.foot { font-size: 8.5pt; color: #5B6573; margin-top: 20pt; }
+.new { break-before: page; }
+</style></head><body>
+<div class="cover">
+  <p class="muted">Job Exposure Index · jobexposureindex.com</p>
+  <h1>The AI Job Exposure Report</h1>
+  <p class="muted">${month} · ${TOTAL} US jobs, ${fmt(tasks.length)} tasks</p>
+</div>
+<div class="kpis">
+  <div><b>${pct(highEmp, totalEmp)}%</b>of US workers are in jobs with high or very high AI exposure (score 60+)</div>
+  <div><b>${pct(lowEmp, totalEmp)}%</b>are in jobs with low exposure (score under 30)</div>
+  <div><b>${fmt(tasksInUse)}</b>of ${fmt(tasks.length)} job tasks already show up in real AI use (${AEI_PERIOD})</div>
+</div>
+<p>Exposure measures how much of a job's work AI could speed up, from 0 to 100. A high score means the job is likely to change shape, not that it will disappear. Worker shares cover the ${fmt(withEmp.length)} jobs with published BLS employment figures.</p>
+
+<h2>Exposure by field</h2>
+<table><thead><tr><th>Field</th><th class="n">Average score</th><th class="n">Jobs</th><th class="n">US workers</th></tr></thead><tbody>
+${fieldList.map((f) => `<tr><td>${esc(f.name)}</td><td class="n">${f.avg}</td><td class="n">${f.jobs.length}</td><td class="n">${f.emp ? fmt(f.emp) : "–"}</td></tr>`).join("")}
+</tbody></table>
+
+<h2>The 20 most exposed jobs</h2>
+<p class="muted">Among jobs with at least 10,000 US workers.</p>
+${table(big.slice().sort((a, b) => b.beta - a.beta).slice(0, 20))}
+
+<h2 class="new">The 20 least exposed jobs</h2>
+<p class="muted">Among jobs with at least 10,000 US workers; ties go to the jobs with the most workers.</p>
+${table(big.slice().sort((a, b) => a.beta - b.beta || b.emp - a.emp).slice(0, 20))}
+
+<h2 class="new">AI-resilient jobs that pay $80,000 or more</h2>
+<p class="muted">Score under 40, highest median pay first.</p>
+${table(LISTS[1].jobs.slice(0, 15))}
+
+<h2>Five steps to stay ahead, whatever your score</h2>
+<ol>
+  <li><b>Look up your own job's tasks.</b> Your job page on jobexposureindex.com lists every task and whether AI can speed it up. Mark the ones you spend most time on.</li>
+  <li><b>Use AI on your most exposed tasks first.</b> People who use AI for the routine parts of their job become more productive, and harder to replace.</li>
+  <li><b>Grow the tasks AI finds hard.</b> Judgement, working with people, hands-on work and responsibility for outcomes hold their value longest.</li>
+  <li><b>Know your nearby options.</b> Each job page lists similar jobs with lower exposure that use many of the same skills.</li>
+  <li><b>Check in regularly.</b> AI changes fast. The weekly report tells you when something moves for your field.</li>
+</ol>
+
+<p class="foot">Sources: task data from O*NET (USDOL/ETA, CC BY 4.0); exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023); real-world use from the Anthropic Economic Index (CC BY); employment and pay from BLS OEWS, ${BLS_RELEASE}. Information only, not career, legal or financial advice. Full method: jobexposureindex.com/method.html</p>
+</body></html>
+`;
+}
+
+// Signup box that sits inside a page (job, field and list pages).
+function inlineSignup(heading, id) {
+  return `<section class="inline-signup">
+      <div>
+        <div class="eyebrow">Free report</div>
+        <h2>${esc(heading)}</h2>
+        <p>Subscribe to the weekly report and get <b>The AI Job Exposure Report (PDF)</b> right away: the most and least exposed jobs, exposure by field, and the AI-resilient jobs that pay well.</p>
+      </div>
+      <div>
+        <form class="signup" action="https://app.kit.com/forms/${KIT_FORM}/subscriptions" method="post" novalidate>
+          <label class="sr" for="${id}">Email address</label>
+          <input id="${id}" name="email_address" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit">Get the free report</button>
+        </form>
+        <p class="note" aria-live="polite">Free · one email a week · unsubscribe anytime</p>
+      </div>
+    </section>`;
+}
+
 // ---------- write ----------
 
 rmSync(ROOT + "public/jobs", { recursive: true, force: true });
 mkdirSync(ROOT + "public/jobs", { recursive: true });
 mkdirSync(ROOT + "public/data", { recursive: true });
 for (const j of jobs) writeFileSync(ROOT + `public/jobs/${j.slug}.html`, jobPage(j));
+for (const dir of ["fields", "lists"]) { rmSync(ROOT + `public/${dir}`, { recursive: true, force: true }); mkdirSync(ROOT + `public/${dir}`, { recursive: true }); }
+for (const f of fieldList) writeFileSync(ROOT + `public/fields/${f.slug}.html`, fieldPage(f));
+writeFileSync(ROOT + "public/fields/index.html", fieldsIndex());
+for (const l of LISTS) writeFileSync(ROOT + `public/lists/${l.slug}.html`, listPageFor(l));
+writeFileSync(ROOT + "public/lists/index.html", listsIndex());
+// Source of the free PDF report; scripts/build-report.mjs prints it to public/downloads/.
+writeFileSync(ROOT + "data/report.html", reportPage());
 writeFileSync(ROOT + "public/jobs/index.html", listPage());
 writeFileSync(ROOT + "public/method.html", methodPage());
 // Facts for the daily social posts (scripts/post-daily.mjs).
@@ -468,7 +781,7 @@ ${top.map((j) => `            <li><a href="/jobs/${j.slug}">${esc(j.title)}</a>$
           <!-- top10:end -->`;
 writeFileSync(homeFile, home.replace(/<!-- top10:start -->[\s\S]*?<!-- top10:end -->/, topHtml));
 
-const urls = ["/", "/jobs/", "/method.html", "/privacy.html", "/terms.html", ...jobs.map((j) => `/jobs/${j.slug}`)];
+const urls = ["/", "/jobs/", "/fields/", "/lists/", "/method.html", "/privacy.html", "/terms.html", ...LISTS.map((l) => `/lists/${l.slug}`), ...fieldList.map((f) => `/fields/${f.slug}`), ...jobs.map((j) => `/jobs/${j.slug}`)];
 writeFileSync(ROOT + "public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${TODAY}</lastmod></url>`).join("\n")}
