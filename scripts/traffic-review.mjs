@@ -247,11 +247,13 @@ async function siteSection(host) {
 
 async function vitalsSection(host) {
   const V = "rumWebVitalsEventsAdaptiveGroups";
+  // Cloudflare reports LCP, INP and FCP in microseconds; ms() turns them into milliseconds.
+  const ms = (x) => x / 1000;
   const metrics = [
-    ["LCP", "Largest Contentful Paint (main content shows)", "largestContentfulPaint", "lcp", (x) => `${(x / 1000).toFixed(2)} s`, (x) => (x <= 2500 ? "Good" : x <= 4000 ? "Needs work" : "Poor")],
-    ["INP", "Interaction to Next Paint (reacts to clicks)", "interactionToNextPaint", "inp", (x) => `${Math.round(x)} ms`, (x) => (x <= 200 ? "Good" : x <= 500 ? "Needs work" : "Poor")],
+    ["LCP", "Largest Contentful Paint (main content shows)", "largestContentfulPaint", "lcp", (x) => `${(ms(x) / 1000).toFixed(2)} s`, (x) => (ms(x) <= 2500 ? "Good" : ms(x) <= 4000 ? "Needs work" : "Poor")],
+    ["INP", "Interaction to Next Paint (reacts to clicks)", "interactionToNextPaint", "inp", (x) => `${Math.round(ms(x))} ms`, (x) => (ms(x) <= 200 ? "Good" : ms(x) <= 500 ? "Needs work" : "Poor")],
     ["CLS", "Cumulative Layout Shift (page stays still)", "cumulativeLayoutShift", "cls", (x) => x.toFixed(3), (x) => (x <= 0.1 ? "Good" : x <= 0.25 ? "Needs work" : "Poor")],
-    ["FCP", "First Contentful Paint (first thing shows)", "firstContentfulPaint", "fcp", (x) => `${(x / 1000).toFixed(2)} s`, (x) => (x <= 1800 ? "Good" : x <= 3000 ? "Needs work" : "Poor")],
+    ["FCP", "First Contentful Paint (first thing shows)", "firstContentfulPaint", "fcp", (x) => `${(ms(x) / 1000).toFixed(2)} s`, (x) => (ms(x) <= 1800 ? "Good" : ms(x) <= 3000 ? "Needs work" : "Poor")],
   ];
   const q = metrics.map((m) => `${m[2]}P75`).filter((f) => VITALS.quantiles.has(f));
   const s = metrics.flatMap((m) => ["Good", "NeedsImprovement", "Poor", "Total"].map((k) => m[3] + k)).filter((f) => VITALS.sums.has(f));
@@ -262,7 +264,8 @@ async function vitalsSection(host) {
   if (!row || !row.count) return `### Speed (Core Web Vitals)\n\n_No speed measurements from human visitors this period._\n\n`;
   const rows = [];
   for (const [short, name, field, pre, fmt, grade] of metrics) {
-    const p75 = row.quantiles?.[`${field}P75`];
+    let p75 = row.quantiles?.[`${field}P75`];
+    if (p75 != null && p75 < 0) p75 = null; // -1 means no measurements (e.g. nobody clicked anything)
     const good = row.sum?.[`${pre}Good`], total = row.sum?.[`${pre}Total`] ?? ((row.sum?.[`${pre}Good`] ?? 0) + (row.sum?.[`${pre}NeedsImprovement`] ?? 0) + (row.sum?.[`${pre}Poor`] ?? 0));
     if (p75 == null && !total) continue;
     rows.push([`${short}: ${name}`, p75 != null ? fmt(p75) : "-", p75 != null ? grade(p75) : "-", total ? `${Math.round((100 * (good ?? 0)) / total)}%` : "-"]);
