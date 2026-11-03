@@ -21,6 +21,8 @@ export default {
     const asset = await env.ASSETS.fetch(request);
     const res = new Response(asset.body, asset);
     for (const [k, v] of Object.entries(SECURITY_HEADERS)) res.headers.set(k, v);
+    // skillhalflife.com reads the job list to show a visitor's score when they arrive from a job page.
+    if (url.pathname === "/data/jobs.json") res.headers.set("Access-Control-Allow-Origin", "https://skillhalflife.com");
     return res;
   },
 };
