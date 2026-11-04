@@ -124,5 +124,23 @@
     "dueAt": "2026-11-02T21:55:42.882Z"
    }
   }
+ },
+ "2026-11-04": {
+  "job": "laundry-and-dry-cleaning-workers",
+  "dueAt": "2026-11-04T19:57:32.651Z",
+  "results": {
+   "twitter": {
+    "id": "6aeb8ab28ee551b5aa78d0a7",
+    "dueAt": "2026-11-04T19:57:32.651Z"
+   },
+   "bluesky": {
+    "id": "6aeb8ab223e3db949c15d2c0",
+    "dueAt": "2026-11-04T19:57:32.651Z"
+   },
+   "linkedin": {
+    "id": "6aeb8ab26cbba97f5cc03d2d",
+    "dueAt": "2026-11-04T19:57:32.651Z"
+   }
+  }
  }
 }
