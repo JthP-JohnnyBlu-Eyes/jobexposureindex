@@ -142,5 +142,23 @@
     "dueAt": "2026-11-04T19:57:32.651Z"
    }
   }
+ },
+ "2026-11-05": {
+  "job": "nursing-instructors-and-teachers-postsecondary",
+  "dueAt": "2026-11-05T20:07:44.344Z",
+  "results": {
+   "twitter": {
+    "id": "6aecde8df12e77483956dd41",
+    "dueAt": "2026-11-05T20:07:44.344Z"
+   },
+   "bluesky": {
+    "id": "6aecde8def862e889be6eb9a",
+    "dueAt": "2026-11-05T20:07:44.344Z"
+   },
+   "linkedin": {
+    "id": "6aecde8eef862e889be6ebc7",
+    "dueAt": "2026-11-05T20:07:44.344Z"
+   }
+  }
  }
 }
