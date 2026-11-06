@@ -160,5 +160,23 @@
     "dueAt": "2026-11-05T20:07:44.344Z"
    }
   }
+ },
+ "2026-11-06": {
+  "job": "public-relations-specialists",
+  "dueAt": "2026-11-06T19:33:18.946Z",
+  "results": {
+   "twitter": {
+    "id": "6aee27fbaf7e526d43d83b4f",
+    "dueAt": "2026-11-06T19:33:18.946Z"
+   },
+   "bluesky": {
+    "id": "6aee27fc229bf05daf0576a8",
+    "dueAt": "2026-11-06T19:33:18.946Z"
+   },
+   "linkedin": {
+    "id": "6aee27fca7751de7c9a21a61",
+    "dueAt": "2026-11-06T19:33:18.946Z"
+   }
+  }
  }
 }
