@@ -178,5 +178,23 @@
     "dueAt": "2026-11-06T19:33:18.946Z"
    }
   }
+ },
+ "2026-11-07": {
+  "job": "cleaners-of-vehicles-and-equipment",
+  "dueAt": "2026-11-07T17:58:27.145Z",
+  "results": {
+   "twitter": {
+    "id": "6aef633f004e4879a76e8af9",
+    "dueAt": "2026-11-07T17:58:27.145Z"
+   },
+   "bluesky": {
+    "id": "6aef633f229bf05daf65352c",
+    "dueAt": "2026-11-07T17:58:27.145Z"
+   },
+   "linkedin": {
+    "id": "6aef6340d6bbae6fa1a028ac",
+    "dueAt": "2026-11-07T17:58:27.145Z"
+   }
+  }
  }
 }
