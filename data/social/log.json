@@ -196,5 +196,23 @@
     "dueAt": "2026-11-07T17:58:27.145Z"
    }
   }
+ },
+ "2026-11-08": {
+  "job": "environmental-scientists-and-specialists-including-health",
+  "dueAt": "2026-11-08T18:08:51.499Z",
+  "results": {
+   "twitter": {
+    "id": "6af0b730d6bbae6fa1020306",
+    "dueAt": "2026-11-08T18:08:51.499Z"
+   },
+   "bluesky": {
+    "id": "6af0b730004e4879a7d081fb",
+    "dueAt": "2026-11-08T18:08:51.499Z"
+   },
+   "linkedin": {
+    "id": "6af0b73051492b796e514a6a",
+    "dueAt": "2026-11-08T18:08:51.499Z"
+   }
+  }
  }
 }
