@@ -214,5 +214,23 @@
     "dueAt": "2026-11-08T18:08:51.499Z"
    }
   }
+ },
+ "2026-11-09": {
+  "job": "inspectors-testers-sorters-samplers-and-weighers",
+  "dueAt": "2026-11-09T22:30:38.805Z",
+  "results": {
+   "twitter": {
+    "id": "6af2460b2720157e3735a2d5",
+    "dueAt": "2026-11-09T22:30:38.805Z"
+   },
+   "bluesky": {
+    "id": "6af2460baec4ecc080c4730f",
+    "dueAt": "2026-11-09T22:30:38.805Z"
+   },
+   "linkedin": {
+    "id": "6af2460cf1b94a4bf847c1d0",
+    "dueAt": "2026-11-09T22:30:38.805Z"
+   }
+  }
  }
 }
