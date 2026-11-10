@@ -232,5 +232,23 @@
     "dueAt": "2026-11-09T22:30:38.805Z"
    }
   }
+ },
+ "2026-11-10": {
+  "job": "software-quality-assurance-analysts-and-testers",
+  "dueAt": "2026-11-10T19:55:02.003Z",
+  "results": {
+   "twitter": {
+    "id": "6af37314e021f9ae425937c9",
+    "dueAt": "2026-11-10T19:55:02.003Z"
+   },
+   "bluesky": {
+    "id": "6af37314695294c6ea375d59",
+    "dueAt": "2026-11-10T19:55:02.003Z"
+   },
+   "linkedin": {
+    "id": "6af37314695294c6ea375d93",
+    "dueAt": "2026-11-10T19:55:02.003Z"
+   }
+  }
  }
 }
