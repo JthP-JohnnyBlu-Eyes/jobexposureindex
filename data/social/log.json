@@ -340,5 +340,23 @@
     "dueAt": "2026-11-15T19:01:30.310Z"
    }
   }
+ },
+ "2026-11-16": {
+  "job": "exercise-trainers-and-group-fitness-instructors",
+  "dueAt": "2026-11-16T22:11:40.592Z",
+  "results": {
+   "twitter": {
+    "id": "6afb7c193bdd67de9b0380ab",
+    "dueAt": "2026-11-16T22:11:40.592Z"
+   },
+   "bluesky": {
+    "id": "6afb7c1947aa910b6e2c0494",
+    "dueAt": "2026-11-16T22:11:40.592Z"
+   },
+   "linkedin": {
+    "id": "6afb7c1a47aa910b6e2c04d7",
+    "dueAt": "2026-11-16T22:11:40.592Z"
+   }
+  }
  }
 }
