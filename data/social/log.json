@@ -358,5 +358,23 @@
     "dueAt": "2026-11-16T22:11:40.592Z"
    }
   }
+ },
+ "2026-11-17": {
+  "job": "recreation-workers",
+  "dueAt": "2026-11-17T21:04:05.139Z",
+  "results": {
+   "twitter": {
+    "id": "6afcbdc230e8d67e7ca2f164",
+    "dueAt": "2026-11-17T21:04:05.139Z"
+   },
+   "bluesky": {
+    "id": "6afcbdc2a4d3be4123fe1956",
+    "dueAt": "2026-11-17T21:04:05.139Z"
+   },
+   "linkedin": {
+    "id": "6afcbdc2b3721c6a00c8b613",
+    "dueAt": "2026-11-17T21:04:05.139Z"
+   }
+  }
  }
 }
