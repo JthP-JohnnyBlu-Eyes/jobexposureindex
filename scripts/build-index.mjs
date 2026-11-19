@@ -173,7 +173,7 @@ ${body}
   <footer>
     <div class="row">
       <span>© 2026 Job Exposure Index</span>
-      <nav aria-label="Footer"><a href="/jobs/">Explore jobs</a><a href="/fields/">By field</a><a href="/lists/">Lists</a><a href="/lists/jobs-ai-cant-replace">Jobs AI can't replace</a><a href="/method.html">Methodology</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+      <nav aria-label="Footer"><a href="/jobs/">Explore jobs</a><a href="/fields/">By field</a><a href="/lists/">Lists</a><a href="/lists/jobs-ai-cant-replace">Jobs AI can't replace</a><a href="/method.html">Methodology</a><a href="/widget">Free widget</a><a href="/open-data">Free data</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
     </div>
     <p class="disc">Information only, not career, legal or financial advice. Exposure means AI could change how a job is done; it does not mean the job will disappear. Task data from the O*NET database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license; O*NET® is a trademark of USDOL/ETA. Exposure ratings from Eloundou, Manning, Mishkin and Rock, "GPTs are GPTs" (2023). Real-world use from the Anthropic Economic Index (CC BY). Employment and pay from the BLS Occupational Employment and Wage Statistics, ${BLS_RELEASE}.</p>
   </footer>
@@ -187,6 +187,122 @@ ${body}
 
 const mini = (j) => `<span class="mini band-${j.band.key}"><span class="bar"><i style="width:${Math.max(j.score, 2)}%"></i></span><b>${j.score}</b></span>`;
 const pill = (j) => `<span class="pill band-${j.band.key}">${j.band.label}</span>`;
+
+// ---------- widget (public/embed.html) ----------
+
+const EMBED_JOB_HEIGHT = 230;
+const EMBED_LOOKUP_HEIGHT = 330;
+// The snippet other sites paste. The link under the iframe is a normal link to the job page, so it counts as a
+// link from their site to this one; the iframe alone would not.
+function embedCode(j) {
+  if (!j) return `<iframe src="${SITE}/embed" title="How exposed is your job to AI?" width="100%" height="${EMBED_LOOKUP_HEIGHT}" style="border:0;max-width:520px" loading="lazy"></iframe>
+<p style="font-size:13px;margin:4px 0 0">Source: <a href="${SITE}/">Job Exposure Index: how exposed is your job to AI?</a></p>`;
+  return `<iframe src="${SITE}/embed?job=${j.slug}" title="${esc(j.title)}: AI exposure score" width="100%" height="${EMBED_JOB_HEIGHT}" style="border:0;max-width:520px" loading="lazy"></iframe>
+<p style="font-size:13px;margin:4px 0 0">Source: <a href="${SITE}/jobs/${j.slug}">Will AI replace ${esc(j.title.toLowerCase())}? Job Exposure Index</a></p>`;
+}
+
+function widgetPage() {
+  const ex = jobs.find((j) => j.slug === "accountants-and-auditors") ?? jobs[0];
+  const body = `
+    <div class="eyebrow" style="margin-top:20px">Free for any website</div>
+    <h1>Add an AI exposure checker to your site</h1>
+    <p class="lede">Let your readers look up how exposed their job is to AI, right on your page. It's free, needs no account, and updates by itself when the index does. Copy the code, paste it where you want the box, and you're done. It works in WordPress, Squarespace, Wix, Ghost, Substack-style HTML blocks and anywhere else that accepts HTML.</p>
+
+    <section class="block">
+      <h2>Option 1: a lookup box for any job</h2>
+      <p class="sub">Readers type their job title and see its score. Good for career blogs, HR and recruiting sites, newsletters and school career pages.</p>
+      <div class="embed-row">
+        <iframe src="/embed" title="How exposed is your job to AI?" width="100%" height="${EMBED_LOOKUP_HEIGHT}" style="border:0;max-width:520px" loading="lazy"></iframe>
+        <div>
+          <label for="code-lookup">Embed code</label>
+          <textarea id="code-lookup" readonly rows="6">${esc(embedCode(null))}</textarea>
+          <button type="button" class="sh" data-copy-code="code-lookup">Copy code</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Option 2: the score for one job</h2>
+      <p class="sub">Shows the score for a single job, for example in an article about that profession. Every job page has its own code at the bottom; this is the one for ${esc(ex.title.toLowerCase())}.</p>
+      <div class="embed-row">
+        <iframe src="/embed?job=${ex.slug}" title="${esc(ex.title)}: AI exposure score" width="100%" height="${EMBED_JOB_HEIGHT}" style="border:0;max-width:520px" loading="lazy"></iframe>
+        <div>
+          <label for="code-job">Embed code</label>
+          <textarea id="code-job" readonly rows="6">${esc(embedCode(ex))}</textarea>
+          <button type="button" class="sh" data-copy-code="code-job">Copy code</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="note-box">
+        <p><b>The fine print.</b> The widget is free for any site, commercial or not. Please keep the source line under it. It loads only the scores from jobexposureindex.com, sets no cookies and doesn't track your readers. Prefer to use the numbers yourself? <a href="/open-data">Download the whole index</a>.</p>
+      </div>
+    </section>
+`;
+  return page({
+    title: "Free AI exposure widget for your website · Job Exposure Index",
+    desc: "A free, embeddable box that lets your readers check how exposed their job is to AI. Copy one line of code into any website.",
+    path: "/widget", current: "", body,
+  });
+}
+
+// ---------- open data (public/downloads/job-exposure-index.csv) ----------
+
+const CSV_FILE = "job-exposure-index.csv";
+const csvCell = (v) => (v === null || v === undefined ? "" : /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v));
+function datasetCsv() {
+  const head = ["rank", "occupation", "onet_soc_code", "exposure_score", "exposure_level", "field", "tasks_total", "tasks_ai_alone", "tasks_ai_with_software", "tasks_not_exposed", "tasks_seen_in_ai_use", "us_employment", "median_annual_pay_usd", "url"];
+  const rows = jobs.map((j) => [j.rank, j.title, j.code, j.score, j.band.label, groups.get(j.major) ?? "", j.tasks.length, j.e1, j.e2, j.e0, j.inUse, j.emp, j.payNote === "or more" ? "" : j.pay, `${SITE}/jobs/${j.slug}`]);
+  return [head, ...rows].map((r) => r.map(csvCell).join(",")).join("\n") + "\n";
+}
+
+function dataPage() {
+  const body = `
+    <div class="eyebrow" style="margin-top:20px">Open data</div>
+    <h1>Download the Job Exposure Index</h1>
+    <p class="lede">The full index, all ${TOTAL} US occupations with their AI exposure scores, task counts, real-world AI use, employment and pay, as one spreadsheet. Free for research, journalism, teaching and commercial use, as long as you credit the Job Exposure Index.</p>
+    <p><a class="dl" href="/downloads/${CSV_FILE}" download>Download the CSV (${TOTAL} jobs)</a></p>
+
+    <section class="block">
+      <h2>What's in it</h2>
+      <div class="table-scroll"><table>
+        <thead><tr><th>Column</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>rank</td><td>1 is the most exposed job; ties share a rank</td></tr>
+          <tr><td>occupation, onet_soc_code, field</td><td>The O*NET occupation, its code and its job field</td></tr>
+          <tr><td>exposure_score, exposure_level</td><td>0 to 100, and its band (Low, Moderate, Elevated, High, Very high)</td></tr>
+          <tr><td>tasks_total, tasks_ai_alone, tasks_ai_with_software, tasks_not_exposed</td><td>How many of the job's tasks AI could speed up on its own, with extra software, or not at all</td></tr>
+          <tr><td>tasks_seen_in_ai_use</td><td>Tasks seen in real conversations with Claude, ${AEI_PERIOD} (Anthropic Economic Index)</td></tr>
+          <tr><td>us_employment, median_annual_pay_usd</td><td>BLS, ${BLS_RELEASE}; empty where BLS doesn't publish a figure</td></tr>
+          <tr><td>url</td><td>The job's page on this site</td></tr>
+        </tbody>
+      </table></div>
+      <p class="sub" style="margin-top:14px">The file is rebuilt automatically whenever the index is refreshed. <a href="/method.html">How the scores are made</a>.</p>
+    </section>
+
+    <section class="block">
+      <h2>How to credit it</h2>
+      <p>The data is published under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Please credit it with a link, for example:</p>
+      <div class="note-box"><p>Source: Job Exposure Index (jobexposureindex.com), based on O*NET (USDOL/ETA, CC BY 4.0), Eloundou et al. "GPTs are GPTs" (2023), the Anthropic Economic Index and BLS OEWS.</p></div>
+      <p class="sub" style="margin-top:14px">Want it on your site as a live box instead? Use the <a href="/widget">free widget</a>.</p>
+    </section>
+`;
+  return page({
+    title: `Free download: AI exposure scores for ${TOTAL} US jobs (CSV) · Job Exposure Index`,
+    desc: `Download the full Job Exposure Index as a CSV: AI exposure scores, task counts, real AI use, employment and pay for ${TOTAL} US occupations. Free under CC BY 4.0.`,
+    path: "/open-data", current: "", body,
+    jsonld: {
+      "@context": "https://schema.org", "@type": "Dataset",
+      name: "Job Exposure Index: AI exposure of US occupations",
+      description: `AI exposure scores, task counts, real-world AI use, employment and pay for ${TOTAL} US occupations.`,
+      url: `${SITE}/open-data`, license: "https://creativecommons.org/licenses/by/4.0/",
+      creator: { "@type": "Organization", name: "Job Exposure Index", url: SITE },
+      dateModified: TODAY, isAccessibleForFree: true,
+      distribution: [{ "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `${SITE}/downloads/${CSV_FILE}` }],
+    },
+  });
+}
 
 // ---------- job pages ----------
 
@@ -281,6 +397,19 @@ ${ts.map((t) => `        <li><i class="${t.exposure.toLowerCase()}" aria-hidden=
       <h2>Questions about ${esc(j.title.toLowerCase())} and AI</h2>
       <div class="faq">
 ${faq.map(([q, a]) => `        <details${q === faq[0][0] ? " open" : ""}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("\n")}
+      </div>
+    </section>
+
+    <section class="block embed-box">
+      <h2>Add this score to your website</h2>
+      <p class="sub">Writing about ${esc(j.title.toLowerCase())} or careers? Paste this code into your page to show the score in a small, always up-to-date box. It's free. <a href="/widget">More about the widget</a>.</p>
+      <div class="embed-row">
+        <iframe src="/embed?job=${j.slug}" title="${esc(j.title)}: AI exposure score" width="100%" height="${EMBED_JOB_HEIGHT}" style="border:0;max-width:520px" loading="lazy"></iframe>
+        <div>
+          <label for="embed-code">Embed code</label>
+          <textarea id="embed-code" readonly rows="5">${esc(embedCode(j))}</textarea>
+          <button type="button" class="sh" data-copy-code="embed-code">Copy code</button>
+        </div>
       </div>
     </section>
 
@@ -758,6 +887,10 @@ writeFileSync(ROOT + "public/lists/index.html", listsIndex());
 writeFileSync(ROOT + "data/report.html", reportPage());
 writeFileSync(ROOT + "public/jobs/index.html", listPage());
 writeFileSync(ROOT + "public/method.html", methodPage());
+writeFileSync(ROOT + "public/widget.html", widgetPage());
+writeFileSync(ROOT + "public/open-data.html", dataPage());
+mkdirSync(ROOT + "public/downloads", { recursive: true });
+writeFileSync(ROOT + `public/downloads/${CSV_FILE}`, datasetCsv());
 // Facts for the daily social posts (scripts/post-daily.mjs).
 const firstTask = (j, e) => j.tasks.filter((t) => t.exposure === e).sort((a, c) => (a.type === "Core" ? 0 : 1) - (c.type === "Core" ? 0 : 1) || a.task.length - c.task.length)[0]?.task.replace(/\.$/, "") ?? null;
 writeFileSync(ROOT + "data/social-jobs.json", JSON.stringify({
@@ -768,7 +901,7 @@ writeFileSync(ROOT + "data/social-jobs.json", JSON.stringify({
     exposedTask: firstTask(j, "E1") ?? firstTask(j, "E2"), safeTask: firstTask(j, "E0"),
   })),
 }, null, 1));
-writeFileSync(ROOT + "public/data/jobs.json", JSON.stringify(jobs.map((j) => ({ t: j.title, s: j.slug, x: j.score, b: j.band.key }))));
+writeFileSync(ROOT + "public/data/jobs.json", JSON.stringify(jobs.map((j) => ({ t: j.title, s: j.slug, x: j.score, b: j.band.key, r: j.rank }))));
 
 // Homepage top 10
 const top = jobs.slice(0, 10);
@@ -781,7 +914,7 @@ ${top.map((j) => `            <li><a href="/jobs/${j.slug}">${esc(j.title)}</a>$
           <!-- top10:end -->`;
 writeFileSync(homeFile, home.replace(/<!-- top10:start -->[\s\S]*?<!-- top10:end -->/, topHtml));
 
-const urls = ["/", "/jobs/", "/fields/", "/lists/", "/method.html", "/privacy.html", "/terms.html", ...LISTS.map((l) => `/lists/${l.slug}`), ...fieldList.map((f) => `/fields/${f.slug}`), ...jobs.map((j) => `/jobs/${j.slug}`)];
+const urls = ["/", "/jobs/", "/fields/", "/lists/", "/method.html", "/widget", "/open-data", "/privacy.html", "/terms.html", ...LISTS.map((l) => `/lists/${l.slug}`), ...fieldList.map((f) => `/fields/${f.slug}`), ...jobs.map((j) => `/jobs/${j.slug}`)];
 writeFileSync(ROOT + "public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${TODAY}</lastmod></url>`).join("\n")}

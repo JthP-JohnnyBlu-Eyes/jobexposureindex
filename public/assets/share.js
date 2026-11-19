@@ -18,3 +18,16 @@
     box.insertBefore(b, box.children[1]);
   }
 })();
+
+// "Copy code" buttons next to the embed code (job pages and /widget).
+(function () {
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy-code]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var box = document.getElementById(btn.getAttribute('data-copy-code'));
+      var done = function () { btn.textContent = 'Code copied'; setTimeout(function () { btn.textContent = 'Copy code'; }, 2000); };
+      var fallback = function () { box.focus(); box.select(); };
+      if (navigator.clipboard) navigator.clipboard.writeText(box.value).then(done, fallback);
+      else fallback();
+    });
+  });
+})();

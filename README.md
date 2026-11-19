@@ -41,3 +41,10 @@ Needs the repository secret `BUFFER_API_KEY` (from https://publish.buffer.com/se
 `.github/workflows/traffic-review.yml` runs `scripts/traffic-review.mjs` every Monday at 07:00 UTC. It reads the last 7 days of Cloudflare Web Analytics with bots left out, for every site in the Cloudflare account (jobexposureindex.com, skillhalflife.com, qbitoro.com), and opens a GitHub issue labelled `traffic-review` with visits and page views against the week before, visits per day, top pages, where visitors came from, countries, devices and Core Web Vitals. GitHub emails you about each new issue.
 
 Needs the repository secret `CLOUDFLARE_API_TOKEN`: a Cloudflare API token with only **Account › Account Analytics › Read** (Cloudflare dashboard, My Profile, API Tokens, Create Token, Create Custom Token). Also add the secret `CLOUDFLARE_ACCOUNT_ID`: the Account ID shown in the Cloudflare dashboard (Account home, the ⋯ menu next to the account name, Copy account ID). A read-only analytics token isn't allowed to look it up by itself. From the Actions tab you can run it by hand, for any number of days, or as `dry-run` to see the review on the run page without opening an issue.
+
+## Free widget and open data
+
+Two ways for other sites to use the index, each with a link back:
+
+- **Widget.** `public/embed.html` is a small box other sites embed with an iframe: `/embed` shows a job lookup, `/embed?job=<slug>` shows one job. It reads `public/data/jobs.json`. The Worker lets only this page be framed by other sites. `/widget` explains it with copy-ready code, and every job page ends with its own embed code. The code includes a plain source link under the iframe, which is what counts as a link to this site.
+- **Open data.** `build-index.mjs` writes the whole index to `public/downloads/job-exposure-index.csv` (CC BY 4.0) and the `/open-data` page describing it, with schema.org Dataset markup so dataset search engines can find it. Both are rebuilt by the weekly data refresh.

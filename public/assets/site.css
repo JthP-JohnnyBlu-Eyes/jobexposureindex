@@ -153,3 +153,14 @@ footer .disc { margin: 14px 0 0; color: var(--faint); max-width: 64em; }
 .inline-signup form.signup { margin: 0; }
 .inline-signup .note { color: #9EA2A9; }
 .inline-signup .note a, .closing .note a { color: #F0A07A; font-weight: 600; }
+
+/* Embed code boxes (job pages, /widget) */
+.embed-row { display: grid; gap: 20px; align-items: start; margin-top: 18px; }
+@media (min-width: 860px) { .embed-row { grid-template-columns: minmax(0, 520px) minmax(0, 1fr); } }
+.embed-row label { display: block; font-weight: 600; font-size: 14px; margin: 0 0 6px; }
+.embed-row textarea { width: 100%; font-family: var(--mono); font-size: 12px; line-height: 1.5; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: var(--radius-control); background: var(--surface); color: var(--soft); resize: vertical; }
+.embed-row .sh { margin-top: 8px; }
+.embed-row .sh { font: inherit; font-size: 14px; font-weight: 500; color: var(--ink); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.embed-row .sh:hover { border-color: var(--ink); }
+a.dl { display: inline-block; color: #fff; background: var(--ink); font-weight: 600; text-decoration: none; padding: 14px 22px; border-radius: var(--radius-control); margin-top: 8px; }
+a.dl:hover { background: var(--soft); color: #fff; }

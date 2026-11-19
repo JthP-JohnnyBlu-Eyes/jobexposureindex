@@ -1,0 +1,924 @@
+rank,occupation,onet_soc_code,exposure_score,exposure_level,field,tasks_total,tasks_ai_alone,tasks_ai_with_software,tasks_not_exposed,tasks_seen_in_ai_use,us_employment,median_annual_pay_usd,url
+1,Mathematicians,15-2021.00,100,Very high,Computer and Mathematical,11,11,0,0,7,2030,126710,https://jobexposureindex.com/jobs/mathematicians
+2,Proofreaders and Copy Markers,43-9081.00,98,Very high,Office and Administrative Support,11,10,1,0,6,4580,51120,https://jobexposureindex.com/jobs/proofreaders-and-copy-markers
+3,Blockchain Engineers,15-1299.07,97,Very high,Computer and Mathematical,17,16,1,0,8,435370,116580,https://jobexposureindex.com/jobs/blockchain-engineers
+4,Correspondence Clerks,43-4021.00,96,Very high,Office and Administrative Support,21,20,0,1,10,4290,46800,https://jobexposureindex.com/jobs/correspondence-clerks
+5,Court Reporters and Simultaneous Captioners,27-3092.00,96,Very high,"Arts, Design, Entertainment, Sports, and Media",14,13,1,0,3,12870,72420,https://jobexposureindex.com/jobs/court-reporters-and-simultaneous-captioners
+6,Computer Programmers,15-1251.00,95,Very high,Computer and Mathematical,17,15,2,0,11,92230,100390,https://jobexposureindex.com/jobs/computer-programmers
+7,Data Warehousing Specialists,15-1243.01,94,Very high,Computer and Mathematical,18,16,2,0,10,67140,139500,https://jobexposureindex.com/jobs/data-warehousing-specialists
+8,Database Administrators,15-1242.00,94,Very high,Computer and Mathematical,18,16,2,0,10,69990,104620,https://jobexposureindex.com/jobs/database-administrators
+9,Web Developers,15-1254.00,93,Very high,Computer and Mathematical,29,25,4,0,20,70190,92650,https://jobexposureindex.com/jobs/web-developers
+10,Web Administrators,15-1299.01,91,Very high,Computer and Mathematical,35,29,6,0,22,435370,116580,https://jobexposureindex.com/jobs/web-administrators
+11,Telephone Operators,43-2021.00,89,Very high,Office and Administrative Support,16,14,1,1,2,3430,41740,https://jobexposureindex.com/jobs/telephone-operators
+12,Data Entry Keyers,43-9021.00,89,Very high,Office and Administrative Support,9,7,1,1,8,127080,41340,https://jobexposureindex.com/jobs/data-entry-keyers
+13,Statistical Assistants,43-9111.00,89,Very high,Office and Administrative Support,14,10,3,1,11,4710,50330,https://jobexposureindex.com/jobs/statistical-assistants
+14,"Poets, Lyricists and Creative Writers",27-3043.05,89,Very high,"Arts, Design, Entertainment, Sports, and Media",16,14,0,2,13,47940,76910,https://jobexposureindex.com/jobs/poets-lyricists-and-creative-writers
+15,Interpreters and Translators,27-3091.00,88,Very high,"Arts, Design, Entertainment, Sports, and Media",17,15,0,2,11,52060,60170,https://jobexposureindex.com/jobs/interpreters-and-translators
+16,Database Architects,15-1243.00,88,Very high,Computer and Mathematical,25,18,7,0,14,67140,139500,https://jobexposureindex.com/jobs/database-architects
+17,Software Quality Assurance Analysts and Testers,15-1253.00,88,Very high,Computer and Mathematical,30,24,4,2,24,186740,104300,https://jobexposureindex.com/jobs/software-quality-assurance-analysts-and-testers
+18,Medical Transcriptionists,31-9094.00,88,Very high,Healthcare Support,15,12,2,1,8,41550,40410,https://jobexposureindex.com/jobs/medical-transcriptionists
+19,Software Developers,15-1252.00,87,Very high,Computer and Mathematical,19,15,3,1,11,1687890,135980,https://jobexposureindex.com/jobs/software-developers
+20,Bioinformatics Technicians,15-2099.01,87,Very high,Computer and Mathematical,19,15,3,1,11,3720,81490,https://jobexposureindex.com/jobs/bioinformatics-technicians
+21,Writers and Authors,27-3043.00,87,Very high,"Arts, Design, Entertainment, Sports, and Media",20,15,5,0,17,47940,76910,https://jobexposureindex.com/jobs/writers-and-authors
+22,Payroll and Timekeeping Clerks,43-3051.00,84,Very high,Office and Administrative Support,22,15,7,0,3,153140,58260,https://jobexposureindex.com/jobs/payroll-and-timekeeping-clerks
+23,Insurance Claims and Policy Processing Clerks,43-9041.00,83,Very high,Office and Administrative Support,27,18,9,0,10,214260,49230,https://jobexposureindex.com/jobs/insurance-claims-and-policy-processing-clerks
+23,Web and Digital Interface Designers,15-1255.00,83,Very high,Computer and Mathematical,30,20,10,0,24,113330,104000,https://jobexposureindex.com/jobs/web-and-digital-interface-designers
+25,Telemarketers,41-9041.00,81,Very high,Sales and Related,12,7,5,0,7,58430,35450,https://jobexposureindex.com/jobs/telemarketers
+26,Computer Numerically Controlled Tool Programmers,51-9162.00,80,Very high,Production,16,11,3,2,4,28500,68120,https://jobexposureindex.com/jobs/computer-numerically-controlled-tool-programmers
+27,"Bookkeeping, Accounting, and Auditing Clerks",43-3031.00,80,Very high,Office and Administrative Support,30,17,13,0,16,1373680,50670,https://jobexposureindex.com/jobs/bookkeeping-accounting-and-auditing-clerks
+28,Penetration Testers,15-1299.04,80,Very high,Computer and Mathematical,22,14,7,1,10,435370,116580,https://jobexposureindex.com/jobs/penetration-testers
+29,File Clerks,43-4071.00,79,High,Office and Administrative Support,19,12,5,2,7,73440,43600,https://jobexposureindex.com/jobs/file-clerks
+30,Statisticians,15-2041.00,79,High,Computer and Mathematical,19,11,8,0,14,29030,105650,https://jobexposureindex.com/jobs/statisticians
+31,Billing and Posting Clerks,43-3021.00,77,High,Office and Administrative Support,30,21,5,4,13,404060,48500,https://jobexposureindex.com/jobs/billing-and-posting-clerks
+32,Computer Systems Engineers/Architects,15-1299.08,77,High,Computer and Mathematical,28,15,13,0,21,435370,116580,https://jobexposureindex.com/jobs/computer-systems-engineers-architects
+33,Brokerage Clerks,43-4011.00,77,High,Office and Administrative Support,10,4,6,0,3,35940,65750,https://jobexposureindex.com/jobs/brokerage-clerks
+34,Computer Systems Analysts,15-1211.00,75,High,Computer and Mathematical,22,13,7,2,16,519530,105850,https://jobexposureindex.com/jobs/computer-systems-analysts
+34,Data Scientists,15-2051.00,75,High,Computer and Mathematical,16,8,8,0,12,262440,120230,https://jobexposureindex.com/jobs/data-scientists
+34,Physicists,19-2012.00,75,High,"Life, Physical, and Social Science",15,7,7,1,2,20430,172250,https://jobexposureindex.com/jobs/physicists
+37,Word Processors and Typists,43-9022.00,74,High,Office and Administrative Support,20,14,2,4,14,35010,49280,https://jobexposureindex.com/jobs/word-processors-and-typists
+38,Network and Computer Systems Administrators,15-1244.00,73,High,Computer and Mathematical,20,10,8,2,14,314340,99130,https://jobexposureindex.com/jobs/network-and-computer-systems-administrators
+39,Computer Hardware Engineers,17-2061.00,73,High,Architecture and Engineering,18,9,7,2,8,76660,161740,https://jobexposureindex.com/jobs/computer-hardware-engineers
+40,Digital Forensics Analysts,15-1299.06,73,High,Computer and Mathematical,20,9,11,0,7,435370,116580,https://jobexposureindex.com/jobs/digital-forensics-analysts
+41,Order Clerks,43-4151.00,71,High,Office and Administrative Support,19,8,11,0,8,75200,46170,https://jobexposureindex.com/jobs/order-clerks
+42,Bioinformatics Scientists,19-1029.01,71,High,"Life, Physical, and Social Science",20,9,11,0,9,55850,98920,https://jobexposureindex.com/jobs/bioinformatics-scientists
+43,Music Directors and Composers,27-2041.00,71,High,"Arts, Design, Entertainment, Sports, and Media",30,15,12,3,9,12540,73710,https://jobexposureindex.com/jobs/music-directors-and-composers
+44,Validation Engineers,17-2112.02,70,High,Architecture and Engineering,22,11,9,2,7,365740,102440,https://jobexposureindex.com/jobs/validation-engineers
+45,"Court, Municipal, and License Clerks",43-4031.00,70,High,Office and Administrative Support,30,12,17,1,13,179750,48700,https://jobexposureindex.com/jobs/court-municipal-and-license-clerks
+45,Technical Writers,27-3042.00,70,High,"Arts, Design, Entertainment, Sports, and Media",15,7,7,1,10,45500,90390,https://jobexposureindex.com/jobs/technical-writers
+47,Business Intelligence Analysts,15-2051.01,70,High,Computer and Mathematical,17,7,10,0,12,262440,120230,https://jobexposureindex.com/jobs/business-intelligence-analysts
+48,Bill and Account Collectors,43-3011.00,70,High,Office and Administrative Support,15,6,9,0,5,158830,47030,https://jobexposureindex.com/jobs/bill-and-account-collectors
+49,Legal Secretaries and Administrative Assistants,43-6012.00,70,High,Office and Administrative Support,14,5,9,0,5,156280,55570,https://jobexposureindex.com/jobs/legal-secretaries-and-administrative-assistants
+50,Financial Quantitative Analysts,13-2099.01,69,High,Business and Financial Operations,21,7,14,0,7,132130,81100,https://jobexposureindex.com/jobs/financial-quantitative-analysts
+51,Compliance Officers,13-1041.00,68,High,Business and Financial Operations,16,6,8,2,7,417070,80730,https://jobexposureindex.com/jobs/compliance-officers
+52,"Eligibility Interviewers, Government Programs",43-4061.00,68,High,Office and Administrative Support,17,7,9,1,5,154800,54210,https://jobexposureindex.com/jobs/eligibility-interviewers-government-programs
+53,Information Security Engineers,15-1299.05,68,High,Computer and Mathematical,20,7,13,0,13,435370,116580,https://jobexposureindex.com/jobs/information-security-engineers
+54,"Dispatchers, Except Police, Fire, and Ambulance",43-5032.00,67,High,Office and Administrative Support,13,4,9,0,5,202810,50340,https://jobexposureindex.com/jobs/dispatchers-except-police-fire-and-ambulance
+55,"Interviewers, Except Eligibility and Loan",43-4111.00,67,High,Office and Administrative Support,17,8,6,3,5,148060,45920,https://jobexposureindex.com/jobs/interviewers-except-eligibility-and-loan
+56,Social Science Research Assistants,19-4061.00,67,High,"Life, Physical, and Social Science",23,9,11,3,9,30640,61990,https://jobexposureindex.com/jobs/social-science-research-assistants
+57,Medical Secretaries and Administrative Assistants,43-6013.00,67,High,Office and Administrative Support,16,6,10,0,9,961610,45930,https://jobexposureindex.com/jobs/medical-secretaries-and-administrative-assistants
+57,Radio Frequency Identification Device Specialists,17-2072.01,67,High,Architecture and Engineering,21,9,10,2,2,96900,130220,https://jobexposureindex.com/jobs/radio-frequency-identification-device-specialists
+57,Video Game Designers,15-1255.01,67,High,Computer and Mathematical,24,8,16,0,8,113330,104000,https://jobexposureindex.com/jobs/video-game-designers
+60,Computer Network Architects,15-1241.00,66,High,Computer and Mathematical,33,13,18,2,11,179740,134050,https://jobexposureindex.com/jobs/computer-network-architects
+61,Automotive Engineers,17-2141.02,66,High,Architecture and Engineering,25,9,15,1,12,296810,104110,https://jobexposureindex.com/jobs/automotive-engineers
+61,Biostatisticians,15-2041.01,66,High,Computer and Mathematical,25,8,17,0,14,29030,105650,https://jobexposureindex.com/jobs/biostatisticians
+63,Health Information Technologists and Medical Registrars,29-9021.00,66,High,Healthcare Practitioners and Technical,16,5,11,0,4,38100,68020,https://jobexposureindex.com/jobs/health-information-technologists-and-medical-registrars
+63,Public Safety Telecommunicators,43-5031.00,66,High,Office and Administrative Support,18,7,9,2,3,102500,53040,https://jobexposureindex.com/jobs/public-safety-telecommunicators
+65,Information Security Analysts,15-1212.00,65,High,Computer and Mathematical,12,4,7,1,6,190650,129180,https://jobexposureindex.com/jobs/information-security-analysts
+66,Broadcast Announcers and Radio Disc Jockeys,27-3011.00,65,High,"Arts, Design, Entertainment, Sports, and Media",24,10,12,2,8,21240,47340,https://jobexposureindex.com/jobs/broadcast-announcers-and-radio-disc-jockeys
+66,"Credit Authorizers, Checkers, and Clerks",43-4041.00,65,High,Office and Administrative Support,16,6,9,1,6,12030,50080,https://jobexposureindex.com/jobs/credit-authorizers-checkers-and-clerks
+66,"News Analysts, Reporters, and Journalists",27-3023.00,65,High,"Arts, Design, Entertainment, Sports, and Media",30,9,21,0,16,39250,62200,https://jobexposureindex.com/jobs/news-analysts-reporters-and-journalists
+69,Executive Secretaries and Executive Administrative Assistants,43-6011.00,65,High,Office and Administrative Support,22,8,12,2,11,459910,76590,https://jobexposureindex.com/jobs/executive-secretaries-and-executive-administrative-assistants
+70,Editors,27-3041.00,65,High,"Arts, Design, Entertainment, Sports, and Media",21,7,13,1,10,91690,77920,https://jobexposureindex.com/jobs/editors
+71,Desktop Publishers,43-9031.00,65,High,Office and Administrative Support,18,6,11,1,11,3350,55290,https://jobexposureindex.com/jobs/desktop-publishers
+72,Human Resources Specialists,13-1071.00,64,High,Business and Financial Operations,26,8,17,1,7,912430,75940,https://jobexposureindex.com/jobs/human-resources-specialists
+73,"Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",43-6014.00,64,High,Office and Administrative Support,32,11,18,3,16,1706790,47540,https://jobexposureindex.com/jobs/secretaries-and-administrative-assistants-except-legal-medical-and-executive
+74,Clinical Data Managers,15-2051.02,64,High,Computer and Mathematical,21,6,15,0,13,262440,120230,https://jobexposureindex.com/jobs/clinical-data-managers
+75,Customs Brokers,13-1041.08,64,High,Business and Financial Operations,23,6,17,0,4,417070,80730,https://jobexposureindex.com/jobs/customs-brokers
+76,Computer and Information Research Scientists,15-1221.00,63,High,Computer and Mathematical,15,5,8,2,8,37200,140300,https://jobexposureindex.com/jobs/computer-and-information-research-scientists
+76,Computer Network Support Specialists,15-1231.00,63,High,Computer and Mathematical,26,12,9,5,13,146190,76220,https://jobexposureindex.com/jobs/computer-network-support-specialists
+78,"Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",41-3091.00,63,High,Sales and Related,15,5,9,1,11,1256010,69990,https://jobexposureindex.com/jobs/sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel
+79,Online Merchants,13-1199.06,63,High,Business and Financial Operations,34,13,18,3,18,1087090,83050,https://jobexposureindex.com/jobs/online-merchants
+80,Operations Research Analysts,15-2031.00,63,High,Computer and Mathematical,16,4,12,0,13,108510,88940,https://jobexposureindex.com/jobs/operations-research-analysts
+80,"Switchboard Operators, Including Answering Service",43-2011.00,63,High,Office and Administrative Support,19,10,4,5,5,34280,38630,https://jobexposureindex.com/jobs/switchboard-operators-including-answering-service
+82,Credit Counselors,13-2071.00,63,High,Business and Financial Operations,23,6,16,1,14,27770,52230,https://jobexposureindex.com/jobs/credit-counselors
+82,Survey Researchers,19-3022.00,63,High,"Life, Physical, and Social Science",16,4,12,0,5,8290,69460,https://jobexposureindex.com/jobs/survey-researchers
+82,Tax Preparers,13-2082.00,63,High,Business and Financial Operations,12,3,9,0,7,76480,54920,https://jobexposureindex.com/jobs/tax-preparers
+85,"Human Resources Assistants, Except Payroll and Timekeeping",43-4161.00,62,High,Office and Administrative Support,19,5,13,1,7,90220,50610,https://jobexposureindex.com/jobs/human-resources-assistants-except-payroll-and-timekeeping
+85,"Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",41-4012.00,62,High,Sales and Related,19,4,15,0,8,1238190,72080,https://jobexposureindex.com/jobs/sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products
+87,Medical Records Specialists,29-2072.00,62,High,Healthcare Practitioners and Technical,17,4,13,0,5,194720,51140,https://jobexposureindex.com/jobs/medical-records-specialists
+88,Procurement Clerks,43-3061.00,61,High,Office and Administrative Support,19,5,13,1,6,55810,50580,https://jobexposureindex.com/jobs/procurement-clerks
+89,Document Management Specialists,15-1299.03,61,High,Computer and Mathematical,23,5,18,0,12,435370,116580,https://jobexposureindex.com/jobs/document-management-specialists
+90,Computer User Support Specialists,15-1232.00,61,High,Computer and Mathematical,16,7,5,4,10,717190,61860,https://jobexposureindex.com/jobs/computer-user-support-specialists
+91,Sustainability Specialists,13-1199.05,61,High,Business and Financial Operations,14,3,11,0,3,1087090,83050,https://jobexposureindex.com/jobs/sustainability-specialists
+92,Telecommunications Engineering Specialists,15-1241.01,61,High,Computer and Mathematical,26,9,14,3,10,179740,134050,https://jobexposureindex.com/jobs/telecommunications-engineering-specialists
+93,"Securities, Commodities, and Financial Services Sales Agents",41-3031.00,61,High,Sales and Related,30,6,24,0,16,489570,78660,https://jobexposureindex.com/jobs/securities-commodities-and-financial-services-sales-agents
+94,Environmental Economists,19-3011.01,61,High,"Life, Physical, and Social Science",20,4,16,0,3,17790,124720,https://jobexposureindex.com/jobs/environmental-economists
+94,Speech-Language Pathology Assistants,31-9099.01,61,High,Healthcare Support,11,3,6,2,0,109740,48430,https://jobexposureindex.com/jobs/speech-language-pathology-assistants
+96,Equal Opportunity Representatives and Officers,13-1041.03,60,High,Business and Financial Operations,19,8,7,4,3,417070,80730,https://jobexposureindex.com/jobs/equal-opportunity-representatives-and-officers
+97,"Production, Planning, and Expediting Clerks",43-5061.00,60,High,Office and Administrative Support,17,5,11,1,10,390160,59650,https://jobexposureindex.com/jobs/production-planning-and-expediting-clerks
+98,Loan Interviewers and Clerks,43-4131.00,59,Elevated,Office and Administrative Support,18,3,15,0,5,164790,50020,https://jobexposureindex.com/jobs/loan-interviewers-and-clerks
+99,Geographic Information Systems Technologists and Technicians,15-1299.02,59,Elevated,Computer and Mathematical,29,5,24,0,16,435370,116580,https://jobexposureindex.com/jobs/geographic-information-systems-technologists-and-technicians
+100,Civil Engineering Technologists and Technicians,17-3022.00,59,Elevated,Architecture and Engineering,15,2,13,0,4,68520,64950,https://jobexposureindex.com/jobs/civil-engineering-technologists-and-technicians
+100,Loan Officers,13-2072.00,59,Elevated,Business and Financial Operations,30,6,23,1,13,274330,76690,https://jobexposureindex.com/jobs/loan-officers
+100,Nanosystems Engineers,17-2199.09,59,Elevated,Architecture and Engineering,25,7,16,2,3,154070,122930,https://jobexposureindex.com/jobs/nanosystems-engineers
+100,Public Relations Specialists,27-3031.00,59,Elevated,"Arts, Design, Entertainment, Sports, and Media",18,4,13,1,10,283380,74750,https://jobexposureindex.com/jobs/public-relations-specialists
+100,Robotics Engineers,17-2199.08,59,Elevated,Architecture and Engineering,24,9,10,5,6,154070,122930,https://jobexposureindex.com/jobs/robotics-engineers
+105,Bioengineers and Biomedical Engineers,17-2031.00,59,Elevated,Architecture and Engineering,30,7,22,1,5,23480,109370,https://jobexposureindex.com/jobs/bioengineers-and-biomedical-engineers
+106,Purchasing Managers,11-3061.00,59,Elevated,Management,18,4,13,1,7,84320,148080,https://jobexposureindex.com/jobs/purchasing-managers
+107,Freight Forwarders,43-5011.01,58,Elevated,Office and Administrative Support,31,5,26,0,4,97670,52260,https://jobexposureindex.com/jobs/freight-forwarders
+108,"Tax Examiners and Collectors, and Revenue Agents",13-2081.00,58,Elevated,Business and Financial Operations,25,4,20,1,3,56610,62370,https://jobexposureindex.com/jobs/tax-examiners-and-collectors-and-revenue-agents
+109,Insurance Sales Agents,41-3021.00,58,Elevated,Sales and Related,19,3,16,0,5,479100,62280,https://jobexposureindex.com/jobs/insurance-sales-agents
+109,"Office Clerks, General",43-9061.00,58,Elevated,Office and Administrative Support,21,8,8,5,11,2464940,45010,https://jobexposureindex.com/jobs/office-clerks-general
+111,Electrical and Electronics Drafters,17-3012.00,57,Elevated,Architecture and Engineering,30,7,21,2,8,17920,76870,https://jobexposureindex.com/jobs/electrical-and-electronics-drafters
+112,"Electronics Engineers, Except Computer",17-2072.00,57,Elevated,Architecture and Engineering,21,5,13,3,11,96900,130220,https://jobexposureindex.com/jobs/electronics-engineers-except-computer
+112,Gambling Managers,11-9071.00,57,Elevated,Management,19,6,9,4,3,5030,93220,https://jobexposureindex.com/jobs/gambling-managers
+114,Business Continuity Planners,13-1199.04,57,Elevated,Business and Financial Operations,21,3,18,0,8,1087090,83050,https://jobexposureindex.com/jobs/business-continuity-planners
+115,Aerospace Engineers,17-2011.00,57,Elevated,Architecture and Engineering,18,3,14,1,6,67710,134960,https://jobexposureindex.com/jobs/aerospace-engineers
+115,Appraisers of Personal and Business Property,13-2022.00,57,Elevated,Business and Financial Operations,14,2,12,0,6,57070,67960,https://jobexposureindex.com/jobs/appraisers-of-personal-and-business-property
+115,Hospitalists,29-1229.02,57,Elevated,Healthcare Practitioners and Technical,14,3,10,1,2,342720,265930,https://jobexposureindex.com/jobs/hospitalists
+115,Information Technology Project Managers,15-1299.09,57,Elevated,Computer and Mathematical,21,3,18,0,11,435370,116580,https://jobexposureindex.com/jobs/information-technology-project-managers
+115,Insurance Underwriters,13-2053.00,57,Elevated,Business and Financial Operations,7,1,6,0,1,105420,81370,https://jobexposureindex.com/jobs/insurance-underwriters
+115,"Title Examiners, Abstractors, and Searchers",23-2093.00,57,Elevated,Legal,17,3,13,1,4,48580,58650,https://jobexposureindex.com/jobs/title-examiners-abstractors-and-searchers
+121,Customer Service Representatives,43-4051.00,57,Elevated,Office and Administrative Support,15,2,13,0,7,2595750,44770,https://jobexposureindex.com/jobs/customer-service-representatives
+122,Library Technicians,25-4031.00,57,Elevated,Educational Instruction and Library,35,14,12,9,7,68690,44580,https://jobexposureindex.com/jobs/library-technicians
+123,Natural Sciences Managers,11-9121.00,57,Elevated,Management,16,2,14,0,5,108690,167220,https://jobexposureindex.com/jobs/natural-sciences-managers
+124,Logistics Analysts,13-1081.02,57,Elevated,Business and Financial Operations,31,4,27,0,12,251040,82320,https://jobexposureindex.com/jobs/logistics-analysts
+125,Atmospheric and Space Scientists,19-2021.00,57,Elevated,"Life, Physical, and Social Science",27,4,21,2,4,10000,99070,https://jobexposureindex.com/jobs/atmospheric-and-space-scientists
+126,Electrical Engineers,17-2071.00,56,Elevated,Architecture and Engineering,22,5,14,3,6,198750,120630,https://jobexposureindex.com/jobs/electrical-engineers
+126,Fundraising Managers,11-2033.00,56,Elevated,Management,16,2,14,0,4,38810,125470,https://jobexposureindex.com/jobs/fundraising-managers
+126,Travel Agents,41-3041.00,56,Elevated,Sales and Related,8,1,7,0,3,55110,50160,https://jobexposureindex.com/jobs/travel-agents
+129,Accountants and Auditors,13-2011.00,56,Elevated,Business and Financial Operations,30,3,27,0,14,1449500,83680,https://jobexposureindex.com/jobs/accountants-and-auditors
+129,New Accounts Clerks,43-4141.00,56,Elevated,Office and Administrative Support,15,4,9,2,5,36860,47670,https://jobexposureindex.com/jobs/new-accounts-clerks
+131,"Recreation and Fitness Studies Teachers, Postsecondary",25-1193.00,56,Elevated,Educational Instruction and Library,24,6,13,5,8,12630,77270,https://jobexposureindex.com/jobs/recreation-and-fitness-studies-teachers-postsecondary
+132,Regulatory Affairs Managers,11-9199.01,56,Elevated,Management,27,3,24,0,6,622190,141900,https://jobexposureindex.com/jobs/regulatory-affairs-managers
+133,Chief Sustainability Officers,11-1011.03,56,Elevated,Management,18,3,14,1,2,204350,213990,https://jobexposureindex.com/jobs/chief-sustainability-officers
+133,Credit Analysts,13-2041.00,56,Elevated,Business and Financial Operations,11,1,10,0,4,64390,83510,https://jobexposureindex.com/jobs/credit-analysts
+133,Environmental Engineers,17-2081.00,56,Elevated,Architecture and Engineering,28,4,23,1,5,38340,107110,https://jobexposureindex.com/jobs/environmental-engineers
+136,Training and Development Specialists,13-1151.00,55,Elevated,Business and Financial Operations,20,2,18,0,6,458300,69280,https://jobexposureindex.com/jobs/training-and-development-specialists
+137,Nuclear Engineers,17-2161.00,55,Elevated,Architecture and Engineering,20,5,12,3,2,15280,133970,https://jobexposureindex.com/jobs/nuclear-engineers
+137,Project Management Specialists,13-1082.00,55,Elevated,Business and Financial Operations,20,2,18,0,13,1066670,102320,https://jobexposureindex.com/jobs/project-management-specialists
+137,Public Relations Managers,11-2032.00,55,Elevated,Management,20,3,16,1,7,74850,146910,https://jobexposureindex.com/jobs/public-relations-managers
+140,Search Marketing Strategists,13-1161.01,55,Elevated,Business and Financial Operations,36,4,32,0,18,899580,78760,https://jobexposureindex.com/jobs/search-marketing-strategists
+141,Dietitians and Nutritionists,29-1031.00,55,Elevated,Healthcare Practitioners and Technical,28,3,23,2,6,77570,76400,https://jobexposureindex.com/jobs/dietitians-and-nutritionists
+141,"Energy Engineers, Except Wind and Solar",17-2199.03,55,Elevated,Architecture and Engineering,21,2,19,0,3,154070,122930,https://jobexposureindex.com/jobs/energy-engineers-except-wind-and-solar
+143,Remote Sensing Technicians,19-4099.03,55,Elevated,"Life, Physical, and Social Science",22,3,19,0,9,73910,62280,https://jobexposureindex.com/jobs/remote-sensing-technicians
+144,Labor Relations Specialists,13-1075.00,55,Elevated,Business and Financial Operations,28,5,21,2,1,64810,95420,https://jobexposureindex.com/jobs/labor-relations-specialists
+145,"Agents and Business Managers of Artists, Performers, and Athletes",13-1011.00,54,Elevated,Business and Financial Operations,14,2,11,1,4,12620,82890,https://jobexposureindex.com/jobs/agents-and-business-managers-of-artists-performers-and-athletes
+145,Dietetic Technicians,29-2051.00,54,Elevated,Healthcare Practitioners and Technical,13,2,10,1,3,31560,37640,https://jobexposureindex.com/jobs/dietetic-technicians
+147,Tutors,25-3041.00,54,Elevated,Educational Instruction and Library,19,3,14,2,11,175070,43350,https://jobexposureindex.com/jobs/tutors
+148,Tellers,43-3071.00,54,Elevated,Office and Administrative Support,29,11,12,6,9,329480,43030,https://jobexposureindex.com/jobs/tellers
+149,"Mathematical Science Teachers, Postsecondary",25-1022.00,54,Elevated,Educational Instruction and Library,24,7,12,5,10,47670,79940,https://jobexposureindex.com/jobs/mathematical-science-teachers-postsecondary
+150,Architectural and Civil Drafters,17-3011.00,54,Elevated,Architecture and Engineering,28,3,24,1,8,103700,66150,https://jobexposureindex.com/jobs/architectural-and-civil-drafters
+151,Fire-Prevention and Protection Engineers,17-2111.02,54,Elevated,Architecture and Engineering,13,1,12,0,2,21450,115160,https://jobexposureindex.com/jobs/fire-prevention-and-protection-engineers
+151,Sociologists,19-3041.00,54,Elevated,"Life, Physical, and Social Science",13,2,10,1,5,2260,106030,https://jobexposureindex.com/jobs/sociologists
+153,Advertising Sales Agents,41-3011.00,54,Elevated,Sales and Related,20,4,14,2,12,91700,64820,https://jobexposureindex.com/jobs/advertising-sales-agents
+154,"Family and Consumer Sciences Teachers, Postsecondary",25-1192.00,54,Elevated,Educational Instruction and Library,23,5,15,3,8,2770,75870,https://jobexposureindex.com/jobs/family-and-consumer-sciences-teachers-postsecondary
+155,First-Line Supervisors of Non-Retail Sales Workers,41-1012.00,54,Elevated,Sales and Related,18,2,15,1,9,214390,87520,https://jobexposureindex.com/jobs/first-line-supervisors-of-non-retail-sales-workers
+156,Climate Change Policy Analysts,19-2041.01,54,Elevated,"Life, Physical, and Social Science",14,1,13,0,2,89250,82220,https://jobexposureindex.com/jobs/climate-change-policy-analysts
+156,Regulatory Affairs Specialists,13-1041.07,54,Elevated,Business and Financial Operations,32,3,28,1,13,417070,80730,https://jobexposureindex.com/jobs/regulatory-affairs-specialists
+158,Librarians and Media Collections Specialists,25-4022.00,54,Elevated,Educational Instruction and Library,30,5,22,3,10,133790,68270,https://jobexposureindex.com/jobs/librarians-and-media-collections-specialists
+158,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",41-4011.00,54,Elevated,Sales and Related,36,5,28,3,18,284800,104920,https://jobexposureindex.com/jobs/sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products
+160,"Library Assistants, Clerical",43-4121.00,53,Elevated,Office and Administrative Support,33,11,13,9,4,85520,36910,https://jobexposureindex.com/jobs/library-assistants-clerical
+161,Financial Risk Specialists,13-2054.00,53,Elevated,Business and Financial Operations,30,2,28,0,20,63850,117330,https://jobexposureindex.com/jobs/financial-risk-specialists
+161,"Foreign Language and Literature Teachers, Postsecondary",25-1124.00,53,Elevated,Educational Instruction and Library,25,7,13,5,8,19830,79350,https://jobexposureindex.com/jobs/foreign-language-and-literature-teachers-postsecondary
+161,Receptionists and Information Clerks,43-4171.00,53,Elevated,Office and Administrative Support,19,4,12,3,12,910180,38010,https://jobexposureindex.com/jobs/receptionists-and-information-clerks
+161,Wind Energy Development Managers,11-9199.10,53,Elevated,Management,15,1,14,0,2,622190,141900,https://jobexposureindex.com/jobs/wind-energy-development-managers
+165,Counter and Rental Clerks,41-2021.00,53,Elevated,Sales and Related,16,4,9,3,6,400810,41300,https://jobexposureindex.com/jobs/counter-and-rental-clerks
+165,Health Education Specialists,21-1091.00,53,Elevated,Community and Social Service,16,4,9,3,1,65690,64070,https://jobexposureindex.com/jobs/health-education-specialists
+167,Animal Scientists,19-1011.00,53,Elevated,"Life, Physical, and Social Science",9,1,7,1,1,3100,68940,https://jobexposureindex.com/jobs/animal-scientists
+167,Geodetic Surveyors,17-1022.01,53,Elevated,Architecture and Engineering,16,3,11,2,3,50830,75440,https://jobexposureindex.com/jobs/geodetic-surveyors
+167,Orthoptists,29-1299.02,53,Elevated,Healthcare Practitioners and Technical,16,3,11,2,3,28630,115210,https://jobexposureindex.com/jobs/orthoptists
+170,Computer and Information Systems Managers,11-3021.00,53,Elevated,Management,17,2,14,1,9,670570,175140,https://jobexposureindex.com/jobs/computer-and-information-systems-managers
+170,"Teaching Assistants, Postsecondary",25-9044.00,53,Elevated,Educational Instruction and Library,20,6,8,6,9,164090,42910,https://jobexposureindex.com/jobs/teaching-assistants-postsecondary
+172,Industrial Ecologists,19-2041.03,53,Elevated,"Life, Physical, and Social Science",38,2,36,0,4,89250,82220,https://jobexposureindex.com/jobs/industrial-ecologists
+172,Intelligence Analysts,33-3021.06,53,Elevated,Protective Service,20,2,17,1,5,114430,93790,https://jobexposureindex.com/jobs/intelligence-analysts
+174,"Buyers and Purchasing Agents, Farm Products",13-1021.00,53,Elevated,Business and Financial Operations,12,1,11,0,2,491430,77710,https://jobexposureindex.com/jobs/buyers-and-purchasing-agents-farm-products
+174,Film and Video Editors,27-4032.00,53,Elevated,"Arts, Design, Entertainment, Sports, and Media",23,2,19,2,9,25610,75420,https://jobexposureindex.com/jobs/film-and-video-editors
+174,Petroleum Engineers,17-2171.00,53,Elevated,Architecture and Engineering,23,4,15,4,2,18060,144910,https://jobexposureindex.com/jobs/petroleum-engineers
+177,"English Language and Literature Teachers, Postsecondary",25-1123.00,53,Elevated,Educational Instruction and Library,33,9,18,6,13,57720,78760,https://jobexposureindex.com/jobs/english-language-and-literature-teachers-postsecondary
+178,"Disc Jockeys, Except Radio",27-2091.00,53,Elevated,"Arts, Design, Entertainment, Sports, and Media",19,8,4,7,6,7920,44949,https://jobexposureindex.com/jobs/disc-jockeys-except-radio
+178,Industrial Engineers,17-2112.00,53,Elevated,Architecture and Engineering,20,1,19,0,6,365740,102440,https://jobexposureindex.com/jobs/industrial-engineers
+178,Mechatronics Engineers,17-2199.05,53,Elevated,Architecture and Engineering,23,5,15,3,5,154070,122930,https://jobexposureindex.com/jobs/mechatronics-engineers
+181,Clinical Research Coordinators,11-9121.01,53,Elevated,Management,33,5,25,3,6,108690,167220,https://jobexposureindex.com/jobs/clinical-research-coordinators
+182,Paralegals and Legal Assistants,23-2011.00,53,Elevated,Legal,12,2,8,2,3,392880,62890,https://jobexposureindex.com/jobs/paralegals-and-legal-assistants
+182,Special Effects Artists and Animators,27-1014.00,53,Elevated,"Arts, Design, Entertainment, Sports, and Media",14,1,13,0,7,19970,102030,https://jobexposureindex.com/jobs/special-effects-artists-and-animators
+184,Broadcast Technicians,27-4012.00,52,Elevated,"Arts, Design, Entertainment, Sports, and Media",29,8,13,8,2,21110,59570,https://jobexposureindex.com/jobs/broadcast-technicians
+184,Patient Representatives,29-2099.08,52,Elevated,Healthcare Practitioners and Technical,13,1,11,1,2,182610,50290,https://jobexposureindex.com/jobs/patient-representatives
+184,Postmasters and Mail Superintendents,11-9131.00,52,Elevated,Management,13,2,9,2,3,13810,96660,https://jobexposureindex.com/jobs/postmasters-and-mail-superintendents
+184,Spa Managers,11-9179.02,52,Elevated,Management,21,5,12,4,9,10450,69770,https://jobexposureindex.com/jobs/spa-managers
+188,Transportation Planners,19-3099.01,52,Elevated,"Life, Physical, and Social Science",22,2,19,1,5,37100,101110,https://jobexposureindex.com/jobs/transportation-planners
+189,"Medical Scientists, Except Epidemiologists",19-1042.00,52,Elevated,"Life, Physical, and Social Science",14,2,10,2,4,172340,103410,https://jobexposureindex.com/jobs/medical-scientists-except-epidemiologists
+190,Environmental Restoration Planners,19-2041.02,52,Elevated,"Life, Physical, and Social Science",23,2,20,1,3,89250,82220,https://jobexposureindex.com/jobs/environmental-restoration-planners
+190,"Environmental Science Teachers, Postsecondary",25-1053.00,52,Elevated,Educational Instruction and Library,25,6,13,6,9,6690,94980,https://jobexposureindex.com/jobs/environmental-science-teachers-postsecondary
+190,Security Management Specialists,13-1199.07,52,Elevated,Business and Financial Operations,23,4,16,3,9,1087090,83050,https://jobexposureindex.com/jobs/security-management-specialists
+193,Quality Control Analysts,19-4099.01,52,Elevated,"Life, Physical, and Social Science",26,6,16,4,10,73910,62280,https://jobexposureindex.com/jobs/quality-control-analysts
+194,"Anthropology and Archeology Teachers, Postsecondary",25-1061.00,52,Elevated,Educational Instruction and Library,26,7,12,7,8,5240,99650,https://jobexposureindex.com/jobs/anthropology-and-archeology-teachers-postsecondary
+195,Budget Analysts,13-2031.00,52,Elevated,Business and Financial Operations,13,1,11,1,4,47160,91640,https://jobexposureindex.com/jobs/budget-analysts
+195,Cartographers and Photogrammetrists,17-1021.00,52,Elevated,Architecture and Engineering,14,1,13,0,6,14260,81390,https://jobexposureindex.com/jobs/cartographers-and-photogrammetrists
+195,"Claims Adjusters, Examiners, and Investigators",13-1031.00,52,Elevated,Business and Financial Operations,29,3,25,1,5,324230,78000,https://jobexposureindex.com/jobs/claims-adjusters-examiners-and-investigators
+195,Compliance Managers,11-9199.02,52,Elevated,Management,30,2,27,1,12,622190,141900,https://jobexposureindex.com/jobs/compliance-managers
+199,Fundraisers,13-1131.00,52,Elevated,Business and Financial Operations,28,4,20,4,6,111040,72550,https://jobexposureindex.com/jobs/fundraisers
+200,Logistics Engineers,13-1081.01,52,Elevated,Business and Financial Operations,30,1,29,0,10,251040,82320,https://jobexposureindex.com/jobs/logistics-engineers
+201,Judicial Law Clerks,23-1012.00,52,Elevated,Legal,19,3,13,3,4,13290,64920,https://jobexposureindex.com/jobs/judicial-law-clerks
+202,Park Naturalists,19-1031.03,52,Elevated,"Life, Physical, and Social Science",18,3,12,3,5,25950,73010,https://jobexposureindex.com/jobs/park-naturalists
+203,Compensation and Benefits Managers,11-3111.00,51,Elevated,Management,24,3,18,3,6,22940,149230,https://jobexposureindex.com/jobs/compensation-and-benefits-managers
+204,Microsystems Engineers,17-2199.06,51,Elevated,Architecture and Engineering,31,7,16,8,3,154070,122930,https://jobexposureindex.com/jobs/microsystems-engineers
+205,"Computer Science Teachers, Postsecondary",25-1021.00,51,Elevated,Educational Instruction and Library,26,4,18,4,9,35480,96980,https://jobexposureindex.com/jobs/computer-science-teachers-postsecondary
+206,Geneticists,19-1029.03,51,Elevated,"Life, Physical, and Social Science",24,5,15,4,2,55850,98920,https://jobexposureindex.com/jobs/geneticists
+207,"Philosophy and Religion Teachers, Postsecondary",25-1126.00,51,Elevated,Educational Instruction and Library,23,6,12,5,9,20460,80260,https://jobexposureindex.com/jobs/philosophy-and-religion-teachers-postsecondary
+207,Sales Engineers,41-9031.00,51,Elevated,Sales and Related,25,4,18,3,13,51790,124900,https://jobexposureindex.com/jobs/sales-engineers
+209,First-Line Supervisors of Food Preparation and Serving Workers,35-1012.00,51,Elevated,Food Preparation and Serving Related,26,5,16,5,3,1223240,44080,https://jobexposureindex.com/jobs/first-line-supervisors-of-food-preparation-and-serving-workers
+209,"History Teachers, Postsecondary",25-1125.00,51,Elevated,Educational Instruction and Library,25,5,14,6,10,18790,83820,https://jobexposureindex.com/jobs/history-teachers-postsecondary
+211,"Library Science Teachers, Postsecondary",25-1082.00,51,Elevated,Educational Instruction and Library,25,5,15,5,8,3630,80340,https://jobexposureindex.com/jobs/library-science-teachers-postsecondary
+212,Human Factors Engineers and Ergonomists,17-2112.01,51,Elevated,Architecture and Engineering,26,4,19,3,9,365740,102440,https://jobexposureindex.com/jobs/human-factors-engineers-and-ergonomists
+213,Quality Control Systems Managers,11-3051.01,51,Elevated,Management,27,2,23,2,9,246250,126060,https://jobexposureindex.com/jobs/quality-control-systems-managers
+214,Actuaries,15-2011.00,50,Elevated,Computer and Mathematical,15,0,15,0,3,26670,130000,https://jobexposureindex.com/jobs/actuaries
+214,"Administrative Law Judges, Adjudicators, and Hearing Officers",23-1021.00,50,Elevated,Legal,14,2,10,2,5,16370,117860,https://jobexposureindex.com/jobs/administrative-law-judges-adjudicators-and-hearing-officers
+214,"Agricultural Sciences Teachers, Postsecondary",25-1041.00,50,Elevated,Educational Instruction and Library,23,5,13,5,8,8920,98700,https://jobexposureindex.com/jobs/agricultural-sciences-teachers-postsecondary
+214,"Arbitrators, Mediators, and Conciliators",23-1022.00,50,Elevated,Legal,20,2,16,2,6,9210,75530,https://jobexposureindex.com/jobs/arbitrators-mediators-and-conciliators
+214,Archivists,25-4011.00,50,Elevated,Educational Instruction and Library,13,1,11,1,3,7970,64550,https://jobexposureindex.com/jobs/archivists
+214,"Area, Ethnic, and Cultural Studies Teachers, Postsecondary",25-1062.00,50,Elevated,Educational Instruction and Library,23,5,13,5,8,11300,85020,https://jobexposureindex.com/jobs/area-ethnic-and-cultural-studies-teachers-postsecondary
+214,Art Directors,27-1011.00,50,Elevated,"Arts, Design, Entertainment, Sports, and Media",16,1,14,1,8,53070,114850,https://jobexposureindex.com/jobs/art-directors
+214,Cost Estimators,13-1051.00,50,Elevated,Business and Financial Operations,14,0,14,0,6,224220,78740,https://jobexposureindex.com/jobs/cost-estimators
+214,"Criminal Justice and Law Enforcement Teachers, Postsecondary",25-1111.00,50,Elevated,Educational Instruction and Library,23,5,13,5,8,13150,76590,https://jobexposureindex.com/jobs/criminal-justice-and-law-enforcement-teachers-postsecondary
+214,Curators,25-4012.00,50,Elevated,Educational Instruction and Library,15,2,11,2,5,12150,63420,https://jobexposureindex.com/jobs/curators
+214,Economists,19-3011.00,50,Elevated,"Life, Physical, and Social Science",13,0,13,0,5,17790,124720,https://jobexposureindex.com/jobs/economists
+214,"Engineering Teachers, Postsecondary",25-1032.00,50,Elevated,Educational Instruction and Library,24,4,16,4,10,40270,109270,https://jobexposureindex.com/jobs/engineering-teachers-postsecondary
+214,"Environmental Scientists and Specialists, Including Health",19-2041.00,50,Elevated,"Life, Physical, and Social Science",22,1,20,1,3,89250,82220,https://jobexposureindex.com/jobs/environmental-scientists-and-specialists-including-health
+214,Financial Examiners,13-2061.00,50,Elevated,Business and Financial Operations,17,1,15,1,5,67830,94160,https://jobexposureindex.com/jobs/financial-examiners
+214,Genetic Counselors,29-9092.00,50,Elevated,Healthcare Practitioners and Technical,19,2,15,2,6,3740,100040,https://jobexposureindex.com/jobs/genetic-counselors
+214,Graphic Designers,27-1024.00,50,Elevated,"Arts, Design, Entertainment, Sports, and Media",16,0,16,0,10,197830,62960,https://jobexposureindex.com/jobs/graphic-designers
+214,"Hotel, Motel, and Resort Desk Clerks",43-4081.00,50,Elevated,Office and Administrative Support,20,4,12,4,4,261420,35070,https://jobexposureindex.com/jobs/hotel-motel-and-resort-desk-clerks
+214,Hydrologic Technicians,19-4044.00,50,Elevated,"Life, Physical, and Social Science",16,3,10,3,4,2840,64790,https://jobexposureindex.com/jobs/hydrologic-technicians
+214,Hydrologists,19-2043.00,50,Elevated,"Life, Physical, and Social Science",25,3,19,3,1,5850,96600,https://jobexposureindex.com/jobs/hydrologists
+214,"Insurance Appraisers, Auto Damage",13-1032.00,50,Elevated,Business and Financial Operations,7,0,7,0,1,11560,78240,https://jobexposureindex.com/jobs/insurance-appraisers-auto-damage
+214,Interior Designers,27-1025.00,50,Elevated,"Arts, Design, Entertainment, Sports, and Media",15,0,15,0,3,71500,67190,https://jobexposureindex.com/jobs/interior-designers
+214,Investment Fund Managers,11-3031.03,50,Elevated,Management,20,0,20,0,7,841710,166570,https://jobexposureindex.com/jobs/investment-fund-managers
+214,Logisticians,13-1081.00,50,Elevated,Business and Financial Operations,22,2,18,2,7,251040,82320,https://jobexposureindex.com/jobs/logisticians
+214,Market Research Analysts and Marketing Specialists,13-1161.00,50,Elevated,Business and Financial Operations,13,0,13,0,8,899580,78760,https://jobexposureindex.com/jobs/market-research-analysts-and-marketing-specialists
+214,Marketing Managers,11-2021.00,50,Elevated,Management,20,1,18,1,8,395240,166790,https://jobexposureindex.com/jobs/marketing-managers
+214,Mechanical Drafters,17-3013.00,50,Elevated,Architecture and Engineering,15,1,13,1,5,39960,71550,https://jobexposureindex.com/jobs/mechanical-drafters
+214,Personal Financial Advisors,13-2052.00,50,Elevated,Business and Financial Operations,21,1,19,1,9,266800,105070,https://jobexposureindex.com/jobs/personal-financial-advisors
+214,Precision Agriculture Technicians,19-4012.01,50,Elevated,"Life, Physical, and Social Science",22,2,18,2,1,15130,49630,https://jobexposureindex.com/jobs/precision-agriculture-technicians
+214,Real Estate Brokers,41-9021.00,50,Elevated,Sales and Related,19,0,19,0,2,46100,73220,https://jobexposureindex.com/jobs/real-estate-brokers
+214,"Shipping, Receiving, and Inventory Clerks",43-5071.00,50,Elevated,Office and Administrative Support,11,3,5,3,2,816870,45260,https://jobexposureindex.com/jobs/shipping-receiving-and-inventory-clerks
+214,Surveying and Mapping Technicians,17-3031.00,50,Elevated,Architecture and Engineering,30,3,24,3,4,58010,54240,https://jobexposureindex.com/jobs/surveying-and-mapping-technicians
+214,Talent Directors,27-2012.04,50,Elevated,"Arts, Design, Entertainment, Sports, and Media",15,1,12,2,3,143120,90360,https://jobexposureindex.com/jobs/talent-directors
+214,Training and Development Managers,11-3131.00,50,Elevated,Management,12,1,10,1,6,48050,133000,https://jobexposureindex.com/jobs/training-and-development-managers
+214,Transportation Engineers,17-2051.01,50,Elevated,Architecture and Engineering,26,1,24,1,5,367840,100840,https://jobexposureindex.com/jobs/transportation-engineers
+214,Water Resource Specialists,11-9121.02,50,Elevated,Management,21,1,19,1,0,108690,167220,https://jobexposureindex.com/jobs/water-resource-specialists
+214,Water/Wastewater Engineers,17-2051.02,50,Elevated,Architecture and Engineering,28,2,24,2,4,367840,100840,https://jobexposureindex.com/jobs/water-wastewater-engineers
+250,Geographers,19-3092.00,50,Elevated,"Life, Physical, and Social Science",12,2,8,2,4,1400,102040,https://jobexposureindex.com/jobs/geographers
+251,Appraisers and Assessors of Real Estate,13-2023.00,49,Elevated,Business and Financial Operations,30,1,28,1,7,57070,67960,https://jobexposureindex.com/jobs/appraisers-and-assessors-of-real-estate
+252,Supply Chain Managers,11-3071.04,49,Elevated,Management,30,0,29,1,4,221180,107230,https://jobexposureindex.com/jobs/supply-chain-managers
+253,First-Line Supervisors of Office and Administrative Support Workers,43-1011.00,49,Elevated,Office and Administrative Support,29,2,24,3,12,1436680,69500,https://jobexposureindex.com/jobs/first-line-supervisors-of-office-and-administrative-support-workers
+254,Soil and Plant Scientists,19-1013.00,49,Elevated,"Life, Physical, and Social Science",27,0,26,1,3,15730,78850,https://jobexposureindex.com/jobs/soil-and-plant-scientists
+255,Industrial-Organizational Psychologists,19-3032.00,49,Elevated,"Life, Physical, and Social Science",25,2,20,3,10,790,193950,https://jobexposureindex.com/jobs/industrial-organizational-psychologists
+255,Radiologists,29-1224.00,49,Elevated,Healthcare Practitioners and Technical,30,0,29,1,3,26770,420860,https://jobexposureindex.com/jobs/radiologists
+255,Surveyors,17-1022.00,49,Elevated,Architecture and Engineering,24,3,18,3,4,50830,75440,https://jobexposureindex.com/jobs/surveyors
+258,"Business Teachers, Postsecondary",25-1011.00,49,Elevated,Educational Instruction and Library,25,4,16,5,9,82150,99080,https://jobexposureindex.com/jobs/business-teachers-postsecondary
+259,"Architects, Except Landscape and Naval",17-1011.00,49,Elevated,Architecture and Engineering,24,2,20,2,10,106770,99280,https://jobexposureindex.com/jobs/architects-except-landscape-and-naval
+260,"Education Teachers, Postsecondary",25-1081.00,49,Elevated,Educational Instruction and Library,24,4,15,5,8,60830,75350,https://jobexposureindex.com/jobs/education-teachers-postsecondary
+261,"Architecture Teachers, Postsecondary",25-1031.00,49,Elevated,Educational Instruction and Library,22,4,13,5,7,7700,96870,https://jobexposureindex.com/jobs/architecture-teachers-postsecondary
+261,Materials Engineers,17-2131.00,49,Elevated,Architecture and Engineering,21,3,14,4,5,22770,112860,https://jobexposureindex.com/jobs/materials-engineers
+261,Molecular and Cellular Biologists,19-1029.02,49,Elevated,"Life, Physical, and Social Science",22,4,14,4,5,55850,98920,https://jobexposureindex.com/jobs/molecular-and-cellular-biologists
+264,Instructional Coordinators,25-9031.00,49,Elevated,Educational Instruction and Library,30,6,20,4,19,227760,77440,https://jobexposureindex.com/jobs/instructional-coordinators
+265,"Career/Technical Education Teachers, Postsecondary",25-1194.00,49,Elevated,Educational Instruction and Library,20,3,14,3,10,114110,63820,https://jobexposureindex.com/jobs/career-technical-education-teachers-postsecondary
+265,Media Programming Directors,27-2012.03,49,Elevated,"Arts, Design, Entertainment, Sports, and Media",23,3,15,5,5,143120,90360,https://jobexposureindex.com/jobs/media-programming-directors
+267,First-Line Supervisors of Retail Sales Workers,41-1011.00,49,Elevated,Sales and Related,21,2,17,2,9,1121800,48520,https://jobexposureindex.com/jobs/first-line-supervisors-of-retail-sales-workers
+267,"Meeting, Convention, and Event Planners",13-1121.00,49,Elevated,Business and Financial Operations,21,2,16,3,4,142860,61160,https://jobexposureindex.com/jobs/meeting-convention-and-event-planners
+269,Biologists,19-1029.04,49,Elevated,"Life, Physical, and Social Science",22,4,14,4,5,55850,98920,https://jobexposureindex.com/jobs/biologists
+270,Health Informatics Specialists,15-1211.01,48,Elevated,Computer and Mathematical,17,0,16,1,4,519530,105850,https://jobexposureindex.com/jobs/health-informatics-specialists
+270,Industrial Production Managers,11-3051.00,48,Elevated,Management,21,1,18,2,5,246250,126060,https://jobexposureindex.com/jobs/industrial-production-managers
+272,Geothermal Production Managers,11-3051.02,48,Elevated,Management,17,3,10,4,0,246250,126060,https://jobexposureindex.com/jobs/geothermal-production-managers
+272,"Pediatricians, General",29-1221.00,48,Elevated,Healthcare Practitioners and Technical,17,0,16,1,6,39390,210040,https://jobexposureindex.com/jobs/pediatricians-general
+274,Materials Scientists,19-2032.00,48,Elevated,"Life, Physical, and Social Science",16,2,11,3,8,8470,117790,https://jobexposureindex.com/jobs/materials-scientists
+275,Security Managers,11-3013.01,48,Elevated,Management,28,2,23,3,9,156180,106660,https://jobexposureindex.com/jobs/security-managers
+275,"Transportation, Storage, and Distribution Managers",11-3071.00,48,Elevated,Management,30,1,27,2,12,221180,107230,https://jobexposureindex.com/jobs/transportation-storage-and-distribution-managers
+277,Financial Managers,11-3031.00,48,Elevated,Management,21,0,20,1,11,841710,166570,https://jobexposureindex.com/jobs/financial-managers
+277,"Mining and Geological Engineers, Including Mining Safety Engineers",17-2151.00,48,Elevated,Architecture and Engineering,18,2,13,3,1,6080,106220,https://jobexposureindex.com/jobs/mining-and-geological-engineers-including-mining-safety-engineers
+277,Nurse Practitioners,29-1171.00,48,Elevated,Healthcare Practitioners and Technical,27,1,24,2,7,323040,132300,https://jobexposureindex.com/jobs/nurse-practitioners
+280,General and Operations Managers,11-1021.00,48,Elevated,Management,17,0,16,1,6,3503020,105770,https://jobexposureindex.com/jobs/general-and-operations-managers
+281,Fuel Cell Engineers,17-2141.01,48,Elevated,Architecture and Engineering,26,6,13,7,2,296810,104110,https://jobexposureindex.com/jobs/fuel-cell-engineers
+282,"Psychology Teachers, Postsecondary",25-1066.00,48,Elevated,Educational Instruction and Library,29,5,17,7,11,41530,80340,https://jobexposureindex.com/jobs/psychology-teachers-postsecondary
+283,Human Resources Managers,11-3121.00,48,Elevated,Management,26,1,23,2,6,220660,149280,https://jobexposureindex.com/jobs/human-resources-managers
+284,Mechanical Engineering Technologists and Technicians,17-3027.00,48,Elevated,Architecture and Engineering,30,5,18,7,10,36190,74510,https://jobexposureindex.com/jobs/mechanical-engineering-technologists-and-technicians
+285,Political Scientists,19-3094.00,48,Elevated,"Life, Physical, and Social Science",14,1,12,1,9,5540,142080,https://jobexposureindex.com/jobs/political-scientists
+286,Manufacturing Engineers,17-2112.03,48,Elevated,Architecture and Engineering,24,1,21,2,11,365740,102440,https://jobexposureindex.com/jobs/manufacturing-engineers
+287,"Forestry and Conservation Science Teachers, Postsecondary",25-1043.00,48,Elevated,Educational Instruction and Library,25,5,14,6,10,1520,101420,https://jobexposureindex.com/jobs/forestry-and-conservation-science-teachers-postsecondary
+287,Psychiatrists,29-1223.00,48,Elevated,Healthcare Practitioners and Technical,12,1,9,2,3,27980,281870,https://jobexposureindex.com/jobs/psychiatrists
+289,Photonics Engineers,17-2199.07,48,Elevated,Architecture and Engineering,26,6,14,6,2,154070,122930,https://jobexposureindex.com/jobs/photonics-engineers
+290,"Fraud Examiners, Investigators and Analysts",13-2099.04,48,Elevated,Business and Financial Operations,23,2,17,4,6,132130,81100,https://jobexposureindex.com/jobs/fraud-examiners-investigators-and-analysts
+290,"Geography Teachers, Postsecondary",25-1064.00,48,Elevated,Educational Instruction and Library,25,5,14,6,9,3330,97590,https://jobexposureindex.com/jobs/geography-teachers-postsecondary
+290,Urban and Regional Planners,19-3051.00,48,Elevated,"Life, Physical, and Social Science",25,0,24,1,4,44230,89320,https://jobexposureindex.com/jobs/urban-and-regional-planners
+293,Advertising and Promotions Managers,11-2011.00,48,Elevated,Management,30,0,28,2,10,21470,133660,https://jobexposureindex.com/jobs/advertising-and-promotions-managers
+294,"Economics Teachers, Postsecondary",25-1063.00,48,Elevated,Educational Instruction and Library,22,3,14,5,8,11560,123920,https://jobexposureindex.com/jobs/economics-teachers-postsecondary
+294,"Political Science Teachers, Postsecondary",25-1065.00,48,Elevated,Educational Instruction and Library,22,4,13,5,8,16970,98070,https://jobexposureindex.com/jobs/political-science-teachers-postsecondary
+296,Adapted Physical Education Specialists,25-2059.01,48,Elevated,Educational Instruction and Library,20,6,7,7,1,33930,76580,https://jobexposureindex.com/jobs/adapted-physical-education-specialists
+296,"Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",25-1051.00,48,Elevated,Educational Instruction and Library,26,5,15,6,10,9900,103170,https://jobexposureindex.com/jobs/atmospheric-earth-marine-and-space-sciences-teachers-postsecondary
+296,"Health Specialties Teachers, Postsecondary",25-1071.00,48,Elevated,Educational Instruction and Library,23,3,16,4,8,221270,107310,https://jobexposureindex.com/jobs/health-specialties-teachers-postsecondary
+299,"Compensation, Benefits, and Job Analysis Specialists",13-1141.00,47,Elevated,Business and Financial Operations,24,2,19,3,6,112380,78210,https://jobexposureindex.com/jobs/compensation-benefits-and-job-analysis-specialists
+299,Historians,19-3093.00,47,Elevated,"Life, Physical, and Social Science",21,3,15,3,7,3450,76750,https://jobexposureindex.com/jobs/historians
+299,"Purchasing Agents, Except Wholesale, Retail, and Farm Products",13-1023.00,47,Elevated,Business and Financial Operations,19,1,16,2,9,491430,77710,https://jobexposureindex.com/jobs/purchasing-agents-except-wholesale-retail-and-farm-products
+299,Treasurers and Controllers,11-3031.01,47,Elevated,Management,22,0,21,1,9,841710,166570,https://jobexposureindex.com/jobs/treasurers-and-controllers
+299,Wind Energy Engineers,17-2199.10,47,Elevated,Architecture and Engineering,16,2,11,3,0,154070,122930,https://jobexposureindex.com/jobs/wind-energy-engineers
+304,Architectural and Engineering Managers,11-9041.00,47,Elevated,Management,21,0,20,1,6,220260,171270,https://jobexposureindex.com/jobs/architectural-and-engineering-managers
+305,"Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",17-2111.00,47,Elevated,Architecture and Engineering,27,3,18,6,4,21450,115160,https://jobexposureindex.com/jobs/health-and-safety-engineers-except-mining-safety-engineers-and-inspectors
+306,Cargo and Freight Agents,43-5011.00,47,Elevated,Office and Administrative Support,24,5,9,10,4,97670,52260,https://jobexposureindex.com/jobs/cargo-and-freight-agents
+306,"Physicians, Pathologists",29-1222.00,47,Elevated,Healthcare Practitioners and Technical,19,1,15,3,1,11110,312400,https://jobexposureindex.com/jobs/physicians-pathologists
+308,"Biological Science Teachers, Postsecondary",25-1042.00,47,Elevated,Educational Instruction and Library,27,4,17,6,10,50190,84620,https://jobexposureindex.com/jobs/biological-science-teachers-postsecondary
+309,"Education and Childcare Administrators, Preschool and Daycare",11-9031.00,47,Elevated,Management,17,1,14,2,4,73660,59300,https://jobexposureindex.com/jobs/education-and-childcare-administrators-preschool-and-daycare
+309,Fabric and Apparel Patternmakers,51-6092.00,47,Elevated,Production,16,2,11,3,0,2950,62750,https://jobexposureindex.com/jobs/fabric-and-apparel-patternmakers
+311,Producers and Directors,27-2012.00,47,Elevated,"Arts, Design, Entertainment, Sports, and Media",30,6,18,6,11,143120,90360,https://jobexposureindex.com/jobs/producers-and-directors
+312,Advanced Practice Psychiatric Nurses,29-1141.02,47,Elevated,Healthcare Practitioners and Technical,24,2,18,4,7,3379720,97550,https://jobexposureindex.com/jobs/advanced-practice-psychiatric-nurses
+312,Concierges,39-6012.00,47,Elevated,Personal Care and Service,16,2,10,4,3,49240,38950,https://jobexposureindex.com/jobs/concierges
+312,"Geoscientists, Except Hydrologists and Geographers",19-2042.00,47,Elevated,"Life, Physical, and Social Science",32,3,24,5,3,23470,101920,https://jobexposureindex.com/jobs/geoscientists-except-hydrologists-and-geographers
+312,Preventive Medicine Physicians,29-1229.05,47,Elevated,Healthcare Practitioners and Technical,15,0,14,1,1,342720,265930,https://jobexposureindex.com/jobs/preventive-medicine-physicians
+312,"Wholesale and Retail Buyers, Except Farm Products",13-1022.00,47,Elevated,Business and Financial Operations,20,1,17,2,7,491430,77710,https://jobexposureindex.com/jobs/wholesale-and-retail-buyers-except-farm-products
+317,Commercial and Industrial Designers,27-1021.00,47,Elevated,"Arts, Design, Entertainment, Sports, and Media",17,0,16,1,8,33490,83910,https://jobexposureindex.com/jobs/commercial-and-industrial-designers
+318,Brownfield Redevelopment Specialists and Site Managers,11-9199.11,47,Elevated,Management,23,1,19,3,0,622190,141900,https://jobexposureindex.com/jobs/brownfield-redevelopment-specialists-and-site-managers
+319,Neuropsychologists,19-3039.02,46,Elevated,"Life, Physical, and Social Science",14,1,11,2,2,18820,110840,https://jobexposureindex.com/jobs/neuropsychologists
+320,Traffic Technicians,53-6041.00,46,Elevated,Transportation and Material Moving,24,3,17,4,2,7860,59090,https://jobexposureindex.com/jobs/traffic-technicians
+321,Chemical Engineers,17-2041.00,46,Elevated,Architecture and Engineering,13,1,10,2,1,21070,125040,https://jobexposureindex.com/jobs/chemical-engineers
+321,Financial and Investment Analysts,13-2051.00,46,Elevated,Business and Financial Operations,26,0,24,2,17,361980,102740,https://jobexposureindex.com/jobs/financial-and-investment-analysts
+321,Solar Sales Representatives and Assessors,41-4011.07,46,Elevated,Sales and Related,13,0,12,1,4,284800,104920,https://jobexposureindex.com/jobs/solar-sales-representatives-and-assessors
+324,Naturopathic Physicians,29-1299.01,46,Elevated,Healthcare Practitioners and Technical,20,4,10,6,4,28630,115210,https://jobexposureindex.com/jobs/naturopathic-physicians
+325,Chief Executives,11-1011.00,46,Elevated,Management,31,3,22,6,9,204350,213990,https://jobexposureindex.com/jobs/chief-executives
+325,Solar Energy Systems Engineers,17-2199.11,46,Elevated,Architecture and Engineering,13,1,10,2,2,154070,122930,https://jobexposureindex.com/jobs/solar-energy-systems-engineers
+327,"Transportation Vehicle, Equipment and Systems Inspectors, Except Aviation",53-6051.07,46,Elevated,Transportation and Material Moving,21,5,10,6,4,24500,92100,https://jobexposureindex.com/jobs/transportation-vehicle-equipment-and-systems-inspectors-except-aviation
+328,General Internal Medicine Physicians,29-1216.00,46,Elevated,Healthcare Practitioners and Technical,19,0,17,2,7,67150,256560,https://jobexposureindex.com/jobs/general-internal-medicine-physicians
+328,Reservation and Transportation Ticket Agents and Travel Clerks,43-4181.00,46,Elevated,Office and Administrative Support,21,2,15,4,7,118710,44390,https://jobexposureindex.com/jobs/reservation-and-transportation-ticket-agents-and-travel-clerks
+330,Lodging Managers,11-9081.00,46,Elevated,Management,24,1,20,3,8,42620,69250,https://jobexposureindex.com/jobs/lodging-managers
+330,Neurologists,29-1217.00,46,Elevated,Healthcare Practitioners and Technical,24,1,19,4,6,10590,248560,https://jobexposureindex.com/jobs/neurologists
+330,Remote Sensing Scientists and Technologists,19-2099.01,46,Elevated,"Life, Physical, and Social Science",24,0,22,2,3,22300,122570,https://jobexposureindex.com/jobs/remote-sensing-scientists-and-technologists
+333,"Environmental Science and Protection Technicians, Including Health",19-4042.00,46,Elevated,"Life, Physical, and Social Science",26,6,11,9,4,34670,55090,https://jobexposureindex.com/jobs/environmental-science-and-protection-technicians-including-health
+334,Audiologists,29-1181.00,45,Elevated,Healthcare Practitioners and Technical,22,3,14,5,1,13660,95780,https://jobexposureindex.com/jobs/audiologists
+334,Biochemists and Biophysicists,19-1021.00,45,Elevated,"Life, Physical, and Social Science",24,3,15,6,3,33830,127410,https://jobexposureindex.com/jobs/biochemists-and-biophysicists
+334,Chiropractors,29-1011.00,45,Elevated,Healthcare Practitioners and Technical,11,2,6,3,3,39630,79200,https://jobexposureindex.com/jobs/chiropractors
+337,Mechanical Engineers,17-2141.00,45,Elevated,Architecture and Engineering,28,1,23,4,13,296810,104110,https://jobexposureindex.com/jobs/mechanical-engineers
+338,Customs and Border Protection Officers,33-3051.04,45,Elevated,Protective Service,11,3,4,4,2,670520,76210,https://jobexposureindex.com/jobs/customs-and-border-protection-officers
+338,Zoologists and Wildlife Biologists,19-1023.00,45,Elevated,"Life, Physical, and Social Science",14,1,9,4,1,18120,76780,https://jobexposureindex.com/jobs/zoologists-and-wildlife-biologists
+340,Environmental Compliance Inspectors,13-1041.01,45,Elevated,Business and Financial Operations,26,5,14,7,3,417070,80730,https://jobexposureindex.com/jobs/environmental-compliance-inspectors
+340,Speech-Language Pathologists,29-1127.00,45,Elevated,Healthcare Practitioners and Technical,24,4,14,6,4,183390,97870,https://jobexposureindex.com/jobs/speech-language-pathologists
+342,Allergists and Immunologists,29-1229.01,45,Elevated,Healthcare Practitioners and Technical,16,3,9,4,3,342720,265930,https://jobexposureindex.com/jobs/allergists-and-immunologists
+342,Clinical Nurse Specialists,29-1141.04,45,Elevated,Healthcare Practitioners and Technical,30,2,23,5,10,3379720,97550,https://jobexposureindex.com/jobs/clinical-nurse-specialists
+342,"Law Teachers, Postsecondary",25-1112.00,45,Elevated,Educational Instruction and Library,23,3,15,5,8,20060,128500,https://jobexposureindex.com/jobs/law-teachers-postsecondary
+342,Medical Dosimetrists,29-2036.00,45,Elevated,Healthcare Practitioners and Technical,20,3,12,5,2,3410,147470,https://jobexposureindex.com/jobs/medical-dosimetrists
+342,Sales Managers,11-2022.00,45,Elevated,Management,17,0,15,2,5,637080,148270,https://jobexposureindex.com/jobs/sales-managers
+347,Civil Engineers,17-2051.00,45,Elevated,Architecture and Engineering,17,1,13,3,3,367840,100840,https://jobexposureindex.com/jobs/civil-engineers
+348,Construction Managers,11-9021.00,44,Elevated,Management,25,1,20,4,6,380360,114990,https://jobexposureindex.com/jobs/construction-managers
+349,Clinical Neuropsychologists,19-3039.03,44,Elevated,"Life, Physical, and Social Science",18,1,14,3,2,18820,110840,https://jobexposureindex.com/jobs/clinical-neuropsychologists
+349,Industrial Engineering Technologists and Technicians,17-3026.00,44,Elevated,Architecture and Engineering,30,3,21,6,10,75570,66120,https://jobexposureindex.com/jobs/industrial-engineering-technologists-and-technicians
+351,"Property, Real Estate, and Community Association Managers",11-9141.00,44,Elevated,Management,27,0,23,4,6,311180,69990,https://jobexposureindex.com/jobs/property-real-estate-and-community-association-managers
+352,Epidemiologists,19-1041.00,44,Elevated,"Life, Physical, and Social Science",15,0,13,2,4,12090,87220,https://jobexposureindex.com/jobs/epidemiologists
+353,Emergency Medicine Physicians,29-1214.00,44,Elevated,Healthcare Practitioners and Technical,17,1,13,3,7,32880,335550,https://jobexposureindex.com/jobs/emergency-medicine-physicians
+353,Government Property Inspectors and Investigators,13-1041.04,44,Elevated,Business and Financial Operations,14,1,9,4,3,417070,80730,https://jobexposureindex.com/jobs/government-property-inspectors-and-investigators
+355,Anthropologists and Archeologists,19-3091.00,44,Elevated,"Life, Physical, and Social Science",30,2,23,5,7,8990,70770,https://jobexposureindex.com/jobs/anthropologists-and-archeologists
+356,"Directors, Religious Activities and Education",21-2021.00,44,Elevated,Community and Social Service,19,3,10,6,6,22160,52100,https://jobexposureindex.com/jobs/directors-religious-activities-and-education
+356,Transportation Inspectors,53-6051.00,44,Elevated,Transportation and Material Moving,21,6,7,8,2,24500,92100,https://jobexposureindex.com/jobs/transportation-inspectors
+358,"Education Administrators, Postsecondary",11-9033.00,44,Elevated,Management,29,1,25,3,9,180470,104590,https://jobexposureindex.com/jobs/education-administrators-postsecondary
+359,"Art, Drama, and Music Teachers, Postsecondary",25-1121.00,44,Elevated,Educational Instruction and Library,28,4,17,7,9,93560,78620,https://jobexposureindex.com/jobs/art-drama-and-music-teachers-postsecondary
+359,Astronomers,19-2011.00,44,Elevated,"Life, Physical, and Social Science",17,1,13,3,3,2120,128820,https://jobexposureindex.com/jobs/astronomers
+359,Audio and Video Technicians,27-4011.00,44,Elevated,"Arts, Design, Entertainment, Sports, and Media",29,5,18,6,8,70230,58100,https://jobexposureindex.com/jobs/audio-and-video-technicians
+359,Family Medicine Physicians,29-1215.00,44,Elevated,Healthcare Practitioners and Technical,13,0,11,2,5,107510,244180,https://jobexposureindex.com/jobs/family-medicine-physicians
+359,Gambling Surveillance Officers and Gambling Investigators,33-9031.00,44,Elevated,Protective Service,8,2,3,3,2,9520,43370,https://jobexposureindex.com/jobs/gambling-surveillance-officers-and-gambling-investigators
+359,Prepress Technicians and Workers,51-5111.00,44,Elevated,Production,25,1,20,4,1,23840,48690,https://jobexposureindex.com/jobs/prepress-technicians-and-workers
+359,Real Estate Sales Agents,41-9022.00,44,Elevated,Sales and Related,33,0,29,4,13,193370,52830,https://jobexposureindex.com/jobs/real-estate-sales-agents
+359,Wind Energy Operations Managers,11-9199.09,44,Elevated,Management,16,1,12,3,0,622190,141900,https://jobexposureindex.com/jobs/wind-energy-operations-managers
+367,"Meter Readers, Utilities",43-5041.00,44,Elevated,Office and Administrative Support,13,4,3,6,2,19430,48150,https://jobexposureindex.com/jobs/meter-readers-utilities
+368,Loss Prevention Managers,11-9199.08,43,Elevated,Management,27,2,20,5,4,622190,141900,https://jobexposureindex.com/jobs/loss-prevention-managers
+369,Music Therapists,29-1129.02,43,Elevated,Healthcare Practitioners and Technical,30,4,18,8,7,22640,77930,https://jobexposureindex.com/jobs/music-therapists
+369,Solar Energy Installation Managers,47-1011.03,43,Elevated,Construction and Extraction,15,0,13,2,1,812210,79920,https://jobexposureindex.com/jobs/solar-energy-installation-managers
+371,First-Line Supervisors of Gambling Services Workers,39-1013.00,43,Elevated,Personal Care and Service,30,9,9,12,5,26010,63820,https://jobexposureindex.com/jobs/first-line-supervisors-of-gambling-services-workers
+372,Conservation Scientists,19-1031.00,43,Elevated,"Life, Physical, and Social Science",30,0,26,4,1,25950,73010,https://jobexposureindex.com/jobs/conservation-scientists
+373,"Sociology Teachers, Postsecondary",25-1067.00,43,Elevated,Educational Instruction and Library,24,3,14,7,8,11850,84290,https://jobexposureindex.com/jobs/sociology-teachers-postsecondary
+374,"Chemistry Teachers, Postsecondary",25-1052.00,43,Elevated,Educational Instruction and Library,28,5,14,9,8,19980,93250,https://jobexposureindex.com/jobs/chemistry-teachers-postsecondary
+375,Funeral Home Managers,11-9171.00,43,Elevated,Management,22,3,13,6,6,13910,78790,https://jobexposureindex.com/jobs/funeral-home-managers
+375,Medical and Health Services Managers,11-9111.00,43,Elevated,Management,18,0,15,3,6,597080,123860,https://jobexposureindex.com/jobs/medical-and-health-services-managers
+375,Pharmacists,29-1051.00,43,Elevated,Healthcare Practitioners and Technical,21,3,12,6,3,321970,140910,https://jobexposureindex.com/jobs/pharmacists
+378,Energy Auditors,47-4011.01,43,Elevated,Construction and Extraction,21,0,18,3,3,146720,74690,https://jobexposureindex.com/jobs/energy-auditors
+379,"Ophthalmologists, Except Pediatric",29-1241.00,43,Elevated,Healthcare Practitioners and Technical,18,1,13,4,1,8950,300080,https://jobexposureindex.com/jobs/ophthalmologists-except-pediatric
+379,Pharmacy Technicians,29-2052.00,43,Elevated,Healthcare Practitioners and Technical,21,6,5,10,2,471680,45750,https://jobexposureindex.com/jobs/pharmacy-technicians
+381,Agricultural Engineers,17-2021.00,43,Elevated,Architecture and Engineering,14,1,10,3,1,1480,98590,https://jobexposureindex.com/jobs/agricultural-engineers
+381,Sound Engineering Technicians,27-4014.00,43,Elevated,"Arts, Design, Entertainment, Sports, and Media",14,1,10,3,2,13080,73130,https://jobexposureindex.com/jobs/sound-engineering-technicians
+383,"Communications Teachers, Postsecondary",25-1122.00,43,Elevated,Educational Instruction and Library,23,3,14,6,8,29420,78580,https://jobexposureindex.com/jobs/communications-teachers-postsecondary
+383,"Fine Artists, Including Painters, Sculptors, and Illustrators",27-1013.00,43,Elevated,"Arts, Design, Entertainment, Sports, and Media",32,0,26,6,7,11220,55490,https://jobexposureindex.com/jobs/fine-artists-including-painters-sculptors-and-illustrators
+383,Lawyers,23-1011.00,43,Elevated,Legal,22,0,19,3,8,754500,159670,https://jobexposureindex.com/jobs/lawyers
+386,"Camera Operators, Television, Video, and Film",27-4031.00,42,Elevated,"Arts, Design, Entertainment, Sports, and Media",24,2,17,5,2,21550,74990,https://jobexposureindex.com/jobs/camera-operators-television-video-and-film
+387,Media Technical Directors/Managers,27-2012.05,42,Elevated,"Arts, Design, Entertainment, Sports, and Media",15,0,13,2,0,143120,90360,https://jobexposureindex.com/jobs/media-technical-directors-managers
+388,Cytogenetic Technologists,29-2011.01,42,Elevated,Healthcare Practitioners and Technical,30,6,13,11,1,332940,62930,https://jobexposureindex.com/jobs/cytogenetic-technologists
+389,Emergency Management Directors,11-9161.00,42,Elevated,Management,23,0,19,4,1,13500,93330,https://jobexposureindex.com/jobs/emergency-management-directors
+390,Landscape Architects,17-1012.00,42,Elevated,Architecture and Engineering,19,0,16,3,4,19600,79870,https://jobexposureindex.com/jobs/landscape-architects
+390,Marine Engineers and Naval Architects,17-2121.00,42,Elevated,Architecture and Engineering,30,3,19,8,4,8250,112230,https://jobexposureindex.com/jobs/marine-engineers-and-naval-architects
+390,Robotics Technicians,17-3024.01,42,Elevated,Architecture and Engineering,23,8,4,11,1,15520,73900,https://jobexposureindex.com/jobs/robotics-technicians
+393,"Social Work Teachers, Postsecondary",25-1113.00,42,Elevated,Educational Instruction and Library,24,4,13,7,8,12610,77570,https://jobexposureindex.com/jobs/social-work-teachers-postsecondary
+394,Cytotechnologists,29-2011.02,42,Elevated,Healthcare Practitioners and Technical,13,2,7,4,1,332940,62930,https://jobexposureindex.com/jobs/cytotechnologists
+395,Gambling Cage Workers,43-3041.00,42,Elevated,Office and Administrative Support,17,7,1,9,2,14430,37580,https://jobexposureindex.com/jobs/gambling-cage-workers
+396,"Physics Teachers, Postsecondary",25-1054.00,42,Elevated,Educational Instruction and Library,24,3,14,7,9,13090,100310,https://jobexposureindex.com/jobs/physics-teachers-postsecondary
+397,"Education Administrators, Kindergarten through Secondary",11-9032.00,42,Elevated,Management,32,1,25,6,12,328330,105870,https://jobexposureindex.com/jobs/education-administrators-kindergarten-through-secondary
+398,Biological Technicians,19-4021.00,42,Elevated,"Life, Physical, and Social Science",18,3,8,7,6,69620,57510,https://jobexposureindex.com/jobs/biological-technicians
+398,Food Service Managers,11-9051.00,42,Elevated,Management,28,2,20,6,6,238430,69390,https://jobexposureindex.com/jobs/food-service-managers
+398,"Inspectors, Testers, Sorters, Samplers, and Weighers",51-9061.00,42,Elevated,Production,32,8,10,14,7,597370,48570,https://jobexposureindex.com/jobs/inspectors-testers-sorters-samplers-and-weighers
+398,"Judges, Magistrate Judges, and Magistrates",23-1023.00,42,Elevated,Legal,21,0,17,4,4,24030,153990,https://jobexposureindex.com/jobs/judges-magistrate-judges-and-magistrates
+402,First-Line Supervisors of Firefighting and Prevention Workers,33-1021.00,42,Elevated,Protective Service,30,7,12,11,2,99140,93530,https://jobexposureindex.com/jobs/first-line-supervisors-of-firefighting-and-prevention-workers
+403,Biofuels/Biodiesel Technology and Product Development Managers,11-9041.01,41,Elevated,Management,19,3,11,5,0,220260,171270,https://jobexposureindex.com/jobs/biofuels-biodiesel-technology-and-product-development-managers
+403,First-Line Supervisors of Personal Service Workers,39-1022.00,41,Elevated,Personal Care and Service,17,2,11,4,4,114110,48590,https://jobexposureindex.com/jobs/first-line-supervisors-of-personal-service-workers
+405,"First-Line Supervisors of Mechanics, Installers, and Repairers",49-1011.00,41,Elevated,"Installation, Maintenance, and Repair",22,1,17,4,5,617500,79860,https://jobexposureindex.com/jobs/first-line-supervisors-of-mechanics-installers-and-repairers
+406,Subway and Streetcar Operators,53-4041.00,41,Elevated,Transportation and Material Moving,12,5,0,7,1,10200,86380,https://jobexposureindex.com/jobs/subway-and-streetcar-operators
+407,Musicians and Singers,27-2042.00,41,Elevated,"Arts, Design, Entertainment, Sports, and Media",30,8,10,12,3,36180,99424,https://jobexposureindex.com/jobs/musicians-and-singers
+408,Environmental Engineering Technologists and Technicians,17-3025.00,41,Elevated,Architecture and Engineering,26,2,17,7,8,12190,59920,https://jobexposureindex.com/jobs/environmental-engineering-technologists-and-technicians
+409,Electrical and Electronic Engineering Technologists and Technicians,17-3023.00,41,Elevated,Architecture and Engineering,30,6,13,11,9,95130,78190,https://jobexposureindex.com/jobs/electrical-and-electronic-engineering-technologists-and-technicians
+410,First-Line Supervisors of Security Workers,33-1091.00,40,Elevated,Protective Service,21,5,7,9,4,81480,55940,https://jobexposureindex.com/jobs/first-line-supervisors-of-security-workers
+410,Management Analysts,13-1111.00,40,Elevated,Business and Financial Operations,11,1,7,3,4,898280,101860,https://jobexposureindex.com/jobs/management-analysts
+412,"Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors",25-3011.00,40,Elevated,Educational Instruction and Library,39,7,18,14,13,37310,61540,https://jobexposureindex.com/jobs/adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors
+413,"Nursing Instructors and Teachers, Postsecondary",25-1072.00,40,Elevated,Educational Instruction and Library,29,5,14,10,7,77960,80250,https://jobexposureindex.com/jobs/nursing-instructors-and-teachers-postsecondary
+414,Calibration Technologists and Technicians,17-3028.00,40,Elevated,Architecture and Engineering,15,3,6,6,2,16540,67820,https://jobexposureindex.com/jobs/calibration-technologists-and-technicians
+414,First-Line Supervisors of Construction Trades and Extraction Workers,47-1011.00,40,Elevated,Construction and Extraction,15,1,10,4,2,812210,79920,https://jobexposureindex.com/jobs/first-line-supervisors-of-construction-trades-and-extraction-workers
+414,First-Line Supervisors of Production and Operating Workers,51-1011.00,40,Elevated,Production,20,3,10,7,5,673430,74450,https://jobexposureindex.com/jobs/first-line-supervisors-of-production-and-operating-workers
+414,Legislators,11-1031.00,40,Elevated,Management,30,1,22,7,6,,,https://jobexposureindex.com/jobs/legislators
+418,"Office Machine Operators, Except Computer",43-9071.00,40,Elevated,Office and Administrative Support,18,5,4,9,1,25130,40960,https://jobexposureindex.com/jobs/office-machine-operators-except-computer
+419,Microbiologists,19-1022.00,40,Elevated,"Life, Physical, and Social Science",14,1,9,4,3,18940,87990,https://jobexposureindex.com/jobs/microbiologists
+419,Occupational Health and Safety Technicians,19-5012.00,40,Elevated,"Life, Physical, and Social Science",26,3,15,8,1,30590,61560,https://jobexposureindex.com/jobs/occupational-health-and-safety-technicians
+421,Probation Officers and Correctional Treatment Specialists,21-1092.00,39,Moderate,Community and Social Service,21,3,11,7,1,89390,66270,https://jobexposureindex.com/jobs/probation-officers-and-correctional-treatment-specialists
+422,Nanotechnology Engineering Technologists and Technicians,17-3026.01,39,Moderate,Architecture and Engineering,25,6,8,11,1,75570,66120,https://jobexposureindex.com/jobs/nanotechnology-engineering-technologists-and-technicians
+423,Chemical Technicians,19-4031.00,39,Moderate,"Life, Physical, and Social Science",16,2,8,6,3,57540,60390,https://jobexposureindex.com/jobs/chemical-technicians
+423,Obstetricians and Gynecologists,29-1218.00,39,Moderate,Healthcare Practitioners and Technical,15,0,12,3,5,21260,292910,https://jobexposureindex.com/jobs/obstetricians-and-gynecologists
+423,Social and Community Service Managers,11-9151.00,39,Moderate,Management,16,1,11,4,5,209330,80390,https://jobexposureindex.com/jobs/social-and-community-service-managers
+423,Social and Human Service Assistants,21-1093.00,39,Moderate,Community and Social Service,20,4,6,10,6,437860,45930,https://jobexposureindex.com/jobs/social-and-human-service-assistants
+427,School Psychologists,19-3034.00,39,Moderate,"Life, Physical, and Social Science",19,0,15,4,4,63940,95990,https://jobexposureindex.com/jobs/school-psychologists
+428,Administrative Services Managers,11-3012.00,39,Moderate,Management,18,2,11,5,7,263960,114130,https://jobexposureindex.com/jobs/administrative-services-managers
+428,Set and Exhibit Designers,27-1027.00,39,Moderate,"Arts, Design, Entertainment, Sports, and Media",27,0,20,7,4,10630,75240,https://jobexposureindex.com/jobs/set-and-exhibit-designers
+430,Fashion Designers,27-1022.00,39,Moderate,"Arts, Design, Entertainment, Sports, and Media",20,0,16,4,3,21450,80960,https://jobexposureindex.com/jobs/fashion-designers
+431,"Geological Technicians, Except Hydrologic Technicians",19-4043.00,39,Moderate,"Life, Physical, and Social Science",30,1,21,8,2,6980,53350,https://jobexposureindex.com/jobs/geological-technicians-except-hydrologic-technicians
+431,Nurse Midwives,29-1161.00,39,Moderate,Healthcare Practitioners and Technical,21,4,8,9,3,7920,134040,https://jobexposureindex.com/jobs/nurse-midwives
+433,Private Detectives and Investigators,33-9021.00,39,Moderate,Protective Service,17,1,10,6,3,35580,51220,https://jobexposureindex.com/jobs/private-detectives-and-investigators
+434,Forensic Science Technicians,19-4092.00,39,Moderate,"Life, Physical, and Social Science",21,1,15,5,1,19120,72060,https://jobexposureindex.com/jobs/forensic-science-technicians
+435,Sports Medicine Physicians,29-1229.06,39,Moderate,Healthcare Practitioners and Technical,27,2,17,8,7,342720,265930,https://jobexposureindex.com/jobs/sports-medicine-physicians
+436,Photographers,27-4021.00,39,Moderate,"Arts, Design, Entertainment, Sports, and Media",29,1,21,7,5,51760,44660,https://jobexposureindex.com/jobs/photographers
+437,Dermatologists,29-1213.00,38,Moderate,Healthcare Practitioners and Technical,18,0,14,4,2,11370,328730,https://jobexposureindex.com/jobs/dermatologists
+438,Fitness and Wellness Coordinators,11-9179.01,38,Moderate,Management,24,2,14,8,6,10450,69770,https://jobexposureindex.com/jobs/fitness-and-wellness-coordinators
+439,Chemists,19-2031.00,38,Moderate,"Life, Physical, and Social Science",13,1,8,4,3,82770,91240,https://jobexposureindex.com/jobs/chemists
+439,Pharmacy Aides,31-9095.00,38,Moderate,Healthcare Support,17,5,5,7,2,39530,37680,https://jobexposureindex.com/jobs/pharmacy-aides
+439,Photographic Process Workers and Processing Machine Operators,51-9151.00,38,Moderate,Production,32,2,21,9,4,4800,40610,https://jobexposureindex.com/jobs/photographic-process-workers-and-processing-machine-operators
+439,Travel Guides,39-7012.00,38,Moderate,Personal Care and Service,17,3,6,8,3,53500,38120,https://jobexposureindex.com/jobs/travel-guides
+443,Recycling Coordinators,53-1042.01,38,Moderate,Transportation and Material Moving,23,3,12,8,2,633400,62840,https://jobexposureindex.com/jobs/recycling-coordinators
+444,Midwives,29-9099.01,38,Moderate,Healthcare Practitioners and Technical,36,6,16,14,6,35010,65790,https://jobexposureindex.com/jobs/midwives
+445,Retail Loss Prevention Specialists,33-9099.02,38,Moderate,Protective Service,21,2,12,7,3,81500,42540,https://jobexposureindex.com/jobs/retail-loss-prevention-specialists
+446,Radiologic Technologists and Technicians,29-2034.00,38,Moderate,Healthcare Practitioners and Technical,30,0,23,7,1,230490,80110,https://jobexposureindex.com/jobs/radiologic-technologists-and-technicians
+447,Physician Assistants,29-1071.00,38,Moderate,Healthcare Practitioners and Technical,12,0,9,3,3,162150,135880,https://jobexposureindex.com/jobs/physician-assistants
+447,Power Distributors and Dispatchers,51-8012.00,38,Moderate,Production,15,1,8,6,2,8520,106730,https://jobexposureindex.com/jobs/power-distributors-and-dispatchers
+449,First-Line Supervisors of Material-Moving Machine and Vehicle Operators,53-1043.00,37,Moderate,Transportation and Material Moving,22,3,10,9,7,633400,62840,https://jobexposureindex.com/jobs/first-line-supervisors-of-material-moving-machine-and-vehicle-operators
+450,Range Managers,19-1031.02,37,Moderate,"Life, Physical, and Social Science",17,0,12,5,0,25950,73010,https://jobexposureindex.com/jobs/range-managers
+451,Clinical and Counseling Psychologists,19-3033.00,37,Moderate,"Life, Physical, and Social Science",30,3,17,10,12,75990,100580,https://jobexposureindex.com/jobs/clinical-and-counseling-psychologists
+451,Farm and Home Management Educators,25-9021.00,37,Moderate,Educational Instruction and Library,15,1,9,5,3,8220,60220,https://jobexposureindex.com/jobs/farm-and-home-management-educators
+453,"First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services",39-1014.00,37,Moderate,Personal Care and Service,19,3,8,8,6,103190,48560,https://jobexposureindex.com/jobs/first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services
+454,Foresters,19-1032.00,37,Moderate,"Life, Physical, and Social Science",25,0,19,6,0,10430,76400,https://jobexposureindex.com/jobs/foresters
+455,"Computer, Automated Teller, and Office Machine Repairers",49-2011.00,37,Moderate,"Installation, Maintenance, and Repair",25,7,4,14,5,65600,47810,https://jobexposureindex.com/jobs/computer-automated-teller-and-office-machine-repairers
+455,"Farmers, Ranchers, and Other Agricultural Managers",11-9013.00,37,Moderate,Management,30,1,21,8,5,6500,89900,https://jobexposureindex.com/jobs/farmers-ranchers-and-other-agricultural-managers
+457,Ophthalmic Medical Technologists,29-2099.05,37,Moderate,Healthcare Practitioners and Technical,31,1,21,9,1,182610,50290,https://jobexposureindex.com/jobs/ophthalmic-medical-technologists
+457,"Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education",25-9042.00,37,Moderate,Educational Instruction and Library,30,8,6,16,7,1584440,37010,https://jobexposureindex.com/jobs/teaching-assistants-preschool-elementary-middle-and-secondary-school-except-special-education
+459,Airfield Operations Specialists,53-2022.00,37,Moderate,Transportation and Material Moving,27,4,15,8,0,15190,56850,https://jobexposureindex.com/jobs/airfield-operations-specialists
+460,Light Truck Drivers,53-3033.00,37,Moderate,Transportation and Material Moving,14,3,4,7,1,983300,44860,https://jobexposureindex.com/jobs/light-truck-drivers
+461,Pediatric Surgeons,29-1243.00,36,Moderate,Healthcare Practitioners and Technical,18,2,9,7,1,1190,559030,https://jobexposureindex.com/jobs/pediatric-surgeons
+461,"Substitute Teachers, Short-Term",25-3031.00,36,Moderate,Educational Instruction and Library,18,5,3,10,5,524770,41670,https://jobexposureindex.com/jobs/substitute-teachers-short-term
+463,Self-Enrichment Teachers,25-3021.00,36,Moderate,Educational Instruction and Library,30,5,12,13,9,332110,46800,https://jobexposureindex.com/jobs/self-enrichment-teachers
+464,Medical Assistants,31-9092.00,36,Moderate,Healthcare Support,20,4,7,9,4,817870,45690,https://jobexposureindex.com/jobs/medical-assistants
+465,Cardiovascular Technologists and Technicians,29-2031.00,36,Moderate,Healthcare Practitioners and Technical,25,3,14,8,1,62960,74310,https://jobexposureindex.com/jobs/cardiovascular-technologists-and-technicians
+466,Food Science Technicians,19-4013.00,36,Moderate,"Life, Physical, and Social Science",16,4,3,9,3,14600,52130,https://jobexposureindex.com/jobs/food-science-technicians
+466,Urologists,29-1229.03,36,Moderate,Healthcare Practitioners and Technical,14,1,8,5,1,342720,265930,https://jobexposureindex.com/jobs/urologists
+468,Rehabilitation Counselors,21-1015.00,35,Moderate,Community and Social Service,17,1,10,6,4,94740,46850,https://jobexposureindex.com/jobs/rehabilitation-counselors
+469,"First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",37-1012.00,35,Moderate,Building and Grounds Cleaning and Maintenance,28,4,12,12,3,130760,58430,https://jobexposureindex.com/jobs/first-line-supervisors-of-landscaping-lawn-service-and-groundskeeping-workers
+470,Electro-Mechanical and Mechatronics Technologists and Technicians,17-3024.00,35,Moderate,Architecture and Engineering,29,5,11,13,3,15520,73900,https://jobexposureindex.com/jobs/electro-mechanical-and-mechatronics-technologists-and-technicians
+471,"Entertainment and Recreation Managers, Except Gambling",11-9072.00,35,Moderate,Management,17,3,6,8,6,37980,79520,https://jobexposureindex.com/jobs/entertainment-and-recreation-managers-except-gambling
+472,"Airline Pilots, Copilots, and Flight Engineers",53-2011.00,35,Moderate,Transportation and Material Moving,26,2,14,10,0,103560,232140,https://jobexposureindex.com/jobs/airline-pilots-copilots-and-flight-engineers
+473,Animal Control Workers,33-9011.00,35,Moderate,Protective Service,16,4,3,9,0,12070,45660,https://jobexposureindex.com/jobs/animal-control-workers
+474,"Middle School Teachers, Except Special and Career/Technical Education",25-2022.00,35,Moderate,Educational Instruction and Library,35,3,19,13,11,620090,64370,https://jobexposureindex.com/jobs/middle-school-teachers-except-special-and-career-technical-education
+475,Cardiologists,29-1212.00,35,Moderate,Healthcare Practitioners and Technical,26,0,18,8,6,17290,496010,https://jobexposureindex.com/jobs/cardiologists
+475,Food Scientists and Technologists,19-1012.00,35,Moderate,"Life, Physical, and Social Science",13,0,9,4,0,13060,88720,https://jobexposureindex.com/jobs/food-scientists-and-technologists
+475,Police Identification and Records Officers,33-3021.02,35,Moderate,Protective Service,15,1,8,6,1,114430,93790,https://jobexposureindex.com/jobs/police-identification-and-records-officers
+478,Critical Care Nurses,29-1141.03,34,Moderate,Healthcare Practitioners and Technical,29,3,14,12,3,3379720,97550,https://jobexposureindex.com/jobs/critical-care-nurses
+479,Healthcare Social Workers,21-1022.00,34,Moderate,Community and Social Service,17,1,10,6,2,187630,67880,https://jobexposureindex.com/jobs/healthcare-social-workers
+479,Neurodiagnostic Technologists,29-2099.01,34,Moderate,Healthcare Practitioners and Technical,16,1,9,6,1,182610,50290,https://jobexposureindex.com/jobs/neurodiagnostic-technologists
+481,Hydroelectric Production Managers,11-3051.06,34,Moderate,Management,19,1,11,7,0,246250,126060,https://jobexposureindex.com/jobs/hydroelectric-production-managers
+481,Parts Salespersons,41-2022.00,34,Moderate,Sales and Related,19,3,6,10,5,270070,38630,https://jobexposureindex.com/jobs/parts-salespersons
+483,Retail Salespersons,41-2031.00,34,Moderate,Sales and Related,24,3,12,9,8,3897860,35410,https://jobexposureindex.com/jobs/retail-salespersons
+484,"Makeup Artists, Theatrical and Performance",39-5091.00,34,Moderate,Personal Care and Service,21,1,12,8,1,2340,97150,https://jobexposureindex.com/jobs/makeup-artists-theatrical-and-performance
+485,Air Traffic Controllers,53-2021.00,34,Moderate,Transportation and Material Moving,23,2,12,9,2,22510,148080,https://jobexposureindex.com/jobs/air-traffic-controllers
+486,Aviation Inspectors,53-6051.01,34,Moderate,Transportation and Material Moving,15,1,8,6,1,24500,92100,https://jobexposureindex.com/jobs/aviation-inspectors
+486,"Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",49-2095.00,34,Moderate,"Installation, Maintenance, and Repair",16,3,3,10,2,20720,103020,https://jobexposureindex.com/jobs/electrical-and-electronics-repairers-powerhouse-substation-and-relay
+488,Coroners,13-1041.06,34,Moderate,Business and Financial Operations,20,3,8,9,1,417070,80730,https://jobexposureindex.com/jobs/coroners
+489,"Career/Technical Education Teachers, Secondary School",25-2032.00,33,Moderate,Educational Instruction and Library,33,5,12,16,9,111420,66270,https://jobexposureindex.com/jobs/career-technical-education-teachers-secondary-school
+490,Clergy,21-2011.00,33,Moderate,Community and Social Service,21,4,6,11,7,57200,60810,https://jobexposureindex.com/jobs/clergy
+490,Driver/Sales Workers,53-3031.00,33,Moderate,Transportation and Material Moving,12,2,3,7,1,409180,38770,https://jobexposureindex.com/jobs/driver-sales-workers
+490,Occupational Health and Safety Specialists,19-5011.00,33,Moderate,"Life, Physical, and Social Science",21,1,12,8,2,140610,90150,https://jobexposureindex.com/jobs/occupational-health-and-safety-specialists
+490,"Orthopedic Surgeons, Except Pediatric",29-1242.00,33,Moderate,Healthcare Practitioners and Technical,15,1,8,6,2,14100,358550,https://jobexposureindex.com/jobs/orthopedic-surgeons-except-pediatric
+490,Registered Nurses,29-1141.00,33,Moderate,Healthcare Practitioners and Technical,27,1,16,10,3,3379720,97550,https://jobexposureindex.com/jobs/registered-nurses
+490,"Secondary School Teachers, Except Special and Career/Technical Education",25-2031.00,33,Moderate,Educational Instruction and Library,32,1,19,12,9,1065210,72040,https://jobexposureindex.com/jobs/secondary-school-teachers-except-special-and-career-technical-education
+496,First-Line Supervisors of Police and Detectives,33-1012.00,33,Moderate,Protective Service,20,2,9,9,4,154610,106040,https://jobexposureindex.com/jobs/first-line-supervisors-of-police-and-detectives
+496,Ophthalmic Medical Technicians,29-2057.00,33,Moderate,Healthcare Practitioners and Technical,20,1,11,8,0,71010,45570,https://jobexposureindex.com/jobs/ophthalmic-medical-technicians
+498,Biomass Power Plant Managers,11-3051.04,33,Moderate,Management,19,1,10,8,1,246250,126060,https://jobexposureindex.com/jobs/biomass-power-plant-managers
+499,Forest and Conservation Technicians,19-4071.00,33,Moderate,"Life, Physical, and Social Science",21,2,11,8,2,30410,54560,https://jobexposureindex.com/jobs/forest-and-conservation-technicians
+500,Aerospace Engineering and Operations Technologists and Technicians,17-3021.00,33,Moderate,Architecture and Engineering,12,1,5,6,1,11280,82890,https://jobexposureindex.com/jobs/aerospace-engineering-and-operations-technologists-and-technicians
+501,"Bus Drivers, School",53-3051.00,32,Moderate,Transportation and Material Moving,17,5,1,11,1,402930,47920,https://jobexposureindex.com/jobs/bus-drivers-school
+502,"Career/Technical Education Teachers, Middle School",25-2023.00,32,Moderate,Educational Instruction and Library,31,6,8,17,10,16870,65030,https://jobexposureindex.com/jobs/career-technical-education-teachers-middle-school
+503,Magnetic Resonance Imaging Technologists,29-2035.00,32,Moderate,Healthcare Practitioners and Technical,23,1,13,9,2,43390,95480,https://jobexposureindex.com/jobs/magnetic-resonance-imaging-technologists
+504,"Coin, Vending, and Amusement Machine Servicers and Repairers",49-9091.00,32,Moderate,"Installation, Maintenance, and Repair",19,6,0,13,1,26410,47450,https://jobexposureindex.com/jobs/coin-vending-and-amusement-machine-servicers-and-repairers
+505,Parking Enforcement Workers,33-3041.00,32,Moderate,Protective Service,23,4,6,13,0,9050,46730,https://jobexposureindex.com/jobs/parking-enforcement-workers
+506,Agricultural Technicians,19-4012.00,32,Moderate,"Life, Physical, and Social Science",26,4,7,15,3,15130,49630,https://jobexposureindex.com/jobs/agricultural-technicians
+506,Community Health Workers,21-1094.00,32,Moderate,Community and Social Service,29,2,14,13,12,61660,51850,https://jobexposureindex.com/jobs/community-health-workers
+508,Facilities Managers,11-3013.00,32,Moderate,Management,11,0,7,4,4,156180,106660,https://jobexposureindex.com/jobs/facilities-managers
+508,Nuclear Power Reactor Operators,51-8011.00,32,Moderate,Production,20,3,6,11,1,5150,122890,https://jobexposureindex.com/jobs/nuclear-power-reactor-operators
+508,Recreational Therapists,29-1125.00,32,Moderate,Healthcare Practitioners and Technical,11,1,5,5,3,14930,61960,https://jobexposureindex.com/jobs/recreational-therapists
+511,Detectives and Criminal Investigators,33-3021.00,32,Moderate,Protective Service,30,3,13,14,7,114430,93790,https://jobexposureindex.com/jobs/detectives-and-criminal-investigators
+511,"Special Education Teachers, Elementary School",25-2056.00,32,Moderate,Educational Instruction and Library,30,3,13,14,9,583430,67170,https://jobexposureindex.com/jobs/special-education-teachers-elementary-school
+513,Postal Service Clerks,43-5051.00,31,Moderate,Office and Administrative Support,21,3,8,10,0,73720,62130,https://jobexposureindex.com/jobs/postal-service-clerks
+514,"Umpires, Referees, and Other Sports Officials",27-2023.00,31,Moderate,"Arts, Design, Entertainment, Sports, and Media",16,4,3,9,2,15780,40710,https://jobexposureindex.com/jobs/umpires-referees-and-other-sports-officials
+515,"Elementary School Teachers, Except Special Education",25-2021.00,31,Moderate,Educational Instruction and Library,38,2,19,17,11,1388390,63970,https://jobexposureindex.com/jobs/elementary-school-teachers-except-special-education
+516,Couriers and Messengers,43-5021.00,31,Moderate,Office and Administrative Support,17,4,2,11,1,68640,39200,https://jobexposureindex.com/jobs/couriers-and-messengers
+517,"Electrical and Electronics Repairers, Commercial and Industrial Equipment",49-2094.00,31,Moderate,"Installation, Maintenance, and Repair",20,4,5,11,1,65010,74090,https://jobexposureindex.com/jobs/electrical-and-electronics-repairers-commercial-and-industrial-equipment
+518,Acute Care Nurses,29-1141.01,31,Moderate,Healthcare Practitioners and Technical,27,1,15,11,6,3379720,97550,https://jobexposureindex.com/jobs/acute-care-nurses
+519,"Special Education Teachers, Middle School",25-2057.00,31,Moderate,Educational Instruction and Library,40,3,18,19,11,95200,66810,https://jobexposureindex.com/jobs/special-education-teachers-middle-school
+520,Merchandise Displayers and Window Trimmers,27-1026.00,30,Moderate,"Arts, Design, Entertainment, Sports, and Media",25,0,14,11,3,165220,39390,https://jobexposureindex.com/jobs/merchandise-displayers-and-window-trimmers
+521,Medical Equipment Repairers,49-9062.00,30,Moderate,"Installation, Maintenance, and Repair",19,3,5,11,2,65990,61660,https://jobexposureindex.com/jobs/medical-equipment-repairers
+521,Occupational Therapists,29-1122.00,30,Moderate,Healthcare Practitioners and Technical,17,2,6,9,3,162450,100330,https://jobexposureindex.com/jobs/occupational-therapists
+523,Diagnostic Medical Sonographers,29-2032.00,30,Moderate,Healthcare Practitioners and Technical,20,2,8,10,1,90160,96590,https://jobexposureindex.com/jobs/diagnostic-medical-sonographers
+524,"Special Education Teachers, Secondary School",25-2058.00,30,Moderate,Educational Instruction and Library,40,4,16,20,9,163930,74260,https://jobexposureindex.com/jobs/special-education-teachers-secondary-school
+525,Aircraft Cargo Handling Supervisors,53-1041.00,30,Moderate,Transportation and Material Moving,6,1,2,3,0,9760,58170,https://jobexposureindex.com/jobs/aircraft-cargo-handling-supervisors
+525,Optometrists,29-1041.00,30,Moderate,Healthcare Practitioners and Technical,10,0,6,4,1,42790,136570,https://jobexposureindex.com/jobs/optometrists
+525,Orthodontists,29-1023.00,30,Moderate,Healthcare Practitioners and Technical,10,0,6,4,1,6210,289140,https://jobexposureindex.com/jobs/orthodontists
+528,Coaches and Scouts,27-2022.00,30,Moderate,"Arts, Design, Entertainment, Sports, and Media",28,2,14,12,8,248950,47320,https://jobexposureindex.com/jobs/coaches-and-scouts
+529,Art Therapists,29-1129.01,30,Moderate,Healthcare Practitioners and Technical,25,1,13,11,5,22640,77930,https://jobexposureindex.com/jobs/art-therapists
+530,Non-Destructive Testing Specialists,17-3029.01,29,Moderate,Architecture and Engineering,16,0,9,7,1,59930,78350,https://jobexposureindex.com/jobs/non-destructive-testing-specialists
+530,"Weighers, Measurers, Checkers, and Samplers, Recordkeeping",43-5111.00,29,Moderate,Office and Administrative Support,22,5,5,12,4,53300,46380,https://jobexposureindex.com/jobs/weighers-measurers-checkers-and-samplers-recordkeeping
+532,Agricultural Inspectors,45-2011.00,29,Moderate,"Farming, Fishing, and Forestry",22,2,9,11,1,14410,49940,https://jobexposureindex.com/jobs/agricultural-inspectors
+533,Nuclear Medicine Technologists,29-2033.00,29,Moderate,Healthcare Practitioners and Technical,17,1,8,8,3,17080,101370,https://jobexposureindex.com/jobs/nuclear-medicine-technologists
+534,"Educational, Guidance, and Career Counselors and Advisors",21-1012.00,29,Moderate,Community and Social Service,34,2,17,15,7,353310,64330,https://jobexposureindex.com/jobs/educational-guidance-and-career-counselors-and-advisors
+534,First-Line Supervisors of Passenger Attendants,53-1044.00,29,Moderate,Transportation and Material Moving,19,1,9,9,5,633400,62840,https://jobexposureindex.com/jobs/first-line-supervisors-of-passenger-attendants
+536,Fire Inspectors and Investigators,33-2021.00,29,Moderate,Protective Service,30,4,9,17,0,13800,75920,https://jobexposureindex.com/jobs/fire-inspectors-and-investigators
+537,Printing Press Operators,51-5112.00,29,Moderate,Production,23,5,5,13,1,144260,45780,https://jobexposureindex.com/jobs/printing-press-operators
+538,Biofuels Production Managers,11-3051.03,29,Moderate,Management,14,0,8,6,0,246250,126060,https://jobexposureindex.com/jobs/biofuels-production-managers
+538,Bridge and Lock Tenders,53-6011.00,29,Moderate,Transportation and Material Moving,18,4,0,14,1,3040,57700,https://jobexposureindex.com/jobs/bridge-and-lock-tenders
+538,Locomotive Engineers,53-4011.00,29,Moderate,Transportation and Material Moving,15,3,2,10,0,33470,81410,https://jobexposureindex.com/jobs/locomotive-engineers
+538,"Opticians, Dispensing",29-2081.00,29,Moderate,Healthcare Practitioners and Technical,21,2,8,11,0,73530,47260,https://jobexposureindex.com/jobs/opticians-dispensing
+538,Podiatrists,29-1081.00,29,Moderate,Healthcare Practitioners and Technical,11,0,6,5,1,9680,160300,https://jobexposureindex.com/jobs/podiatrists
+543,Fish and Game Wardens,33-3031.00,28,Moderate,Protective Service,24,2,9,13,0,5770,74060,https://jobexposureindex.com/jobs/fish-and-game-wardens
+544,First-Line Supervisors of Correctional Officers,33-1011.00,28,Moderate,Protective Service,23,5,3,15,4,53380,77970,https://jobexposureindex.com/jobs/first-line-supervisors-of-correctional-officers
+545,Histotechnologists,29-2011.04,28,Moderate,Healthcare Practitioners and Technical,16,2,5,9,0,332940,62930,https://jobexposureindex.com/jobs/histotechnologists
+545,Taxi Drivers,53-3054.00,28,Moderate,Transportation and Material Moving,16,4,1,11,2,41050,42100,https://jobexposureindex.com/jobs/taxi-drivers
+545,"Telecommunications Equipment Installers and Repairers, Except Line Installers",49-2022.00,28,Moderate,"Installation, Maintenance, and Repair",40,10,4,26,9,140920,63890,https://jobexposureindex.com/jobs/telecommunications-equipment-installers-and-repairers-except-line-installers
+548,"First-Line Supervisors of Farming, Fishing, and Forestry Workers",45-1011.00,28,Moderate,"Farming, Fishing, and Forestry",30,4,9,17,5,27960,59320,https://jobexposureindex.com/jobs/first-line-supervisors-of-farming-fishing-and-forestry-workers
+549,Radiation Therapists,29-1124.00,28,Moderate,Healthcare Practitioners and Technical,22,1,10,11,2,17070,105310,https://jobexposureindex.com/jobs/radiation-therapists
+550,Athletic Trainers,29-9091.00,28,Moderate,Healthcare Practitioners and Technical,23,3,8,12,6,30500,62520,https://jobexposureindex.com/jobs/athletic-trainers
+551,Heavy and Tractor-Trailer Truck Drivers,53-3032.00,28,Moderate,Transportation and Material Moving,31,5,5,21,3,2062040,58640,https://jobexposureindex.com/jobs/heavy-and-tractor-trailer-truck-drivers
+552,Automotive Engineering Technicians,17-3027.01,28,Moderate,Architecture and Engineering,18,1,8,9,4,36190,74510,https://jobexposureindex.com/jobs/automotive-engineering-technicians
+552,Railroad Conductors and Yardmasters,53-4031.00,28,Moderate,Transportation and Material Moving,22,2,8,12,0,46440,78000,https://jobexposureindex.com/jobs/railroad-conductors-and-yardmasters
+554,Orthotists and Prosthetists,29-2091.00,28,Moderate,Healthcare Practitioners and Technical,15,3,3,9,0,9390,81110,https://jobexposureindex.com/jobs/orthotists-and-prosthetists
+555,"Low Vision Therapists, Orientation and Mobility Specialists, and Vision Rehabilitation Therapists",29-1122.01,28,Moderate,Healthcare Practitioners and Technical,21,2,8,11,2,162450,100330,https://jobexposureindex.com/jobs/low-vision-therapists-orientation-and-mobility-specialists-and-vision-rehabilitation-therapists
+556,Industrial Machinery Mechanics,49-9041.00,27,Moderate,"Installation, Maintenance, and Repair",16,3,3,10,2,439640,64520,https://jobexposureindex.com/jobs/industrial-machinery-mechanics
+557,Animal Caretakers,39-2021.00,27,Moderate,Personal Care and Service,22,3,4,15,4,266910,35360,https://jobexposureindex.com/jobs/animal-caretakers
+558,Choreographers,27-2032.00,27,Moderate,"Arts, Design, Entertainment, Sports, and Media",18,1,8,9,2,2860,55310,https://jobexposureindex.com/jobs/choreographers
+559,Mental Health and Substance Abuse Social Workers,21-1023.00,27,Moderate,Community and Social Service,13,0,7,6,3,132810,60280,https://jobexposureindex.com/jobs/mental-health-and-substance-abuse-social-workers
+560,Veterinarians,29-1131.00,27,Moderate,Healthcare Practitioners and Technical,23,2,9,12,3,83900,130100,https://jobexposureindex.com/jobs/veterinarians
+561,Gambling and Sports Book Writers and Runners,39-3012.00,27,Moderate,Personal Care and Service,22,5,1,16,3,8950,34980,https://jobexposureindex.com/jobs/gambling-and-sports-book-writers-and-runners
+561,Gas Compressor and Gas Pumping Station Operators,53-7071.00,27,Moderate,Transportation and Material Moving,13,3,1,9,1,3510,77320,https://jobexposureindex.com/jobs/gas-compressor-and-gas-pumping-station-operators
+561,Tour Guides and Escorts,39-7011.00,27,Moderate,Personal Care and Service,19,3,3,13,6,53500,38120,https://jobexposureindex.com/jobs/tour-guides-and-escorts
+564,Occupational Therapy Assistants,31-2011.00,27,Moderate,Healthcare Support,22,4,4,14,4,51290,72300,https://jobexposureindex.com/jobs/occupational-therapy-assistants
+565,Dental Assistants,31-9091.00,27,Moderate,Healthcare Support,16,2,4,10,1,387790,48070,https://jobexposureindex.com/jobs/dental-assistants
+565,Physical Medicine and Rehabilitation Physicians,29-1229.04,27,Moderate,Healthcare Practitioners and Technical,15,1,6,8,1,342720,265930,https://jobexposureindex.com/jobs/physical-medicine-and-rehabilitation-physicians
+565,"Teaching Assistants, Special Education",25-9043.00,27,Moderate,Educational Instruction and Library,30,5,6,19,6,1584440,37010,https://jobexposureindex.com/jobs/teaching-assistants-special-education
+568,First-Line Supervisors of Housekeeping and Janitorial Workers,37-1011.00,27,Moderate,Building and Grounds Cleaning and Maintenance,26,4,6,16,5,178760,49100,https://jobexposureindex.com/jobs/first-line-supervisors-of-housekeeping-and-janitorial-workers
+569,Bakers,51-3011.00,26,Moderate,Production,18,3,4,11,5,236200,37160,https://jobexposureindex.com/jobs/bakers
+570,Costume Attendants,39-3092.00,26,Moderate,Personal Care and Service,21,2,6,13,0,6510,50400,https://jobexposureindex.com/jobs/costume-attendants
+571,"Captains, Mates, and Pilots of Water Vessels",53-5021.00,26,Moderate,Transportation and Material Moving,30,6,4,20,0,36850,92460,https://jobexposureindex.com/jobs/captains-mates-and-pilots-of-water-vessels
+572,Chefs and Head Cooks,35-1011.00,26,Moderate,Food Preparation and Serving Related,21,2,7,12,5,200040,62470,https://jobexposureindex.com/jobs/chefs-and-head-cooks
+572,Gambling Change Persons and Booth Cashiers,41-2012.00,26,Moderate,Sales and Related,15,3,1,11,1,21530,36220,https://jobexposureindex.com/jobs/gambling-change-persons-and-booth-cashiers
+574,Correctional Officers and Jailers,33-3012.00,26,Moderate,Protective Service,26,5,3,18,1,380500,58940,https://jobexposureindex.com/jobs/correctional-officers-and-jailers
+575,"Door-to-Door Sales Workers, News and Street Vendors, and Related Workers",41-9091.00,26,Moderate,Sales and Related,12,2,2,8,4,2760,41380,https://jobexposureindex.com/jobs/door-to-door-sales-workers-news-and-street-vendors-and-related-workers
+576,Exercise Physiologists,29-1128.00,26,Moderate,Healthcare Practitioners and Technical,25,1,11,13,6,8560,59460,https://jobexposureindex.com/jobs/exercise-physiologists
+576,Transportation Security Screeners,33-9093.00,26,Moderate,Protective Service,26,0,14,12,2,50290,66770,https://jobexposureindex.com/jobs/transportation-security-screeners
+578,Craft Artists,27-1012.00,26,Moderate,"Arts, Design, Entertainment, Sports, and Media",15,0,8,7,5,4580,46080,https://jobexposureindex.com/jobs/craft-artists
+579,"Patternmakers, Wood",51-7032.00,26,Moderate,Production,20,4,2,14,1,220,49630,https://jobexposureindex.com/jobs/patternmakers-wood
+580,Mental Health Counselors,21-1014.00,25,Moderate,Community and Social Service,27,2,10,15,11,1035300,60320,https://jobexposureindex.com/jobs/mental-health-counselors
+581,Anesthesiologists,29-1211.00,25,Moderate,Healthcare Practitioners and Technical,18,0,9,9,2,38760,391490,https://jobexposureindex.com/jobs/anesthesiologists
+581,Computer Numerically Controlled Tool Operators,51-9161.00,25,Moderate,Production,27,6,2,19,3,169450,50690,https://jobexposureindex.com/jobs/computer-numerically-controlled-tool-operators
+581,"Dentists, General",29-1021.00,25,Moderate,Healthcare Practitioners and Technical,20,1,8,11,1,124390,170950,https://jobexposureindex.com/jobs/dentists-general
+581,Licensed Practical and Licensed Vocational Nurses,29-2061.00,25,Moderate,Healthcare Practitioners and Technical,23,2,7,14,2,648410,64400,https://jobexposureindex.com/jobs/licensed-practical-and-licensed-vocational-nurses
+581,Pest Control Workers,37-2021.00,25,Moderate,Building and Grounds Cleaning and Maintenance,15,2,2,11,3,102620,45250,https://jobexposureindex.com/jobs/pest-control-workers
+581,Police and Sheriff's Patrol Officers,33-3051.00,25,Moderate,Protective Service,30,2,11,17,5,670520,76210,https://jobexposureindex.com/jobs/police-and-sheriff-s-patrol-officers
+581,Shuttle Drivers and Chauffeurs,53-3053.00,25,Moderate,Transportation and Material Moving,26,5,3,18,3,248530,37290,https://jobexposureindex.com/jobs/shuttle-drivers-and-chauffeurs
+581,"Special Education Teachers, Kindergarten",25-2055.00,25,Moderate,Educational Instruction and Library,30,3,9,18,6,583430,67170,https://jobexposureindex.com/jobs/special-education-teachers-kindergarten
+589,"Pump Operators, Except Wellhead Pumpers",53-7072.00,25,Moderate,Transportation and Material Moving,14,2,2,10,1,9780,61770,https://jobexposureindex.com/jobs/pump-operators-except-wellhead-pumpers
+589,Transit and Railroad Police,33-3052.00,25,Moderate,Protective Service,14,1,5,8,2,4390,90230,https://jobexposureindex.com/jobs/transit-and-railroad-police
+591,Photonics Technicians,17-3029.08,24,Moderate,Architecture and Engineering,30,3,7,20,0,59930,78350,https://jobexposureindex.com/jobs/photonics-technicians
+592,"Child, Family, and School Social Workers",21-1021.00,24,Moderate,Community and Social Service,23,1,9,13,8,392550,59550,https://jobexposureindex.com/jobs/child-family-and-school-social-workers
+593,Construction and Building Inspectors,47-4011.00,24,Moderate,Construction and Extraction,19,0,10,9,1,146720,74690,https://jobexposureindex.com/jobs/construction-and-building-inspectors
+593,"Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",51-4035.00,24,Moderate,Production,15,3,1,11,0,12460,52800,https://jobexposureindex.com/jobs/milling-and-planing-machine-setters-operators-and-tenders-metal-and-plastic
+595,"Bus Drivers, Transit and Intercity",53-3052.00,24,Moderate,Transportation and Material Moving,15,3,1,11,2,159240,59050,https://jobexposureindex.com/jobs/bus-drivers-transit-and-intercity
+595,Occupational Therapy Aides,31-2012.00,24,Moderate,Healthcare Support,15,3,1,11,0,4310,39160,https://jobexposureindex.com/jobs/occupational-therapy-aides
+597,Residential Advisors,39-9041.00,24,Moderate,Personal Care and Service,30,3,8,19,7,84760,42240,https://jobexposureindex.com/jobs/residential-advisors
+598,Avionics Technicians,49-2091.00,24,Moderate,"Installation, Maintenance, and Repair",13,2,3,8,0,18830,82280,https://jobexposureindex.com/jobs/avionics-technicians
+598,Camera and Photographic Equipment Repairers,49-9061.00,24,Moderate,"Installation, Maintenance, and Repair",15,1,6,8,2,1650,52720,https://jobexposureindex.com/jobs/camera-and-photographic-equipment-repairers
+598,"Cooks, Private Household",35-2013.00,24,Moderate,Food Preparation and Serving Related,13,2,2,9,3,1100,47940,https://jobexposureindex.com/jobs/cooks-private-household
+598,"Electrical and Electronics Installers and Repairers, Transportation Equipment",49-2093.00,24,Moderate,"Installation, Maintenance, and Repair",15,3,2,10,2,6940,84890,https://jobexposureindex.com/jobs/electrical-and-electronics-installers-and-repairers-transportation-equipment
+602,Commercial Pilots,53-2012.00,24,Moderate,Transportation and Material Moving,26,3,6,17,0,47630,123220,https://jobexposureindex.com/jobs/commercial-pilots
+603,Audiovisual Equipment Installers and Repairers,49-2097.00,24,Moderate,"Installation, Maintenance, and Repair",11,2,1,8,3,19780,52600,https://jobexposureindex.com/jobs/audiovisual-equipment-installers-and-repairers
+603,Recreation Workers,39-9032.00,24,Moderate,Personal Care and Service,24,3,6,15,9,331490,36560,https://jobexposureindex.com/jobs/recreation-workers
+605,Museum Technicians and Conservators,25-4013.00,24,Moderate,Educational Instruction and Library,26,1,11,14,2,12310,51440,https://jobexposureindex.com/jobs/museum-technicians-and-conservators
+606,Team Assemblers,51-2092.00,24,Moderate,Production,11,2,1,8,2,1405030,44650,https://jobexposureindex.com/jobs/team-assemblers
+607,Machinists,51-4041.00,23,Moderate,Production,29,4,4,21,3,287050,58750,https://jobexposureindex.com/jobs/machinists
+608,Semiconductor Processing Technicians,51-9141.00,23,Moderate,Production,24,4,2,18,0,31460,51430,https://jobexposureindex.com/jobs/semiconductor-processing-technicians
+609,Models,41-9012.00,23,Moderate,Sales and Related,14,2,3,9,1,3780,48470,https://jobexposureindex.com/jobs/models
+609,Power Plant Operators,51-8013.00,23,Moderate,Production,30,3,8,19,2,29320,102040,https://jobexposureindex.com/jobs/power-plant-operators
+611,"Kindergarten Teachers, Except Special Education",25-2012.00,23,Moderate,Educational Instruction and Library,37,2,13,22,7,108870,62680,https://jobexposureindex.com/jobs/kindergarten-teachers-except-special-education
+612,Gem and Diamond Workers,51-9071.06,23,Moderate,Production,22,0,8,14,0,22440,52540,https://jobexposureindex.com/jobs/gem-and-diamond-workers
+612,Medical and Clinical Laboratory Technologists,29-2011.00,23,Moderate,Healthcare Practitioners and Technical,16,1,5,10,3,332940,62930,https://jobexposureindex.com/jobs/medical-and-clinical-laboratory-technologists
+614,Postal Service Mail Carriers,43-5052.00,23,Moderate,Office and Administrative Support,22,5,1,16,1,328820,60550,https://jobexposureindex.com/jobs/postal-service-mail-carriers
+615,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",35-9031.00,23,Moderate,Food Preparation and Serving Related,22,1,9,12,2,432690,31200,https://jobexposureindex.com/jobs/hosts-and-hostesses-restaurant-lounge-and-coffee-shop
+616,Nuclear Monitoring Technicians,19-4051.02,23,Moderate,"Life, Physical, and Social Science",19,3,3,13,0,6470,110240,https://jobexposureindex.com/jobs/nuclear-monitoring-technicians
+616,"Preschool Teachers, Except Special Education",25-2011.00,23,Moderate,Educational Instruction and Library,34,2,11,21,3,478780,38140,https://jobexposureindex.com/jobs/preschool-teachers-except-special-education
+618,"First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",53-1042.00,22,Moderate,Transportation and Material Moving,24,2,8,14,13,633400,62840,https://jobexposureindex.com/jobs/first-line-supervisors-of-helpers-laborers-and-material-movers-hand
+619,"Coil Winders, Tapers, and Finishers",51-2021.00,22,Moderate,Production,11,2,0,9,1,12840,48220,https://jobexposureindex.com/jobs/coil-winders-tapers-and-finishers
+619,Passenger Attendants,53-6061.00,22,Moderate,Transportation and Material Moving,14,2,2,10,3,27110,37720,https://jobexposureindex.com/jobs/passenger-attendants
+619,Personal Care Aides,31-1122.00,22,Moderate,Healthcare Support,11,2,1,8,5,4305810,35800,https://jobexposureindex.com/jobs/personal-care-aides
+619,Veterinary Assistants and Laboratory Animal Caretakers,31-9096.00,22,Moderate,Healthcare Support,28,3,6,19,2,126580,38150,https://jobexposureindex.com/jobs/veterinary-assistants-and-laboratory-animal-caretakers
+623,Forest Fire Inspectors and Prevention Specialists,33-2022.00,22,Moderate,Protective Service,16,2,3,11,1,2780,56870,https://jobexposureindex.com/jobs/forest-fire-inspectors-and-prevention-specialists
+624,"Mail Clerks and Mail Machine Operators, Except Postal Service",43-9051.00,22,Moderate,Office and Administrative Support,29,4,6,19,0,55230,39280,https://jobexposureindex.com/jobs/mail-clerks-and-mail-machine-operators-except-postal-service
+625,Medical and Clinical Laboratory Technicians,29-2012.00,21,Moderate,Healthcare Practitioners and Technical,15,0,7,8,1,332940,62930,https://jobexposureindex.com/jobs/medical-and-clinical-laboratory-technicians
+626,Amusement and Recreation Attendants,39-3091.00,21,Moderate,Personal Care and Service,19,3,1,15,2,397830,32150,https://jobexposureindex.com/jobs/amusement-and-recreation-attendants
+627,Log Graders and Scalers,45-4023.00,21,Moderate,"Farming, Fishing, and Forestry",13,0,4,9,0,3070,46330,https://jobexposureindex.com/jobs/log-graders-and-scalers
+628,Geothermal Technicians,49-9099.01,21,Moderate,"Installation, Maintenance, and Repair",24,1,6,17,1,176300,49230,https://jobexposureindex.com/jobs/geothermal-technicians
+629,Cashiers,41-2011.00,21,Moderate,Sales and Related,29,5,4,20,8,3089410,32880,https://jobexposureindex.com/jobs/cashiers
+630,Emergency Medical Technicians,29-2042.00,21,Moderate,Healthcare Practitioners and Technical,12,2,1,9,2,180510,44470,https://jobexposureindex.com/jobs/emergency-medical-technicians
+631,"Rail Yard Engineers, Dinkey Operators, and Hostlers",53-4013.00,20,Moderate,Transportation and Material Moving,25,5,0,20,0,3920,60600,https://jobexposureindex.com/jobs/rail-yard-engineers-dinkey-operators-and-hostlers
+632,Respiratory Therapists,29-1126.00,20,Moderate,Healthcare Practitioners and Technical,22,2,5,15,1,139790,82280,https://jobexposureindex.com/jobs/respiratory-therapists
+633,Hearing Aid Specialists,29-2092.00,20,Moderate,Healthcare Practitioners and Technical,11,0,5,6,0,11270,65160,https://jobexposureindex.com/jobs/hearing-aid-specialists
+633,Substance Abuse and Behavioral Disorder Counselors,21-1011.00,20,Moderate,Community and Social Service,23,2,5,16,4,1035300,60320,https://jobexposureindex.com/jobs/substance-abuse-and-behavioral-disorder-counselors
+633,Weatherization Installers and Technicians,47-4099.03,20,Moderate,Construction and Extraction,20,3,2,15,1,28380,49910,https://jobexposureindex.com/jobs/weatherization-installers-and-technicians
+636,Floral Designers,27-1023.00,20,Moderate,"Arts, Design, Entertainment, Sports, and Media",16,1,4,11,3,40590,37360,https://jobexposureindex.com/jobs/floral-designers
+636,"Special Education Teachers, Preschool",25-2051.00,20,Moderate,Educational Instruction and Library,36,4,6,26,7,29510,64830,https://jobexposureindex.com/jobs/special-education-teachers-preschool
+636,Watch and Clock Repairers,49-9064.00,20,Moderate,"Installation, Maintenance, and Repair",15,2,2,11,0,1310,67230,https://jobexposureindex.com/jobs/watch-and-clock-repairers
+639,Skincare Specialists,39-5094.00,20,Moderate,Personal Care and Service,18,1,5,12,6,72890,45330,https://jobexposureindex.com/jobs/skincare-specialists
+640,Refuse and Recyclable Material Collectors,53-7081.00,20,Moderate,Transportation and Material Moving,16,3,1,12,1,147240,49690,https://jobexposureindex.com/jobs/refuse-and-recyclable-material-collectors
+641,"Petroleum Pump System Operators, Refinery Operators, and Gaugers",51-8093.00,20,Moderate,Production,24,2,7,15,1,33160,96710,https://jobexposureindex.com/jobs/petroleum-pump-system-operators-refinery-operators-and-gaugers
+642,Bartenders,35-3011.00,19,Low,Food Preparation and Serving Related,20,2,4,14,2,756390,34340,https://jobexposureindex.com/jobs/bartenders
+643,Physical Therapists,29-1123.00,19,Low,Healthcare Practitioners and Technical,24,2,5,17,4,267330,102760,https://jobexposureindex.com/jobs/physical-therapists
+644,Upholsterers,51-6093.00,19,Low,Production,22,3,4,15,0,20140,46340,https://jobexposureindex.com/jobs/upholsterers
+645,Actors,27-2011.00,19,Low,"Arts, Design, Entertainment, Sports, and Media",19,3,1,15,7,55000,60424,https://jobexposureindex.com/jobs/actors
+645,Dental Hygienists,29-1292.00,19,Low,Healthcare Practitioners and Technical,18,1,4,13,1,222740,98100,https://jobexposureindex.com/jobs/dental-hygienists
+645,Logging Equipment Operators,45-4022.00,19,Low,"Farming, Fishing, and Forestry",9,2,0,7,0,21060,49740,https://jobexposureindex.com/jobs/logging-equipment-operators
+645,Tool and Die Makers,51-4111.00,19,Low,Production,17,2,3,12,1,56930,64050,https://jobexposureindex.com/jobs/tool-and-die-makers
+649,Crane and Tower Operators,53-7021.00,18,Low,Transportation and Material Moving,11,1,2,8,0,42890,68080,https://jobexposureindex.com/jobs/crane-and-tower-operators
+649,Elevator and Escalator Installers and Repairers,47-4021.00,18,Low,Construction and Extraction,20,3,1,16,0,23790,109910,https://jobexposureindex.com/jobs/elevator-and-escalator-installers-and-repairers
+651,Waiters and Waitresses,35-3031.00,18,Low,Food Preparation and Serving Related,25,2,5,18,2,2270910,35230,https://jobexposureindex.com/jobs/waiters-and-waitresses
+652,Phlebotomists,31-9097.00,18,Low,Healthcare Support,24,3,2,19,0,143540,45230,https://jobexposureindex.com/jobs/phlebotomists
+653,Motion Picture Projectionists,39-3021.00,18,Low,Personal Care and Service,22,2,5,15,0,1480,38270,https://jobexposureindex.com/jobs/motion-picture-projectionists
+653,Physical Therapist Aides,31-2022.00,18,Low,Healthcare Support,19,2,2,15,0,48150,35240,https://jobexposureindex.com/jobs/physical-therapist-aides
+655,Stockers and Order Fillers,53-7065.00,18,Low,Transportation and Material Moving,30,3,5,22,4,2833810,37330,https://jobexposureindex.com/jobs/stockers-and-order-fillers
+656,Jewelers and Precious Stone and Metal Workers,51-9071.00,18,Low,Production,30,2,6,22,1,22440,52540,https://jobexposureindex.com/jobs/jewelers-and-precious-stone-and-metal-workers
+656,Outdoor Power Equipment and Other Small Engine Mechanics,49-3053.00,18,Low,"Installation, Maintenance, and Repair",14,2,1,11,0,36060,47880,https://jobexposureindex.com/jobs/outdoor-power-equipment-and-other-small-engine-mechanics
+658,Funeral Attendants,39-4021.00,18,Low,Personal Care and Service,26,6,0,20,3,31090,35680,https://jobexposureindex.com/jobs/funeral-attendants
+659,"Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",51-4191.00,18,Low,Production,26,4,0,22,0,14000,48750,https://jobexposureindex.com/jobs/heat-treating-equipment-setters-operators-and-tenders-metal-and-plastic
+659,"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",51-4023.00,18,Low,Production,19,2,2,15,0,25250,50140,https://jobexposureindex.com/jobs/rolling-machine-setters-operators-and-tenders-metal-and-plastic
+661,Ship Engineers,53-5031.00,17,Low,Transportation and Material Moving,17,2,2,13,0,8400,109530,https://jobexposureindex.com/jobs/ship-engineers
+662,Animal Breeders,45-2021.00,17,Low,"Farming, Fishing, and Forestry",24,2,3,19,0,1330,51130,https://jobexposureindex.com/jobs/animal-breeders
+663,Acupuncturists,29-1291.00,17,Low,Healthcare Practitioners and Technical,18,3,0,15,3,7830,76040,https://jobexposureindex.com/jobs/acupuncturists
+663,Anesthesiologist Assistants,29-1071.01,17,Low,Healthcare Practitioners and Technical,16,0,5,11,0,162150,135880,https://jobexposureindex.com/jobs/anesthesiologist-assistants
+663,"Electronic Equipment Installers and Repairers, Motor Vehicles",49-2096.00,17,Low,"Installation, Maintenance, and Repair",12,2,0,10,1,8550,48420,https://jobexposureindex.com/jobs/electronic-equipment-installers-and-repairers-motor-vehicles
+663,Flight Attendants,53-2031.00,17,Low,Transportation and Material Moving,25,4,1,20,3,131650,63580,https://jobexposureindex.com/jobs/flight-attendants
+663,Nurse Anesthetists,29-1151.00,17,Low,Healthcare Practitioners and Technical,24,0,8,16,1,51840,236590,https://jobexposureindex.com/jobs/nurse-anesthetists
+663,"Railroad Brake, Signal, and Switch Operators and Locomotive Firers",53-4022.00,17,Low,Transportation and Material Moving,28,3,4,21,0,12400,68840,https://jobexposureindex.com/jobs/railroad-brake-signal-and-switch-operators-and-locomotive-firers
+663,School Bus Monitors,33-9094.00,17,Low,Protective Service,18,3,0,15,1,78420,35100,https://jobexposureindex.com/jobs/school-bus-monitors
+663,Security and Fire Alarm Systems Installers,49-2098.00,17,Low,"Installation, Maintenance, and Repair",16,2,3,11,3,86340,60070,https://jobexposureindex.com/jobs/security-and-fire-alarm-systems-installers
+663,Security Guards,33-9032.00,17,Low,Protective Service,14,2,0,12,1,1283470,38020,https://jobexposureindex.com/jobs/security-guards
+672,Veterinary Technologists and Technicians,29-2056.00,16,Low,Healthcare Practitioners and Technical,31,2,6,23,2,129140,47380,https://jobexposureindex.com/jobs/veterinary-technologists-and-technicians
+673,"Morticians, Undertakers, and Funeral Arrangers",39-4031.00,16,Low,Personal Care and Service,22,2,3,17,3,25100,55010,https://jobexposureindex.com/jobs/morticians-undertakers-and-funeral-arrangers
+673,Stationary Engineers and Boiler Operators,51-8021.00,16,Low,Production,25,3,1,21,2,28250,78620,https://jobexposureindex.com/jobs/stationary-engineers-and-boiler-operators
+675,Barbers,39-5011.00,16,Low,Personal Care and Service,20,2,3,15,2,15000,38210,https://jobexposureindex.com/jobs/barbers
+676,"Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",51-4034.00,16,Low,Production,16,2,1,13,0,16710,50620,https://jobexposureindex.com/jobs/lathe-and-turning-machine-tool-setters-operators-and-tenders-metal-and-plastic
+676,"Model Makers, Metal and Plastic",51-4061.00,16,Low,Production,16,2,1,13,0,2610,63340,https://jobexposureindex.com/jobs/model-makers-metal-and-plastic
+678,"Textile Cutting Machine Setters, Operators, and Tenders",51-6062.00,16,Low,Production,18,2,2,14,2,9000,38760,https://jobexposureindex.com/jobs/textile-cutting-machine-setters-operators-and-tenders
+679,"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",51-9051.00,16,Low,Production,18,2,0,16,1,14280,48040,https://jobexposureindex.com/jobs/furnace-kiln-oven-drier-and-kettle-operators-and-tenders
+680,Textile Bleaching and Dyeing Machine Operators and Tenders,51-6061.00,16,Low,Production,24,3,1,20,2,5310,38180,https://jobexposureindex.com/jobs/textile-bleaching-and-dyeing-machine-operators-and-tenders
+681,Lighting Technicians,27-4015.00,16,Low,"Arts, Design, Entertainment, Sports, and Media",16,1,3,12,0,8900,68060,https://jobexposureindex.com/jobs/lighting-technicians
+681,"Textile Knitting and Weaving Machine Setters, Operators, and Tenders",51-6063.00,16,Low,Production,20,3,1,16,1,13030,39530,https://jobexposureindex.com/jobs/textile-knitting-and-weaving-machine-setters-operators-and-tenders
+683,"Model Makers, Wood",51-7031.00,15,Low,Production,14,1,2,11,0,280,56550,https://jobexposureindex.com/jobs/model-makers-wood
+683,Paramedics,29-2043.00,15,Low,Healthcare Practitioners and Technical,13,1,2,10,3,100610,60600,https://jobexposureindex.com/jobs/paramedics
+683,Physical Therapist Assistants,31-2021.00,15,Low,Healthcare Support,21,2,2,17,1,112430,68380,https://jobexposureindex.com/jobs/physical-therapist-assistants
+686,Chemical Equipment Operators and Tenders,51-9011.00,15,Low,Production,23,2,3,18,0,139630,58040,https://jobexposureindex.com/jobs/chemical-equipment-operators-and-tenders
+686,"Patternmakers, Metal and Plastic",51-4062.00,15,Low,Production,15,2,2,11,0,1470,58000,https://jobexposureindex.com/jobs/patternmakers-metal-and-plastic
+688,Chemical Plant and System Operators,51-8091.00,15,Low,Production,19,1,4,14,2,16610,78120,https://jobexposureindex.com/jobs/chemical-plant-and-system-operators
+689,Baggage Porters and Bellhops,39-6011.00,15,Low,Personal Care and Service,17,2,3,12,3,28510,37080,https://jobexposureindex.com/jobs/baggage-porters-and-bellhops
+690,Childcare Workers,39-9011.00,15,Low,Personal Care and Service,25,3,2,20,6,518910,34980,https://jobexposureindex.com/jobs/childcare-workers
+691,Electricians,47-2111.00,15,Low,Construction and Extraction,21,2,2,17,1,757220,63190,https://jobexposureindex.com/jobs/electricians
+692,Home Appliance Repairers,49-9031.00,15,Low,"Installation, Maintenance, and Repair",31,2,4,25,2,32150,50990,https://jobexposureindex.com/jobs/home-appliance-repairers
+693,Carpenters,47-2031.00,14,Low,Construction and Extraction,29,1,6,22,2,670090,60580,https://jobexposureindex.com/jobs/carpenters
+694,Farm Labor Contractors,13-1074.00,14,Low,Business and Financial Operations,8,0,2,6,0,310,58460,https://jobexposureindex.com/jobs/farm-labor-contractors
+694,"Farmworkers and Laborers, Crop, Nursery, and Greenhouse",45-2092.00,14,Low,"Farming, Fishing, and Forestry",30,2,5,23,3,265500,35660,https://jobexposureindex.com/jobs/farmworkers-and-laborers-crop-nursery-and-greenhouse
+694,"Maintenance Workers, Machinery",49-9043.00,14,Low,"Installation, Maintenance, and Repair",18,2,1,15,0,60020,60850,https://jobexposureindex.com/jobs/maintenance-workers-machinery
+694,Nuclear Technicians,19-4051.00,14,Low,"Life, Physical, and Social Science",21,2,3,16,0,6470,110240,https://jobexposureindex.com/jobs/nuclear-technicians
+694,"Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",51-9012.00,14,Low,Production,21,2,1,18,0,60100,51610,https://jobexposureindex.com/jobs/separating-filtering-clarifying-precipitating-and-still-machine-setters-operators-and-tenders
+694,Shampooers,39-5093.00,14,Low,Personal Care and Service,4,1,0,3,1,8070,32600,https://jobexposureindex.com/jobs/shampooers
+694,"Ushers, Lobby Attendants, and Ticket Takers",39-3031.00,14,Low,Personal Care and Service,23,3,1,19,1,121770,32910,https://jobexposureindex.com/jobs/ushers-lobby-attendants-and-ticket-takers
+701,Firefighters,33-2011.00,14,Low,Protective Service,30,3,2,25,0,345990,59280,https://jobexposureindex.com/jobs/firefighters
+702,Aircraft Service Attendants,53-6032.00,14,Low,Transportation and Material Moving,18,2,1,15,0,31300,40450,https://jobexposureindex.com/jobs/aircraft-service-attendants
+703,Medical Appliance Technicians,51-9082.00,14,Low,Production,15,1,2,12,0,11280,48030,https://jobexposureindex.com/jobs/medical-appliance-technicians
+704,"Maintenance and Repair Workers, General",49-9071.00,14,Low,"Installation, Maintenance, and Repair",30,1,5,24,3,1529700,49590,https://jobexposureindex.com/jobs/maintenance-and-repair-workers-general
+705,"Earth Drillers, Except Oil and Gas",47-5023.00,14,Low,Construction and Extraction,30,2,4,24,0,19450,60190,https://jobexposureindex.com/jobs/earth-drillers-except-oil-and-gas
+705,Etchers and Engravers,51-9194.00,14,Low,Production,30,0,7,23,0,7750,43310,https://jobexposureindex.com/jobs/etchers-and-engravers
+705,Mechanical Door Repairers,49-9011.00,14,Low,"Installation, Maintenance, and Repair",25,2,2,21,1,27120,55720,https://jobexposureindex.com/jobs/mechanical-door-repairers
+708,"Explosives Workers, Ordnance Handling Experts, and Blasters",47-5032.00,14,Low,Construction and Extraction,30,4,1,25,0,5100,61390,https://jobexposureindex.com/jobs/explosives-workers-ordnance-handling-experts-and-blasters
+709,Gambling Dealers,39-3011.00,14,Low,Personal Care and Service,21,3,0,18,6,83910,34320,https://jobexposureindex.com/jobs/gambling-dealers
+709,Nannies,39-9011.01,14,Low,Personal Care and Service,19,2,1,16,1,518910,34980,https://jobexposureindex.com/jobs/nannies
+711,Aircraft Mechanics and Service Technicians,49-3011.00,13,Low,"Installation, Maintenance, and Repair",38,3,4,31,0,138090,79870,https://jobexposureindex.com/jobs/aircraft-mechanics-and-service-technicians
+712,Biomass Plant Technicians,51-8013.03,13,Low,Production,18,1,3,14,0,29320,102040,https://jobexposureindex.com/jobs/biomass-plant-technicians
+713,Baristas,35-3023.01,13,Low,Food Preparation and Serving Related,19,2,1,16,2,3854050,31200,https://jobexposureindex.com/jobs/baristas
+713,Butchers and Meat Cutters,51-3021.00,13,Low,Production,12,1,2,9,0,136430,40140,https://jobexposureindex.com/jobs/butchers-and-meat-cutters
+715,"Control and Valve Installers and Repairers, Except Mechanical Door",49-9012.00,13,Low,"Installation, Maintenance, and Repair",39,3,3,33,0,48240,74340,https://jobexposureindex.com/jobs/control-and-valve-installers-and-repairers-except-mechanical-door
+716,Automotive and Watercraft Service Attendants,53-6031.00,13,Low,Transportation and Material Moving,15,3,0,12,1,102010,35670,https://jobexposureindex.com/jobs/automotive-and-watercraft-service-attendants
+716,"Layout Workers, Metal and Plastic",51-4192.00,13,Low,Production,14,0,4,10,1,5970,63870,https://jobexposureindex.com/jobs/layout-workers-metal-and-plastic
+718,"Food Servers, Nonrestaurant",35-3041.00,13,Low,Food Preparation and Serving Related,14,1,2,11,1,293900,35360,https://jobexposureindex.com/jobs/food-servers-nonrestaurant
+719,Food Cooking Machine Operators and Tenders,51-3093.00,13,Low,Production,17,2,0,15,1,31250,41590,https://jobexposureindex.com/jobs/food-cooking-machine-operators-and-tenders
+720,Demonstrators and Product Promoters,41-9011.00,13,Low,Sales and Related,24,2,4,18,8,64520,39320,https://jobexposureindex.com/jobs/demonstrators-and-product-promoters
+721,Endoscopy Technicians,31-9099.02,13,Low,Healthcare Support,12,1,1,10,0,109740,48430,https://jobexposureindex.com/jobs/endoscopy-technicians
+721,Histology Technicians,29-2012.01,13,Low,Healthcare Practitioners and Technical,8,0,2,6,0,332940,62930,https://jobexposureindex.com/jobs/histology-technicians
+721,Psychiatric Aides,31-1133.00,13,Low,Healthcare Support,17,3,0,14,2,35520,44910,https://jobexposureindex.com/jobs/psychiatric-aides
+721,Water and Wastewater Treatment Plant and System Operators,51-8031.00,13,Low,Production,8,1,0,7,0,128490,60020,https://jobexposureindex.com/jobs/water-and-wastewater-treatment-plant-and-system-operators
+725,"Cooks, Institution and Cafeteria",35-2012.00,12,Low,Food Preparation and Serving Related,17,1,4,12,2,441050,37450,https://jobexposureindex.com/jobs/cooks-institution-and-cafeteria
+726,Psychiatric Technicians,29-2053.00,12,Low,Healthcare Practitioners and Technical,16,0,4,12,3,156960,45130,https://jobexposureindex.com/jobs/psychiatric-technicians
+727,Cabinetmakers and Bench Carpenters,51-7011.00,12,Low,Production,20,2,3,15,2,77170,46680,https://jobexposureindex.com/jobs/cabinetmakers-and-bench-carpenters
+728,Farm Equipment Mechanics and Service Technicians,49-3041.00,12,Low,"Installation, Maintenance, and Repair",14,2,0,12,0,37870,56550,https://jobexposureindex.com/jobs/farm-equipment-mechanics-and-service-technicians
+729,Food Batchmakers,51-3092.00,12,Low,Production,25,2,1,22,2,174520,42290,https://jobexposureindex.com/jobs/food-batchmakers
+730,"Glass Blowers, Molders, Benders, and Finishers",51-9195.04,11,Low,Production,19,1,1,17,0,33190,46170,https://jobexposureindex.com/jobs/glass-blowers-molders-benders-and-finishers
+731,Marriage and Family Therapists,21-1013.00,11,Low,Community and Social Service,16,1,2,13,8,66740,66940,https://jobexposureindex.com/jobs/marriage-and-family-therapists
+731,Medical Equipment Preparers,31-9093.00,11,Low,Healthcare Support,16,1,1,14,0,77420,47700,https://jobexposureindex.com/jobs/medical-equipment-preparers
+731,"Mixing and Blending Machine Setters, Operators, and Tenders",51-9023.00,11,Low,Production,19,2,0,17,2,94920,48990,https://jobexposureindex.com/jobs/mixing-and-blending-machine-setters-operators-and-tenders
+734,Solar Photovoltaic Installers,47-2231.00,11,Low,Construction and Extraction,26,0,6,20,1,31350,53140,https://jobexposureindex.com/jobs/solar-photovoltaic-installers
+735,"Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",51-9021.00,11,Low,Production,22,2,0,20,1,26000,48540,https://jobexposureindex.com/jobs/crushing-grinding-and-polishing-machine-setters-operators-and-tenders
+736,Parking Attendants,53-6021.00,11,Low,Transportation and Material Moving,18,1,2,15,1,137880,35150,https://jobexposureindex.com/jobs/parking-attendants
+736,"Radio, Cellular, and Tower Equipment Installers and Repairers",49-2021.00,11,Low,"Installation, Maintenance, and Repair",30,1,3,26,2,11140,63520,https://jobexposureindex.com/jobs/radio-cellular-and-tower-equipment-installers-and-repairers
+738,"Electric Motor, Power Tool, and Related Repairers",49-2092.00,11,Low,"Installation, Maintenance, and Repair",39,3,1,35,1,14450,56210,https://jobexposureindex.com/jobs/electric-motor-power-tool-and-related-repairers
+739,"Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",51-9192.00,11,Low,Production,11,1,0,10,0,14760,43530,https://jobexposureindex.com/jobs/cleaning-washing-and-metal-pickling-equipment-operators-and-tenders
+739,Crossing Guards and Flaggers,33-9091.00,11,Low,Protective Service,12,1,1,10,0,94360,38100,https://jobexposureindex.com/jobs/crossing-guards-and-flaggers
+739,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers",49-9021.00,11,Low,"Installation, Maintenance, and Repair",30,2,2,26,5,409670,61010,https://jobexposureindex.com/jobs/heating-air-conditioning-and-refrigeration-mechanics-and-installers
+742,Metal-Refining Furnace Operators and Tenders,51-4051.00,10,Low,Production,15,1,1,13,1,16780,54430,https://jobexposureindex.com/jobs/metal-refining-furnace-operators-and-tenders
+742,"Plating Machine Setters, Operators, and Tenders, Metal and Plastic",51-4193.00,10,Low,Production,38,2,2,34,1,32410,43960,https://jobexposureindex.com/jobs/plating-machine-setters-operators-and-tenders-metal-and-plastic
+744,Animal Trainers,39-2011.00,10,Low,Personal Care and Service,19,1,1,17,0,18770,39990,https://jobexposureindex.com/jobs/animal-trainers
+744,Bicycle Repairers,49-3091.00,10,Low,"Installation, Maintenance, and Repair",16,0,3,13,0,12170,42780,https://jobexposureindex.com/jobs/bicycle-repairers
+744,Conveyor Operators and Tenders,53-7011.00,10,Low,Transportation and Material Moving,23,1,2,20,0,22930,42420,https://jobexposureindex.com/jobs/conveyor-operators-and-tenders
+747,"Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",51-4081.00,10,Low,Production,21,2,1,18,0,124590,47180,https://jobexposureindex.com/jobs/multiple-machine-tool-setters-operators-and-tenders-metal-and-plastic
+748,"Plumbers, Pipefitters, and Steamfitters",47-2152.00,10,Low,Construction and Extraction,30,1,4,25,0,465840,63800,https://jobexposureindex.com/jobs/plumbers-pipefitters-and-steamfitters
+749,Nursing Assistants,31-1131.00,10,Low,Healthcare Support,33,2,3,28,5,1448910,42260,https://jobexposureindex.com/jobs/nursing-assistants
+750,"Graders and Sorters, Agricultural Products",45-2041.00,10,Low,"Farming, Fishing, and Forestry",6,1,0,5,0,25180,35730,https://jobexposureindex.com/jobs/graders-and-sorters-agricultural-products
+750,Hydroelectric Plant Technicians,51-8013.04,10,Low,Production,21,2,0,19,0,29320,102040,https://jobexposureindex.com/jobs/hydroelectric-plant-technicians
+750,"Mobile Heavy Equipment Mechanics, Except Engines",49-3042.00,10,Low,"Installation, Maintenance, and Repair",20,1,2,17,2,176600,65510,https://jobexposureindex.com/jobs/mobile-heavy-equipment-mechanics-except-engines
+750,"Packers and Packagers, Hand",53-7064.00,10,Low,Transportation and Material Moving,12,1,0,11,3,559820,36280,https://jobexposureindex.com/jobs/packers-and-packagers-hand
+750,"Postal Service Mail Sorters, Processors, and Processing Machine Operators",43-5053.00,10,Low,Office and Administrative Support,17,2,0,15,2,105200,58470,https://jobexposureindex.com/jobs/postal-service-mail-sorters-processors-and-processing-machine-operators
+755,Rail Car Repairers,49-3043.00,10,Low,"Installation, Maintenance, and Repair",20,1,1,18,0,21350,67530,https://jobexposureindex.com/jobs/rail-car-repairers
+756,Electrical and Electronic Equipment Assemblers,51-2022.00,10,Low,Production,17,1,2,14,2,259810,45930,https://jobexposureindex.com/jobs/electrical-and-electronic-equipment-assemblers
+757,Engine and Other Machine Assemblers,51-2031.00,10,Low,Production,12,0,2,10,0,34000,53710,https://jobexposureindex.com/jobs/engine-and-other-machine-assemblers
+758,Biofuels Processing Technicians,51-8099.01,9,Low,Production,19,0,4,15,0,14080,62470,https://jobexposureindex.com/jobs/biofuels-processing-technicians
+758,"Cooks, Restaurant",35-2014.00,9,Low,Food Preparation and Serving Related,20,1,3,16,4,1409890,37390,https://jobexposureindex.com/jobs/cooks-restaurant
+760,Gas Plant Operators,51-8092.00,9,Low,Production,19,1,1,17,1,18030,87820,https://jobexposureindex.com/jobs/gas-plant-operators
+760,Ophthalmic Laboratory Technicians,51-9083.00,9,Low,Production,18,0,3,15,0,18660,39460,https://jobexposureindex.com/jobs/ophthalmic-laboratory-technicians
+762,"Ambulance Drivers and Attendants, Except Emergency Medical Technicians",53-3011.00,9,Low,Transportation and Material Moving,11,1,0,10,0,12630,35450,https://jobexposureindex.com/jobs/ambulance-drivers-and-attendants-except-emergency-medical-technicians
+762,Machine Feeders and Offbearers,53-7063.00,9,Low,Transportation and Material Moving,13,1,0,12,1,42330,41220,https://jobexposureindex.com/jobs/machine-feeders-and-offbearers
+762,"Tailors, Dressmakers, and Custom Sewers",51-6052.00,9,Low,Production,22,1,2,19,0,13920,41640,https://jobexposureindex.com/jobs/tailors-dressmakers-and-custom-sewers
+765,Print Binding and Finishing Workers,51-5113.00,9,Low,Production,26,1,2,23,1,33180,42290,https://jobexposureindex.com/jobs/print-binding-and-finishing-workers
+766,Helpers--Production Workers,51-9198.00,9,Low,Production,34,2,3,29,1,165700,39070,https://jobexposureindex.com/jobs/helpers-production-workers
+767,"Welders, Cutters, Solderers, and Brazers",51-4121.00,9,Low,Production,30,2,1,27,0,416210,53750,https://jobexposureindex.com/jobs/welders-cutters-solderers-and-brazers
+768,Tile and Stone Setters,47-2044.00,9,Low,Construction and Extraction,25,1,3,21,1,35850,55690,https://jobexposureindex.com/jobs/tile-and-stone-setters
+769,Shoe Machine Operators and Tenders,51-6042.00,9,Low,Production,19,1,0,18,0,3280,35650,https://jobexposureindex.com/jobs/shoe-machine-operators-and-tenders
+769,"Stone Cutters and Carvers, Manufacturing",51-9195.03,9,Low,Production,16,0,3,13,0,33190,46170,https://jobexposureindex.com/jobs/stone-cutters-and-carvers-manufacturing
+771,"Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",51-6064.00,9,Low,Production,24,2,0,22,0,22020,38670,https://jobexposureindex.com/jobs/textile-winding-twisting-and-drawing-out-machine-setters-operators-and-tenders
+772,Cleaners of Vehicles and Equipment,53-7061.00,8,Low,Transportation and Material Moving,21,1,1,19,0,380430,35830,https://jobexposureindex.com/jobs/cleaners-of-vehicles-and-equipment
+772,Glaziers,47-2121.00,8,Low,Construction and Extraction,27,0,5,22,1,58480,57080,https://jobexposureindex.com/jobs/glaziers
+772,Manicurists and Pedicurists,39-5092.00,8,Low,Personal Care and Service,18,1,1,16,2,152770,35760,https://jobexposureindex.com/jobs/manicurists-and-pedicurists
+772,"Potters, Manufacturing",51-9195.05,8,Low,Production,24,0,4,20,0,33190,46170,https://jobexposureindex.com/jobs/potters-manufacturing
+776,Automotive Service Technicians and Mechanics,49-3023.00,8,Low,"Installation, Maintenance, and Repair",30,1,3,26,3,704640,50620,https://jobexposureindex.com/jobs/automotive-service-technicians-and-mechanics
+777,"Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",51-4072.00,8,Low,Production,33,1,3,29,1,150470,44350,https://jobexposureindex.com/jobs/molding-coremaking-and-casting-machine-setters-operators-and-tenders-metal-and-plastic
+777,Sewing Machine Operators,51-6031.00,8,Low,Production,26,1,2,23,0,104880,36670,https://jobexposureindex.com/jobs/sewing-machine-operators
+779,Hazardous Materials Removal Workers,47-4041.00,8,Low,Construction and Extraction,21,1,2,18,0,51710,49450,https://jobexposureindex.com/jobs/hazardous-materials-removal-workers
+780,Cooling and Freezing Equipment Operators and Tenders,51-9193.00,8,Low,Production,19,1,0,18,0,6900,41330,https://jobexposureindex.com/jobs/cooling-and-freezing-equipment-operators-and-tenders
+780,"Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",33-9092.00,8,Low,Protective Service,15,1,0,14,0,157550,33580,https://jobexposureindex.com/jobs/lifeguards-ski-patrol-and-other-recreational-protective-service-workers
+780,Locksmiths and Safe Repairers,49-9094.00,8,Low,"Installation, Maintenance, and Repair",14,1,0,13,0,15040,51320,https://jobexposureindex.com/jobs/locksmiths-and-safe-repairers
+783,"Hairdressers, Hairstylists, and Cosmetologists",39-5012.00,8,Low,Personal Care and Service,23,1,1,21,4,305710,35790,https://jobexposureindex.com/jobs/hairdressers-hairstylists-and-cosmetologists
+784,Septic Tank Servicers and Sewer Pipe Cleaners,47-4071.00,8,Low,Construction and Extraction,22,1,1,20,0,30650,49880,https://jobexposureindex.com/jobs/septic-tank-servicers-and-sewer-pipe-cleaners
+785,Home Health Aides,31-1121.00,8,Low,Healthcare Support,15,1,0,14,0,4305810,35800,https://jobexposureindex.com/jobs/home-health-aides
+785,Manufactured Building and Mobile Home Installers,49-9095.00,8,Low,"Installation, Maintenance, and Repair",14,1,0,13,1,3020,45990,https://jobexposureindex.com/jobs/manufactured-building-and-mobile-home-installers
+785,Motorboat Mechanics and Service Technicians,49-3051.00,8,Low,"Installation, Maintenance, and Repair",13,1,0,12,1,23220,57550,https://jobexposureindex.com/jobs/motorboat-mechanics-and-service-technicians
+785,Plasterers and Stucco Masons,47-2161.00,8,Low,Construction and Extraction,15,1,0,14,1,19310,57660,https://jobexposureindex.com/jobs/plasterers-and-stucco-masons
+785,"Rock Splitters, Quarry",47-5051.00,8,Low,Construction and Extraction,9,0,1,8,0,3320,48740,https://jobexposureindex.com/jobs/rock-splitters-quarry
+785,Signal and Track Switch Repairers,49-9097.00,8,Low,"Installation, Maintenance, and Repair",14,1,0,13,0,8720,92460,https://jobexposureindex.com/jobs/signal-and-track-switch-repairers
+791,"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",51-9041.00,8,Low,Production,28,2,0,26,0,58770,45760,https://jobexposureindex.com/jobs/extruding-forming-pressing-and-compacting-machine-setters-operators-and-tenders
+792,Massage Therapists,31-9011.00,7,Low,Healthcare Support,14,1,0,13,3,98790,58450,https://jobexposureindex.com/jobs/massage-therapists
+793,Floor Sanders and Finishers,47-2043.00,7,Low,Construction and Extraction,7,0,1,6,0,3720,50440,https://jobexposureindex.com/jobs/floor-sanders-and-finishers
+793,Reinforcing Iron and Rebar Workers,47-2171.00,7,Low,Construction and Extraction,7,0,1,6,0,13800,58970,https://jobexposureindex.com/jobs/reinforcing-iron-and-rebar-workers
+793,"Tank Car, Truck, and Ship Loaders",53-7121.00,7,Low,Transportation and Material Moving,19,1,0,18,0,10700,58870,https://jobexposureindex.com/jobs/tank-car-truck-and-ship-loaders
+796,"Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",51-6091.00,7,Low,Production,21,1,0,20,0,12850,46350,https://jobexposureindex.com/jobs/extruding-and-forming-machine-setters-operators-and-tenders-synthetic-and-glass-fibers
+797,"Cutting and Slicing Machine Setters, Operators, and Tenders",51-9032.00,7,Low,Production,28,1,1,26,0,44980,46570,https://jobexposureindex.com/jobs/cutting-and-slicing-machine-setters-operators-and-tenders
+797,"Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",51-4122.00,7,Low,Production,29,2,1,26,0,31600,47920,https://jobexposureindex.com/jobs/welding-soldering-and-brazing-machine-setters-operators-and-tenders
+799,Commercial Divers,49-9092.00,7,Low,"Installation, Maintenance, and Repair",25,0,3,22,0,3450,72990,https://jobexposureindex.com/jobs/commercial-divers
+799,"Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",51-3091.00,7,Low,Production,20,1,0,19,0,20370,44810,https://jobexposureindex.com/jobs/food-and-tobacco-roasting-baking-and-drying-machine-operators-and-tenders
+799,Surgical Technologists,29-2055.00,7,Low,Healthcare Practitioners and Technical,16,1,1,14,0,117460,64650,https://jobexposureindex.com/jobs/surgical-technologists
+802,Sheet Metal Workers,47-2211.00,7,Low,Construction and Extraction,24,0,3,21,0,119770,61800,https://jobexposureindex.com/jobs/sheet-metal-workers
+803,"Woodworking Machine Setters, Operators, and Tenders, Except Sawing",51-7042.00,7,Low,Production,26,1,2,23,0,61420,43380,https://jobexposureindex.com/jobs/woodworking-machine-setters-operators-and-tenders-except-sawing
+804,Adhesive Bonding Machine Operators and Tenders,51-9191.00,6,Low,Production,17,1,0,16,0,11500,46460,https://jobexposureindex.com/jobs/adhesive-bonding-machine-operators-and-tenders
+804,"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",51-4033.00,6,Low,Production,18,1,1,16,0,67000,46550,https://jobexposureindex.com/jobs/grinding-lapping-polishing-and-buffing-machine-tool-setters-operators-and-tenders-metal-and-plastic
+804,"Locker Room, Coatroom, and Dressing Room Attendants",39-3093.00,6,Low,Personal Care and Service,23,1,0,22,5,15560,36300,https://jobexposureindex.com/jobs/locker-room-coatroom-and-dressing-room-attendants
+804,"Service Unit Operators, Oil and Gas",47-5013.00,6,Low,Construction and Extraction,19,1,0,18,1,43140,58160,https://jobexposureindex.com/jobs/service-unit-operators-oil-and-gas
+808,Carpet Installers,47-2041.00,6,Low,Construction and Extraction,16,0,2,14,1,13780,50340,https://jobexposureindex.com/jobs/carpet-installers
+808,"Farmworkers, Farm, Ranch, and Aquacultural Animals",45-2093.00,6,Low,"Farming, Fishing, and Forestry",22,0,3,19,0,32810,36670,https://jobexposureindex.com/jobs/farmworkers-farm-ranch-and-aquacultural-animals
+808,Fast Food and Counter Workers,35-3023.00,6,Low,Food Preparation and Serving Related,28,1,3,24,1,3854050,31200,https://jobexposureindex.com/jobs/fast-food-and-counter-workers
+811,Tree Trimmers and Pruners,37-3013.00,6,Low,Building and Grounds Cleaning and Maintenance,26,1,1,24,0,55160,50960,https://jobexposureindex.com/jobs/tree-trimmers-and-pruners
+812,Recreational Vehicle Service Technicians,49-3092.00,6,Low,"Installation, Maintenance, and Repair",17,1,0,16,3,17430,52000,https://jobexposureindex.com/jobs/recreational-vehicle-service-technicians
+813,Timing Device Assemblers and Adjusters,51-2061.00,6,Low,Production,17,0,3,14,0,250,62620,https://jobexposureindex.com/jobs/timing-device-assemblers-and-adjusters
+814,"Sawing Machine Setters, Operators, and Tenders, Wood",51-7041.00,6,Low,Production,24,0,3,21,0,40850,42770,https://jobexposureindex.com/jobs/sawing-machine-setters-operators-and-tenders-wood
+814,Shoe and Leather Workers and Repairers,51-6041.00,6,Low,Production,27,0,4,23,1,7450,37800,https://jobexposureindex.com/jobs/shoe-and-leather-workers-and-repairers
+816,"Painters, Construction and Maintenance",47-2141.00,6,Low,Construction and Extraction,19,1,0,18,1,225190,49400,https://jobexposureindex.com/jobs/painters-construction-and-maintenance
+817,"Pesticide Handlers, Sprayers, and Applicators, Vegetation",37-3012.00,6,Low,Building and Grounds Cleaning and Maintenance,10,0,1,9,0,27050,46340,https://jobexposureindex.com/jobs/pesticide-handlers-sprayers-and-applicators-vegetation
+818,Operating Engineers and Other Construction Equipment Operators,47-2073.00,5,Low,Construction and Extraction,28,1,1,26,0,478090,59850,https://jobexposureindex.com/jobs/operating-engineers-and-other-construction-equipment-operators
+819,"Rotary Drill Operators, Oil and Gas",47-5012.00,5,Low,Construction and Extraction,22,1,0,21,0,12600,67890,https://jobexposureindex.com/jobs/rotary-drill-operators-oil-and-gas
+820,Fence Erectors,47-4031.00,5,Low,Construction and Extraction,20,1,0,19,0,24480,47980,https://jobexposureindex.com/jobs/fence-erectors
+821,Construction Laborers,47-2061.00,5,Low,Construction and Extraction,32,0,2,30,0,1096780,47120,https://jobexposureindex.com/jobs/construction-laborers
+821,"Insulation Workers, Floor, Ceiling, and Wall",47-2131.00,5,Low,Construction and Extraction,10,0,1,9,0,44440,49120,https://jobexposureindex.com/jobs/insulation-workers-floor-ceiling-and-wall
+821,Laundry and Dry-Cleaning Workers,51-6011.00,5,Low,Production,32,1,2,29,0,198040,34890,https://jobexposureindex.com/jobs/laundry-and-dry-cleaning-workers
+824,Solar Thermal Installers and Technicians,47-2152.04,5,Low,Construction and Extraction,21,0,2,19,0,465840,63800,https://jobexposureindex.com/jobs/solar-thermal-installers-and-technicians
+825,Electromechanical Equipment Assemblers,51-2023.00,5,Low,Production,14,0,1,13,0,259810,45930,https://jobexposureindex.com/jobs/electromechanical-equipment-assemblers
+825,"Insulation Workers, Mechanical",47-2132.00,5,Low,Construction and Extraction,13,0,1,12,0,25660,58340,https://jobexposureindex.com/jobs/insulation-workers-mechanical
+825,Prosthodontists,29-1024.00,5,Low,Healthcare Practitioners and Technical,11,0,1,10,0,870,311180,https://jobexposureindex.com/jobs/prosthodontists
+828,Fishing and Hunting Workers,45-3031.00,4,Low,"Farming, Fishing, and Forestry",30,0,3,27,0,,,https://jobexposureindex.com/jobs/fishing-and-hunting-workers
+829,"Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",51-9124.00,4,Low,Production,30,1,1,28,1,158740,48250,https://jobexposureindex.com/jobs/coating-painting-and-spraying-machine-setters-operators-and-tenders
+829,Forest and Conservation Workers,45-4011.00,4,Low,"Farming, Fishing, and Forestry",21,1,0,20,0,6050,43680,https://jobexposureindex.com/jobs/forest-and-conservation-workers
+829,Recycling and Reclamation Workers,53-7062.04,4,Low,Transportation and Material Moving,18,1,0,17,0,2950280,40240,https://jobexposureindex.com/jobs/recycling-and-reclamation-workers
+829,Wind Turbine Service Technicians,49-9081.00,4,Low,"Installation, Maintenance, and Repair",13,0,1,12,0,9980,64120,https://jobexposureindex.com/jobs/wind-turbine-service-technicians
+833,Automotive Body and Related Repairers,49-3021.00,4,Low,"Installation, Maintenance, and Repair",25,0,2,23,0,149310,54890,https://jobexposureindex.com/jobs/automotive-body-and-related-repairers
+833,Sailors and Marine Oilers,53-5011.00,4,Low,Transportation and Material Moving,28,1,1,26,0,31670,51520,https://jobexposureindex.com/jobs/sailors-and-marine-oilers
+835,Crematory Operators,39-4012.00,4,Low,Personal Care and Service,12,0,1,11,2,2970,43650,https://jobexposureindex.com/jobs/crematory-operators
+835,Dental Laboratory Technicians,51-9081.00,4,Low,Production,17,0,1,16,0,34410,49610,https://jobexposureindex.com/jobs/dental-laboratory-technicians
+835,Drywall and Ceiling Tile Installers,47-2081.00,4,Low,Construction and Extraction,26,0,2,24,0,83080,58930,https://jobexposureindex.com/jobs/drywall-and-ceiling-tile-installers
+835,"Forging Machine Setters, Operators, and Tenders, Metal and Plastic",51-4022.00,4,Low,Production,13,0,1,12,0,8930,49030,https://jobexposureindex.com/jobs/forging-machine-setters-operators-and-tenders-metal-and-plastic
+835,Segmental Pavers,47-4091.00,4,Low,Construction and Extraction,12,0,1,11,0,28380,49910,https://jobexposureindex.com/jobs/segmental-pavers
+835,"Sewers, Hand",51-6051.00,4,Low,Production,13,0,1,12,0,2190,36480,https://jobexposureindex.com/jobs/sewers-hand
+841,Embalmers,39-4011.00,4,Low,Personal Care and Service,26,1,0,25,0,3890,58780,https://jobexposureindex.com/jobs/embalmers
+841,"Laborers and Freight, Stock, and Material Movers, Hand",53-7062.00,4,Low,Transportation and Material Moving,21,1,0,20,2,2950280,40240,https://jobexposureindex.com/jobs/laborers-and-freight-stock-and-material-movers-hand
+841,Oral and Maxillofacial Surgeons,29-1022.00,4,Low,Healthcare Practitioners and Technical,14,0,1,13,0,4910,352220,https://jobexposureindex.com/jobs/oral-and-maxillofacial-surgeons
+841,Roofers,47-2181.00,4,Low,Construction and Extraction,28,0,2,26,0,135490,55440,https://jobexposureindex.com/jobs/roofers
+845,Surgical Assistants,29-9093.00,4,Low,Healthcare Practitioners and Technical,28,0,2,26,1,22270,66800,https://jobexposureindex.com/jobs/surgical-assistants
+846,Brickmasons and Blockmasons,47-2021.00,4,Low,Construction and Extraction,14,0,1,13,0,52550,62120,https://jobexposureindex.com/jobs/brickmasons-and-blockmasons
+847,Food Preparation Workers,35-2021.00,4,Low,Food Preparation and Serving Related,31,1,1,29,3,893600,35320,https://jobexposureindex.com/jobs/food-preparation-workers
+848,Bailiffs,33-3011.00,4,Low,Protective Service,15,1,0,14,0,17310,56600,https://jobexposureindex.com/jobs/bailiffs
+848,"Grinding and Polishing Workers, Hand",51-9022.00,4,Low,Production,20,1,0,19,0,10510,42660,https://jobexposureindex.com/jobs/grinding-and-polishing-workers-hand
+848,Pipelayers,47-2151.00,4,Low,Construction and Extraction,14,0,1,13,0,33050,49000,https://jobexposureindex.com/jobs/pipelayers
+851,"Helpers--Installation, Maintenance, and Repair Workers",49-9098.00,3,Low,"Installation, Maintenance, and Repair",16,0,1,15,0,95580,39630,https://jobexposureindex.com/jobs/helpers-installation-maintenance-and-repair-workers
+851,"Tool Grinders, Filers, and Sharpeners",51-4194.00,3,Low,Production,18,0,1,17,0,5600,50060,https://jobexposureindex.com/jobs/tool-grinders-filers-and-sharpeners
+853,Fallers,45-4021.00,3,Low,"Farming, Fishing, and Forestry",19,0,1,18,0,3130,52100,https://jobexposureindex.com/jobs/fallers
+853,Industrial Truck and Tractor Operators,53-7051.00,3,Low,Transportation and Material Moving,11,0,1,10,0,774420,46420,https://jobexposureindex.com/jobs/industrial-truck-and-tractor-operators
+853,Telecommunications Line Installers and Repairers,49-9052.00,3,Low,"Installation, Maintenance, and Repair",20,1,0,19,0,97720,74330,https://jobexposureindex.com/jobs/telecommunications-line-installers-and-repairers
+856,Boilermakers,47-2011.00,3,Low,Construction and Extraction,17,0,1,16,0,10190,76410,https://jobexposureindex.com/jobs/boilermakers
+856,"Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",51-4032.00,3,Low,Production,17,0,1,16,0,4680,49080,https://jobexposureindex.com/jobs/drilling-and-boring-machine-tool-setters-operators-and-tenders-metal-and-plastic
+858,Furniture Finishers,51-7021.00,3,Low,Production,22,0,2,20,1,14480,44540,https://jobexposureindex.com/jobs/furniture-finishers
+858,Structural Iron and Steel Workers,47-2221.00,3,Low,Construction and Extraction,20,0,1,19,0,68380,62780,https://jobexposureindex.com/jobs/structural-iron-and-steel-workers
+860,Paperhangers,47-2142.00,3,Low,Construction and Extraction,20,0,1,19,0,1570,52140,https://jobexposureindex.com/jobs/paperhangers
+861,"Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",51-2011.00,3,Low,Production,30,0,1,29,0,34020,65380,https://jobexposureindex.com/jobs/aircraft-structure-surfaces-rigging-and-systems-assemblers
+862,Helpers--Electricians,47-3013.00,2,Low,Construction and Extraction,24,1,0,23,0,63630,42670,https://jobexposureindex.com/jobs/helpers-electricians
+862,Landscaping and Groundskeeping Workers,37-3011.00,2,Low,Building and Grounds Cleaning and Maintenance,27,0,2,25,1,952640,39150,https://jobexposureindex.com/jobs/landscaping-and-groundskeeping-workers
+864,"Loading and Moving Machine Operators, Underground Mining",47-5044.00,2,Low,Construction and Extraction,28,1,0,27,0,5930,74500,https://jobexposureindex.com/jobs/loading-and-moving-machine-operators-underground-mining
+865,Structural Metal Fabricators and Fitters,51-2041.00,2,Low,Production,23,0,1,22,0,52360,51330,https://jobexposureindex.com/jobs/structural-metal-fabricators-and-fitters
+866,Millwrights,49-9044.00,2,Low,"Installation, Maintenance, and Repair",23,0,1,22,1,40330,65700,https://jobexposureindex.com/jobs/millwrights
+867,Dancers,27-2031.00,2,Low,"Arts, Design, Entertainment, Sports, and Media",14,0,1,13,0,8130,51584,https://jobexposureindex.com/jobs/dancers
+867,"Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",51-4021.00,2,Low,Production,16,0,1,15,0,60840,47720,https://jobexposureindex.com/jobs/extruding-and-drawing-machine-setters-operators-and-tenders-metal-and-plastic
+867,Fiberglass Laminators and Fabricators,51-2051.00,2,Low,Production,16,0,1,15,0,16170,46880,https://jobexposureindex.com/jobs/fiberglass-laminators-and-fabricators
+870,Musical Instrument Repairers and Tuners,49-9063.00,2,Low,"Installation, Maintenance, and Repair",37,0,1,36,0,5380,46420,https://jobexposureindex.com/jobs/musical-instrument-repairers-and-tuners
+871,Tire Builders,51-9197.00,2,Low,Production,23,0,1,22,0,20770,57390,https://jobexposureindex.com/jobs/tire-builders
+872,Highway Maintenance Workers,47-4051.00,2,Low,Construction and Extraction,19,0,1,18,0,154960,50260,https://jobexposureindex.com/jobs/highway-maintenance-workers
+873,Exercise Trainers and Group Fitness Instructors,39-9031.00,1,Low,Personal Care and Service,22,0,1,21,10,322930,47160,https://jobexposureindex.com/jobs/exercise-trainers-and-group-fitness-instructors
+874,"Pressers, Textile, Garment, and Related Materials",51-6021.00,1,Low,Production,28,0,1,27,0,26120,35060,https://jobexposureindex.com/jobs/pressers-textile-garment-and-related-materials
+875,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",51-4031.00,1,Low,Production,32,0,1,31,0,171200,46330,https://jobexposureindex.com/jobs/cutting-punching-and-press-machine-setters-operators-and-tenders-metal-and-plastic
+876,Agricultural Equipment Operators,45-2091.00,0,Low,"Farming, Fishing, and Forestry",17,0,0,17,0,28500,41730,https://jobexposureindex.com/jobs/agricultural-equipment-operators
+876,Athletes and Sports Competitors,27-2021.00,0,Low,"Arts, Design, Entertainment, Sports, and Media",9,0,0,9,1,15070,66710,https://jobexposureindex.com/jobs/athletes-and-sports-competitors
+876,Automotive Glass Installers and Repairers,49-3022.00,0,Low,"Installation, Maintenance, and Repair",18,0,0,18,1,20310,47630,https://jobexposureindex.com/jobs/automotive-glass-installers-and-repairers
+876,Bus and Truck Mechanics and Diesel Engine Specialists,49-3031.00,0,Low,"Installation, Maintenance, and Repair",26,0,0,26,1,289960,61770,https://jobexposureindex.com/jobs/bus-and-truck-mechanics-and-diesel-engine-specialists
+876,Cement Masons and Concrete Finishers,47-2051.00,0,Low,Construction and Extraction,26,0,0,26,0,206170,57020,https://jobexposureindex.com/jobs/cement-masons-and-concrete-finishers
+876,Continuous Mining Machine Operators,47-5041.00,0,Low,Construction and Extraction,15,0,0,15,0,14000,61810,https://jobexposureindex.com/jobs/continuous-mining-machine-operators
+876,"Cooks, Fast Food",35-2011.00,0,Low,Food Preparation and Serving Related,19,0,0,19,1,641070,30890,https://jobexposureindex.com/jobs/cooks-fast-food
+876,"Cooks, Short Order",35-2015.00,0,Low,Food Preparation and Serving Related,11,0,0,11,1,138650,35880,https://jobexposureindex.com/jobs/cooks-short-order
+876,"Cutters and Trimmers, Hand",51-9031.00,0,Low,Production,18,0,0,18,1,6060,38020,https://jobexposureindex.com/jobs/cutters-and-trimmers-hand
+876,"Derrick Operators, Oil and Gas",47-5011.00,0,Low,Construction and Extraction,15,0,0,15,0,10590,58620,https://jobexposureindex.com/jobs/derrick-operators-oil-and-gas
+876,Dining Room and Cafeteria Attendants and Bartender Helpers,35-9011.00,0,Low,Food Preparation and Serving Related,24,0,0,24,1,542750,33980,https://jobexposureindex.com/jobs/dining-room-and-cafeteria-attendants-and-bartender-helpers
+876,Dishwashers,35-9021.00,0,Low,Food Preparation and Serving Related,13,0,0,13,1,477450,34810,https://jobexposureindex.com/jobs/dishwashers
+876,Dredge Operators,53-7031.00,0,Low,Transportation and Material Moving,6,0,0,6,0,1040,49640,https://jobexposureindex.com/jobs/dredge-operators
+876,Electrical Power-Line Installers and Repairers,49-9051.00,0,Low,"Installation, Maintenance, and Repair",23,0,0,23,1,131070,95320,https://jobexposureindex.com/jobs/electrical-power-line-installers-and-repairers
+876,"Excavating and Loading Machine and Dragline Operators, Surface Mining",47-5022.00,0,Low,Construction and Extraction,16,0,0,16,0,34480,57430,https://jobexposureindex.com/jobs/excavating-and-loading-machine-and-dragline-operators-surface-mining
+876,"Floor Layers, Except Carpet, Wood, and Hard Tiles",47-2042.00,0,Low,Construction and Extraction,14,0,0,14,0,23640,56460,https://jobexposureindex.com/jobs/floor-layers-except-carpet-wood-and-hard-tiles
+876,Foundry Mold and Coremakers,51-4071.00,0,Low,Production,13,0,0,13,0,12790,48110,https://jobexposureindex.com/jobs/foundry-mold-and-coremakers
+876,"Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",47-3011.00,0,Low,Construction and Extraction,15,0,0,15,0,14170,47550,https://jobexposureindex.com/jobs/helpers-brickmasons-blockmasons-stonemasons-and-tile-and-marble-setters
+876,Helpers--Carpenters,47-3012.00,0,Low,Construction and Extraction,18,0,0,18,0,21680,43780,https://jobexposureindex.com/jobs/helpers-carpenters
+876,Helpers--Extraction Workers,47-5081.00,0,Low,Construction and Extraction,14,0,0,14,0,6700,47730,https://jobexposureindex.com/jobs/helpers-extraction-workers
+876,"Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",47-3014.00,0,Low,Construction and Extraction,11,0,0,11,0,7490,40470,https://jobexposureindex.com/jobs/helpers-painters-paperhangers-plasterers-and-stucco-masons
+876,"Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",47-3015.00,0,Low,Construction and Extraction,15,0,0,15,0,44330,42360,https://jobexposureindex.com/jobs/helpers-pipelayers-plumbers-pipefitters-and-steamfitters
+876,Helpers--Roofers,47-3016.00,0,Low,Construction and Extraction,18,0,0,18,0,6030,44160,https://jobexposureindex.com/jobs/helpers-roofers
+876,Hoist and Winch Operators,53-7041.00,0,Low,Transportation and Material Moving,13,0,0,13,0,2600,56450,https://jobexposureindex.com/jobs/hoist-and-winch-operators
+876,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners",37-2011.00,0,Low,Building and Grounds Cleaning and Maintenance,23,0,0,23,0,2209760,36840,https://jobexposureindex.com/jobs/janitors-and-cleaners-except-maids-and-housekeeping-cleaners
+876,Maids and Housekeeping Cleaners,37-2012.00,0,Low,Building and Grounds Cleaning and Maintenance,25,0,0,25,0,860670,35510,https://jobexposureindex.com/jobs/maids-and-housekeeping-cleaners
+876,"Meat, Poultry, and Fish Cutters and Trimmers",51-3022.00,0,Low,Production,13,0,0,13,0,145700,38300,https://jobexposureindex.com/jobs/meat-poultry-and-fish-cutters-and-trimmers
+876,"Molders, Shapers, and Casters, Except Metal and Plastic",51-9195.00,0,Low,Production,27,0,0,27,0,33190,46170,https://jobexposureindex.com/jobs/molders-shapers-and-casters-except-metal-and-plastic
+876,Motorboat Operators,53-5022.00,0,Low,Transportation and Material Moving,17,0,0,17,0,2480,47520,https://jobexposureindex.com/jobs/motorboat-operators
+876,Motorcycle Mechanics,49-3052.00,0,Low,"Installation, Maintenance, and Repair",13,0,0,13,0,13510,48580,https://jobexposureindex.com/jobs/motorcycle-mechanics
+876,Orderlies,31-1132.00,0,Low,Healthcare Support,24,0,0,24,1,52440,38290,https://jobexposureindex.com/jobs/orderlies
+876,Packaging and Filling Machine Operators and Tenders,51-9111.00,0,Low,Production,20,0,0,20,0,379060,43220,https://jobexposureindex.com/jobs/packaging-and-filling-machine-operators-and-tenders
+876,"Painting, Coating, and Decorating Workers",51-9123.00,0,Low,Production,13,0,0,13,0,7940,41600,https://jobexposureindex.com/jobs/painting-coating-and-decorating-workers
+876,"Paper Goods Machine Setters, Operators, and Tenders",51-9196.00,0,Low,Production,15,0,0,15,0,96130,50270,https://jobexposureindex.com/jobs/paper-goods-machine-setters-operators-and-tenders
+876,"Paving, Surfacing, and Tamping Equipment Operators",47-2071.00,0,Low,Construction and Extraction,20,0,0,20,0,41820,53340,https://jobexposureindex.com/jobs/paving-surfacing-and-tamping-equipment-operators
+876,Pile Driver Operators,47-2072.00,0,Low,Construction and Extraction,5,0,0,5,0,2310,73300,https://jobexposureindex.com/jobs/pile-driver-operators
+876,"Pourers and Casters, Metal",51-4052.00,0,Low,Production,16,0,0,16,0,4560,51810,https://jobexposureindex.com/jobs/pourers-and-casters-metal
+876,Rail-Track Laying and Maintenance Equipment Operators,47-4061.00,0,Low,Construction and Extraction,26,0,0,26,0,19580,70070,https://jobexposureindex.com/jobs/rail-track-laying-and-maintenance-equipment-operators
+876,"Refractory Materials Repairers, Except Brickmasons",49-9045.00,0,Low,"Installation, Maintenance, and Repair",16,0,0,16,0,1080,61290,https://jobexposureindex.com/jobs/refractory-materials-repairers-except-brickmasons
+876,Riggers,49-9096.00,0,Low,"Installation, Maintenance, and Repair",14,0,0,14,0,22530,62640,https://jobexposureindex.com/jobs/riggers
+876,"Roof Bolters, Mining",47-5043.00,0,Low,Construction and Extraction,14,0,0,14,0,2160,78540,https://jobexposureindex.com/jobs/roof-bolters-mining
+876,"Roustabouts, Oil and Gas",47-5071.00,0,Low,Construction and Extraction,13,0,0,13,0,44970,46960,https://jobexposureindex.com/jobs/roustabouts-oil-and-gas
+876,Slaughterers and Meat Packers,51-3023.00,0,Low,Production,15,0,0,15,0,69950,40130,https://jobexposureindex.com/jobs/slaughterers-and-meat-packers
+876,Stonemasons,47-2022.00,0,Low,Construction and Extraction,17,0,0,17,0,7820,57390,https://jobexposureindex.com/jobs/stonemasons
+876,Tapers,47-2082.00,0,Low,Construction and Extraction,16,0,0,16,0,12840,68270,https://jobexposureindex.com/jobs/tapers
+876,Terrazzo Workers and Finishers,47-2053.00,0,Low,Construction and Extraction,26,0,0,26,0,1180,76170,https://jobexposureindex.com/jobs/terrazzo-workers-and-finishers
+876,Tire Repairers and Changers,49-3093.00,0,Low,"Installation, Maintenance, and Repair",26,0,0,26,0,108410,37710,https://jobexposureindex.com/jobs/tire-repairers-and-changers
+876,Wellhead Pumpers,53-7073.00,0,Low,Transportation and Material Moving,16,0,0,16,0,17990,69960,https://jobexposureindex.com/jobs/wellhead-pumpers
