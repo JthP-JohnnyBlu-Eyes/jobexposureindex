@@ -250,6 +250,7 @@ function widgetPage() {
 // ---------- open data (public/downloads/job-exposure-index.csv) ----------
 
 const CSV_FILE = "job-exposure-index.csv";
+const KAGGLE = "https://www.kaggle.com/datasets/stefanjohndepous/ai-exposure-of-923-us-jobs-job-exposure-index";
 const csvCell = (v) => (v === null || v === undefined ? "" : /[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v));
 function datasetCsv() {
   const head = ["rank", "occupation", "onet_soc_code", "exposure_score", "exposure_level", "field", "tasks_total", "tasks_ai_alone", "tasks_ai_with_software", "tasks_not_exposed", "tasks_seen_in_ai_use", "us_employment", "median_annual_pay_usd", "url"];
@@ -263,6 +264,7 @@ function dataPage() {
     <h1>Download the Job Exposure Index</h1>
     <p class="lede">The full index, all ${TOTAL} US occupations with their AI exposure scores, task counts, real-world AI use, employment and pay, as one spreadsheet. Free for research, journalism, teaching and commercial use, as long as you credit the Job Exposure Index.</p>
     <p><a class="dl" href="/downloads/${CSV_FILE}" download>Download the CSV (${TOTAL} jobs)</a></p>
+    <p class="sub">Also on Kaggle: <a href="${KAGGLE}">AI Exposure of ${TOTAL} US Jobs</a>.</p>
 
     <section class="block">
       <h2>What's in it</h2>
@@ -299,6 +301,7 @@ function dataPage() {
       url: `${SITE}/open-data`, license: "https://creativecommons.org/licenses/by/4.0/",
       creator: { "@type": "Organization", name: "Job Exposure Index", url: SITE },
       dateModified: TODAY, isAccessibleForFree: true,
+      sameAs: KAGGLE,
       distribution: [{ "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `${SITE}/downloads/${CSV_FILE}` }],
     },
   });
