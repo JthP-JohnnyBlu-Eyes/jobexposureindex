@@ -1,10 +1,16 @@
 name: Daily social post
 
-# Every day at 12:07 UTC: schedules the "job of the day" on X, Bluesky and LinkedIn in Buffer
-# for 14:00 UTC, and commits data/social/log.json so a day is never posted twice.
+# Schedules the "job of the day" on X, Bluesky and LinkedIn in Buffer for 14:00 UTC, and commits
+# data/social/log.json so a day is never posted twice. GitHub often starts scheduled runs hours late,
+# so it is tried several times in the morning: the first run that starts does the work, later runs
+# only re-check Buffer's health. Each run also opens a GitHub issue when Buffer reports a
+# disconnected channel or a failed post (see the health check in scripts/post-daily.mjs).
 on:
   schedule:
-    - cron: '7 12 * * *'
+    - cron: '7 2 * * *'
+    - cron: '7 6 * * *'
+    - cron: '7 10 * * *'
+    - cron: '7 13 * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -15,6 +21,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: social
@@ -38,6 +45,18 @@ jobs:
             soon) node scripts/post-daily.mjs --soon ;;
             *) node scripts/post-daily.mjs ;;
           esac
+      - name: Open an issue if Buffer needs attention
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          f=data/social/alert.md
+          [ -f "$f" ] || exit 0
+          printf '\n@JthP-JohnnyBlu-Eyes\n' >> "$f"
+          title="Buffer needs attention"
+          n=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number')
+          if [ -n "$n" ]; then gh issue comment "$n" --body-file "$f"; else gh issue create --title "$title" --body-file "$f"; fi
+          rm "$f"
       - name: Record what was posted
         if: always()
         run: |

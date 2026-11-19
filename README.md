@@ -32,7 +32,7 @@ The PDF is printed with Playwright, so it is not rebuilt by the weekly data refr
 
 ## Daily social posts
 
-`.github/workflows/social.yml` runs `scripts/post-daily.mjs` every day at 12:07 UTC. It picks the "job of the day" (a fixed shuffle of jobs with at least 20,000 US workers, one per day) from `data/social-jobs.json`, and schedules a post for 14:00 UTC on X (with the job's share card), Bluesky and LinkedIn (as link cards) through Buffer. If Buffer rejects a rich post, it falls back to plain text with the link. Each day is logged in `data/social/log.json`, so nothing is posted twice.
+`.github/workflows/social.yml` runs `scripts/post-daily.mjs` a few times each morning (GitHub often starts scheduled runs hours late; the first run that starts does the posting). It picks the "job of the day" (a fixed shuffle of jobs with at least 20,000 US workers, one per day) from `data/social-jobs.json`, and schedules a post for 14:00 UTC on X (with the job's share card), Bluesky and LinkedIn (as link cards) through Buffer. If Buffer rejects a rich post, it falls back to plain text with the link. Each day is logged in `data/social/log.json`, so nothing is posted twice. Every run also checks Buffer for disconnected, locked or paused channels and for failed posts, and opens (or comments on) a GitHub issue called "Buffer needs attention" when it finds a new problem.
 
 Needs the repository secret `BUFFER_API_KEY` (from https://publish.buffer.com/settings/api on the Job Exposure Index Buffer account). From the Actions tab you can run it by hand: `dry-run` prints the posts, `soon` schedules them 15 minutes from now.
 

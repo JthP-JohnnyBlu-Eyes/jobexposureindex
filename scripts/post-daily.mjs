@@ -135,7 +135,6 @@ mkdirSync(ROOT + "data/social", { recursive: true });
 const log = existsSync(logFile) ? JSON.parse(readFileSync(logFile, "utf8")) : {};
 const done = log[today]?.results ?? {};
 const todo = Object.keys(plans).filter((s) => !done[s]?.id);
-if (!todo.length) { console.log(`Already posted for ${today}`); process.exit(0); }
 
 const key = process.env.BUFFER_API_KEY;
 if (!key) { console.error("BUFFER_API_KEY is not set"); process.exit(1); }
@@ -159,6 +158,63 @@ for (const org of orgs.account.organizations) {
 }
 if (channels.x && !channels.twitter) channels.twitter = channels.x;
 console.log("Connected:", Object.keys(channels).join(", ") || "none");
+
+// ---------- health check ----------
+// Buffer accepts a post even when it later cannot publish it (for example when X logs Buffer out).
+// So every run also asks Buffer which channels need a refresh and which posts failed, and writes
+// new problems to data/social/alert.md; the workflow turns that file into a GitHub issue.
+// The check never blocks posting: if Buffer's API answers differently than expected, it only warns.
+
+const healthFile = ROOT + "data/social/health.json";
+const health = existsSync(healthFile) ? JSON.parse(readFileSync(healthFile, "utf8")) : { alerted: [] };
+const problems = []; // { key, text }
+for (const org of orgs.account.organizations) {
+  try {
+    const data = await gql(
+      `query ($id: OrganizationId!) { channels(input: { organizationId: $id }) { id service name isDisconnected isLocked isQueuePaused } }`,
+      { id: org.id },
+    );
+    for (const ch of data.channels.flat()) {
+      const label = `${ch.name} (${ch.service})`;
+      if (ch.isDisconnected) problems.push({ key: `disconnected:${ch.id}`, text: `**${label}** has lost its connection. In Buffer, open the channel and click **Refresh**, then retry its failed posts.` });
+      if (ch.isLocked) problems.push({ key: `locked:${ch.id}`, text: `**${label}** is locked in Buffer (usually a plan limit), so nothing can post there.` });
+      if (ch.isQueuePaused) problems.push({ key: `paused:${ch.id}`, text: `**${label}** has its queue paused in Buffer, so scheduled posts won't go out.` });
+    }
+  } catch (e) {
+    console.log(`Health check: could not read channel status: ${e.message}`);
+  }
+  try {
+    const data = await gql(
+      `query ($id: OrganizationId!) { posts(first: 20, input: { organizationId: $id, filter: { status: [error] } }) { edges { node { id text dueAt channelId } } } }`,
+      { id: org.id },
+    );
+    const names = Object.fromEntries(Object.entries(channels).map(([s, id]) => [id, s === "twitter" ? "X" : s]));
+    for (const { node: p } of data.posts.edges) {
+      // Older failures were handled by hand long ago; only report the last week.
+      if (p.dueAt && Date.parse(p.dueAt) < now - 7 * 86400000) continue;
+      const first = String(p.text ?? "").split("\n")[0].slice(0, 80);
+      problems.push({ key: `failed:${p.id}`, text: `A post on **${names[p.channelId] ?? p.channelId}** failed${p.dueAt ? ` (due ${p.dueAt.slice(0, 16).replace("T", " ")} UTC)` : ""}: "${first}". Open it in Buffer and click **Retry**.` });
+    }
+  } catch (e) {
+    console.log(`Health check: could not read failed posts: ${e.message}`);
+  }
+}
+const fresh = problems.filter((p) => !health.alerted.includes(p.key));
+if (problems.length) console.log("Needs attention:\n" + problems.map((p) => "- " + p.text).join("\n"));
+if (fresh.length) {
+  writeFileSync(
+    ROOT + "data/social/alert.md",
+    `Buffer needs attention (found ${new Date(now).toISOString().slice(0, 16).replace("T", " ")} UTC):\n\n` +
+      problems.map((p) => `- ${p.text}`).join("\n") +
+      "\n\nBuffer: https://publish.buffer.com\n",
+  );
+}
+// Remember what was reported, so the same problem is not reported every day. A problem that
+// goes away and comes back later is reported again.
+const alerted = problems.map((p) => p.key).sort();
+if (JSON.stringify(alerted) !== JSON.stringify(health.alerted)) writeFileSync(healthFile, JSON.stringify({ alerted }, null, 1) + "\n");
+
+if (!todo.length) { console.log(`Already posted for ${today}`); process.exit(0); }
 
 const results = { ...done };
 for (const service of todo) {
