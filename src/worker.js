@@ -21,6 +21,11 @@ export default {
     const asset = await env.ASSETS.fetch(request);
     const res = new Response(asset.body, asset);
     for (const [k, v] of Object.entries(SECURITY_HEADERS)) res.headers.set(k, v);
+    // The widget (public/embed.html) is meant to be shown inside other sites, so it may be framed anywhere.
+    if (url.pathname === "/embed" || url.pathname === "/embed.html") {
+      res.headers.delete("X-Frame-Options");
+      res.headers.set("Content-Security-Policy", "frame-ancestors *");
+    }
     // skillhalflife.com reads the job list to show a visitor's score when they arrive from a job page.
     if (url.pathname === "/data/jobs.json") res.headers.set("Access-Control-Allow-Origin", "https://skillhalflife.com");
     return res;
