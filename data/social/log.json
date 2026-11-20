@@ -394,5 +394,23 @@
     "dueAt": "2026-11-18T20:40:38.410Z"
    }
   }
+ },
+ "2026-11-20": {
+  "job": "medical-secretaries-and-administrative-assistants",
+  "dueAt": "2026-11-20T14:00:00.000Z",
+  "results": {
+   "twitter": {
+    "id": "6b00192229e3b73db737720f",
+    "dueAt": "2026-11-20T14:00:00.000Z"
+   },
+   "bluesky": {
+    "id": "6b001922c1699b33ec1c2dcf",
+    "dueAt": "2026-11-20T14:00:00.000Z"
+   },
+   "linkedin": {
+    "id": "6b0019228681649bed791c14",
+    "dueAt": "2026-11-20T14:00:00.000Z"
+   }
+  }
  }
 }
