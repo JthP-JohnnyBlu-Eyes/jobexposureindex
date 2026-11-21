@@ -412,5 +412,23 @@
     "dueAt": "2026-11-20T14:00:00.000Z"
    }
   }
+ },
+ "2026-11-21": {
+  "job": "advanced-practice-psychiatric-nurses",
+  "dueAt": "2026-11-21T14:00:00.000Z",
+  "results": {
+   "twitter": {
+    "id": "6b01660b5e993799d8692c84",
+    "dueAt": "2026-11-21T14:00:00.000Z"
+   },
+   "bluesky": {
+    "id": "6b01660b20a2d09a0aebd995",
+    "dueAt": "2026-11-21T14:00:00.000Z"
+   },
+   "linkedin": {
+    "id": "6b01660b20a2d09a0aebd9cb",
+    "dueAt": "2026-11-21T14:00:00.000Z"
+   }
+  }
  }
 }
