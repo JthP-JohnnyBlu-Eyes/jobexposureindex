@@ -484,5 +484,23 @@
     "dueAt": "2026-11-24T14:00:00.000Z"
    }
   }
+ },
+ "2026-11-25": {
+  "job": "office-machine-operators-except-computer",
+  "dueAt": "2026-11-25T14:00:00.000Z",
+  "results": {
+   "twitter": {
+    "id": "6b06c1a0e47d92fb9771e230",
+    "dueAt": "2026-11-25T14:00:00.000Z"
+   },
+   "bluesky": {
+    "id": "6b06c1a081683ea08040cacc",
+    "dueAt": "2026-11-25T14:00:00.000Z"
+   },
+   "linkedin": {
+    "id": "6b06c1a04f2f059ad9a58b55",
+    "dueAt": "2026-11-25T14:00:00.000Z"
+   }
+  }
  }
 }
