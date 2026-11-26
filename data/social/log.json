@@ -502,5 +502,23 @@
     "dueAt": "2026-11-25T14:00:00.000Z"
    }
   }
+ },
+ "2026-11-26": {
+  "job": "merchandise-displayers-and-window-trimmers",
+  "dueAt": "2026-11-26T14:00:00.000Z",
+  "results": {
+   "twitter": {
+    "id": "6b080d97b56cc066e5bdba81",
+    "dueAt": "2026-11-26T14:00:00.000Z"
+   },
+   "bluesky": {
+    "id": "6b080d972c18150e1046b62c",
+    "dueAt": "2026-11-26T14:00:00.000Z"
+   },
+   "linkedin": {
+    "id": "6b080d97b56cc066e5bdbab6",
+    "dueAt": "2026-11-26T14:00:00.000Z"
+   }
+  }
  }
 }
