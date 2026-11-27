@@ -520,5 +520,23 @@
     "dueAt": "2026-11-26T14:00:00.000Z"
    }
   }
+ },
+ "2026-11-27": {
+  "job": "electrical-and-electronics-repairers-powerhouse-substation-and-relay",
+  "dueAt": "2026-11-27T14:00:00.000Z",
+  "results": {
+   "twitter": {
+    "id": "6b095f2a658222306c050d5f",
+    "dueAt": "2026-11-27T14:00:00.000Z"
+   },
+   "bluesky": {
+    "id": "6b095f2a776ce212760b5ae8",
+    "dueAt": "2026-11-27T14:00:00.000Z"
+   },
+   "linkedin": {
+    "id": "6b095f2a062ed764a8085bcb",
+    "dueAt": "2026-11-27T14:00:00.000Z"
+   }
+  }
  }
 }
