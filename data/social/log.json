@@ -538,5 +538,23 @@
     "dueAt": "2026-11-27T14:00:00.000Z"
    }
   }
+ },
+ "2026-11-28": {
+  "job": "architects-except-landscape-and-naval",
+  "dueAt": "2026-11-28T14:00:00.000Z",
+  "results": {
+   "twitter": {
+    "id": "6b0aa8842eb719ec56fff750",
+    "dueAt": "2026-11-28T14:00:00.000Z"
+   },
+   "bluesky": {
+    "id": "6b0aa884c2d6ca610d9b2b12",
+    "dueAt": "2026-11-28T14:00:00.000Z"
+   },
+   "linkedin": {
+    "id": "6b0aa8842d54762da5a8c73b",
+    "dueAt": "2026-11-28T14:00:00.000Z"
+   }
+  }
  }
 }
